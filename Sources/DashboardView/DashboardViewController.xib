@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="hHQ-aZ-BqJ" customClass="DashboardViewController" customModule="LifetimeTracker">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="DQw-nS-Umv"/>
+                <viewControllerLayoutGuide type="bottom" id="ZG3-c3-Vhc"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="qkW-0y-nk1">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="DashboardView" customModule="LifetimeTracker">
+                        <rect key="frame" x="0.5" y="0.0" width="375" height="129"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-Y3-fW1" userLabel="Expand">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eDm-2k-hYj"/>
+                                    <constraint firstAttribute="width" constant="44" id="vDz-lI-QyO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="expandTapped:" destination="hHQ-aZ-BqJ" eventType="touchUpInside" id="eGb-n3-ckL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No issues detected." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lf6-bT-Ehs" userLabel="Summary">
+                                <rect key="frame" x="44" y="12" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="22" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-AY-p68">
+                                <rect key="frame" x="0.0" y="43" width="375" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hHQ-aZ-BqJ" id="hn9-9o-SSp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lf6-bT-Ehs" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="3bo-33-wim"/>
+                            <constraint firstItem="0TP-AY-p68" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FbY-Io-jBs"/>
+                            <constraint firstItem="gQn-Y3-fW1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LVm-CA-xTt"/>
+                            <constraint firstItem="0TP-AY-p68" firstAttribute="top" secondItem="lf6-bT-Ehs" secondAttribute="bottom" constant="10" id="P36-TR-20g"/>
+                            <constraint firstItem="0TP-AY-p68" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="hju-Gu-3xz"/>
+                            <constraint firstItem="lf6-bT-Ehs" firstAttribute="leading" secondItem="gQn-Y3-fW1" secondAttribute="trailing" id="hwq-vk-N7X"/>
+                            <constraint firstAttribute="bottom" secondItem="0TP-AY-p68" secondAttribute="bottom" id="lB3-eb-2Qy"/>
+                            <constraint firstItem="gQn-Y3-fW1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oZH-uG-0wm"/>
+                            <constraint firstItem="lf6-bT-Ehs" firstAttribute="centerY" secondItem="gQn-Y3-fW1" secondAttribute="centerY" id="sTy-8H-uGa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="iN0-l3-epB" firstAttribute="height" secondItem="qkW-0y-nk1" secondAttribute="height" id="9sl-8E-sI7"/>
+                    <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="qkW-0y-nk1" secondAttribute="top" id="NrA-uX-6qs"/>
+                    <constraint firstItem="iN0-l3-epB" firstAttribute="width" secondItem="qkW-0y-nk1" secondAttribute="width" id="ggg-Ym-Eng"/>
+                    <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="qkW-0y-nk1" secondAttribute="centerX" id="iiy-ww-oST"/>
+                </constraints>
+            </view>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <size key="freeformSize" width="375" height="129"/>
+            <connections>
+                <outlet property="summaryLabel" destination="lf6-bT-Ehs" id="zEp-yk-116"/>
+                <outlet property="tableView" destination="0TP-AY-p68" id="wgL-gt-eYS"/>
+                <outlet property="view" destination="qkW-0y-nk1" id="Evg-1F-ZDt"/>
+            </connections>
+            <point key="canvasLocation" x="-40.5" y="251.5"/>
+        </viewController>
+    </objects>
+</document>

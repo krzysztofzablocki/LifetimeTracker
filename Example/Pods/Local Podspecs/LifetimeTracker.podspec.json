@@ -1,0 +1,31 @@
+{
+  "name": "LifetimeTracker",
+  "version": "0.1",
+  "summary": "Framework to visually warn you when retain cycle happens.",
+  "description": "Mini framework that can surface retain cycle issues sooner.",
+  "homepage": "https://github.com/krzysztofzablocki/LifetimeTracker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Krzysztof Zablocki": "krzysztof.zablocki@pixle.pl"
+  },
+  "social_media_url": "http://twitter.com/merowing_",
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9",
+    "watchos": "2.0",
+    "tvos": "9.0"
+  },
+  "source": {
+    "git": ".git",
+    "tag": "0.1"
+  },
+  "source_files": "Sources/**/*.swift",
+  "resources": "Sources/**/*.xib",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ]
+}
