@@ -16,7 +16,7 @@ Add `pod 'LifetimeTracker'` to your Podfile.
 
 ### Carthage
 
-Add github `"krzysztofzablocki/LifetimeTracker"` to your Cartfile.
+Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
 ## Integration
 To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`:
