@@ -15,7 +15,7 @@ public typealias LifetimeConfiguration = (identifier: String, maxCount: Int)
 public protocol LifetimeTrackable: class {
 
     /// Configuration for lifetime tracking, contains identifier and leak classifier
-    static var LifetimeConfiguration: LifetimeConfiguration { get }
+    static var lifetimeConfiguration: LifetimeConfiguration { get }
 
     /// Starts tracking lifetime, should be called in each initializer
     func trackLifetime()
@@ -73,7 +73,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
             lock.unlock()
         }
 
-        let configuration = type(of: instance).LifetimeConfiguration
+        let configuration = type(of: instance).lifetimeConfiguration
         let name = configuration.identifier
         let fullName = String(describing: type(of: instance))
         let pointer = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
