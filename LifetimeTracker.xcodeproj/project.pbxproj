@@ -16,6 +16,9 @@
 		8933C78F1EB5B82C000D00A4 /* LifetimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */; };
 		8933C7901EB5B82D000D00A4 /* LifetimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */; };
 		CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
+		CDDD75271F7D3664001BCD29 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD75241F7D3664001BCD29 /* DashboardViewController.swift */; };
+		CDDD75281F7D3664001BCD29 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDD75251F7D3664001BCD29 /* DashboardViewController.xib */; };
+		CDDD75291F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */; };
 		DD7502881C68FEDE006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */; };
 		DD7502921C690C7A006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		AD2FAA261CD0B6D800659CF4 /* LifetimeTracker.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LifetimeTracker.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* LifetimeTrackerTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LifetimeTrackerTests.plist; sourceTree = "<group>"; };
 		CDA4DD721F29F70700F01611 /* DeallocTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeallocTracker.swift; sourceTree = "<group>"; };
+		CDDD75241F7D3664001BCD29 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		CDDD75251F7D3664001BCD29 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* LifetimeTracker-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* LifetimeTracker-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +157,8 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDDD75231F7D3664001BCD29 /* DashboardView */,
+				CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */,
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
 				CDA4DD721F29F70700F01611 /* DeallocTracker.swift */,
 			);
@@ -164,6 +172,15 @@
 			);
 			name = Tests;
 			path = Tests/LifetimeTrackerTests;
+			sourceTree = "<group>";
+		};
+		CDDD75231F7D3664001BCD29 /* DashboardView */ = {
+			isa = PBXGroup;
+			children = (
+				CDDD75241F7D3664001BCD29 /* DashboardViewController.swift */,
+				CDDD75251F7D3664001BCD29 /* DashboardViewController.xib */,
+			);
+			path = DashboardView;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {
@@ -410,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDD75281F7D3664001BCD29 /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +481,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
+				CDDD75271F7D3664001BCD29 /* DashboardViewController.swift in Sources */,
 				CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */,
+				CDDD75291F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

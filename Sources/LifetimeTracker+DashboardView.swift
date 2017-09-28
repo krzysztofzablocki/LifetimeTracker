@@ -5,7 +5,7 @@
 //  Created by Krzysztof Zablocki on 9/25/17.
 //
 
-import Foundation
+import UIKit
 
 fileprivate extension String {
     func attributed(_ attributes: [String: Any] = [:]) -> NSAttributedString {
