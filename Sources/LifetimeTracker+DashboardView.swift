@@ -8,7 +8,15 @@
 import UIKit
 
 fileprivate extension String {
-    func attributed(_ attributes: [String: Any] = [:]) -> NSAttributedString {
+    #if swift(>=4.0)
+    typealias AttributedStringKey = NSAttributedStringKey
+    static let foregroundColorAttributeName = NSAttributedStringKey.foregroundColor
+    #else
+    typealias AttributedStringKey = String
+    static let foregroundColorAttributeName = NSForegroundColorAttributeName
+    #endif
+
+    func attributed(_ attributes: [AttributedStringKey: Any] = [:]) -> NSAttributedString {
         return NSAttributedString(string: self, attributes: attributes)
     }
 }
@@ -55,12 +63,12 @@ public final class LifetimeTrackerDashboardIntegration {
 
         if list.isEmpty {
             return "No issues detected".attributed([
-                NSForegroundColorAttributeName: UIColor.green
+                String.foregroundColorAttributeName: UIColor.green
                 ])
         }
 
         return ("Detected: ").attributed([
-            NSForegroundColorAttributeName: UIColor.red
+            String.foregroundColorAttributeName: UIColor.red
             ]) + list.attributed()
     }
 
