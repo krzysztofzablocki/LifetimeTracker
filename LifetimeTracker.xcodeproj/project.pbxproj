@@ -15,6 +15,9 @@
 		8933C78E1EB5B82C000D00A4 /* LifetimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* LifetimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */; };
 		8933C7901EB5B82D000D00A4 /* LifetimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */; };
+		CD2064CF1F7EB44E00E8CBBD /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
+		CD2064D01F7EB45A00E8CBBD /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
+		CD2064D11F7EB45F00E8CBBD /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
 		CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
 		CDDD75271F7D3664001BCD29 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD75241F7D3664001BCD29 /* DashboardViewController.swift */; };
 		CDDD75281F7D3664001BCD29 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDDD75251F7D3664001BCD29 /* DashboardViewController.xib */; };
@@ -499,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2064D01F7EB45A00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2064D11F7EB45F00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2064CF1F7EB44E00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
