@@ -8,6 +8,8 @@ Instruments and Memory Graph Debugger are great, but too many times developers f
 
 If you use those tools sporadicaly many of the issues they surface will require you to investigate the cause, and cost you a lot of time in the process.
 
+Other tools like [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) rely on objc runtime magic to find the problems, but that means they can't really be used for pure Swift classes. This small tool simply focuses on tracking lifetime of objects which means that it can be used in both Objective-C and Swift codebases and it doesn't rely on any complex or automatic magic behaviour.
+
 ## Installation
 
 ### CocoaPods
