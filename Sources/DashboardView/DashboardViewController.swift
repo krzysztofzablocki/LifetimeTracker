@@ -16,6 +16,13 @@ final class DashboardViewController: UIViewController {
     enum State {
         case open
         case closed
+
+        var opposite: State {
+            switch self {
+            case .open: return .closed
+            case .closed: return .open
+            }
+        }
     }
 
     enum Edge: Int {
@@ -23,17 +30,28 @@ final class DashboardViewController: UIViewController {
         case bottom
     }
 
-    private var state: State = .closed
-    private var layoutWidth: CGFloat = 0
+    private var state: State = .closed {
+        didSet { self.clampDragOffset() }
+    }
+
     fileprivate var entries = [String]()
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var summaryLabel: UILabel!
     public var edge: Edge = .bottom
 
+    private let closedHeight: CGFloat = 44
+    private var originalOffset: CGFloat = 0
+    private var dragOffset: CGFloat = 0 {
+        didSet { relayout() }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+
+        addPanGestureRecognizer()
+        dragOffset = maximumYPosition
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -44,6 +62,9 @@ final class DashboardViewController: UIViewController {
         summaryLabel?.attributedText = vm.summary
 
         entries = vm.entries
+
+        tableView.reloadData()
+        tableView.layoutIfNeeded()
         relayout()
     }
 
@@ -52,40 +73,68 @@ final class DashboardViewController: UIViewController {
         relayout()
     }
 
-    private func relayout() {
-        guard let window = view.window else { return }
-        layoutWidth = UIScreen.main.bounds.width
+    // MARK: - Layout
 
-        let size = tableView.sizeThatFits(CGSize(width: layoutWidth, height: CGFloat.greatestFiniteMagnitude))
-
-        view.frame = CGRect(x: 0, y: 0, width: layoutWidth, height: min(UIScreen.main.applicationFrame.height - 44, max(CGFloat(129), size.height + 44 + 10)))
-        let heightToShow: CGFloat
-
+    private var heightToShow: CGFloat {
         switch state {
         case .closed:
-            heightToShow = 44
+            return closedHeight
         case .open:
-            heightToShow = view.bounds.height
-            break
+            return heightToFitTableView
         }
-
-        window.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - heightToShow, width: UIScreen.main.bounds.width, height: view.frame.height)
-
-        view.layoutIfNeeded()
-        tableView.reloadData()
     }
 
+    private var maximumYPosition: CGFloat {
+        return UIScreen.main.bounds.height - heightToShow
+    }
+
+    private var heightToFitTableView: CGFloat {
+        let size = tableView.contentSize
+        return max(CGFloat(129), size.height + closedHeight + 10)
+    }
+
+    private var layoutWidth: CGFloat { return UIScreen.main.bounds.width }
+
+    private func relayout() {
+        guard let window = view.window else { return }
+
+        view.frame = CGRect(x: 0, y: 0, width: layoutWidth, height: heightToShow)
+        window.frame = CGRect(x: 0, y: dragOffset, width: UIScreen.main.bounds.width, height: view.frame.height)
+
+        view.layoutIfNeeded()
+    }
+
+    // MARK: - Expand / collapse
+
     @IBAction private func expandTapped(_ sender: UIButton) {
-        switch state {
-        case .closed:
-            state = .open
-        case .open:
-            state = .closed
-        }
+        state = state.opposite
 
         UIView.animateKeyframes(withDuration: 0.3, delay: 0, options: [.beginFromCurrentState, .calculationModeCubicPaced] , animations: {
             self.relayout()
         }, completion: nil)
+    }
+
+    // MARK: Panning
+
+    func addPanGestureRecognizer() {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(toolbarPanned))
+        self.view.addGestureRecognizer(panGestureRecognizer)
+    }
+
+    func toolbarPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
+        switch gestureRecognizer.state {
+        case .began:
+            originalOffset = dragOffset
+        case .changed:
+            let translation = gestureRecognizer.translation(in: self.view)
+            dragOffset = originalOffset + translation.y
+            clampDragOffset()
+        default: break
+        }
+    }
+
+    func clampDragOffset() {
+        dragOffset = max(44, min(maximumYPosition, dragOffset))
     }
 }
 
