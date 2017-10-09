@@ -48,9 +48,11 @@ public final class LifetimeTrackerDashboardIntegration {
     public init() {}
 
     public func refreshUI(counts: [String: LifetimeTracker.Entry], fullEntries: [String: LifetimeTracker.Entry]) {
-        window.isHidden = false
-        let vm = DashboardViewModel(summary: summary(from: counts), entries: entries(from: fullEntries))
-        vc.update(with: vm)
+        DispatchQueue.main.async {
+            self.window.isHidden = false
+            let vm = DashboardViewModel(summary: self.summary(from: counts), entries: self.entries(from: fullEntries))
+            self.vc.update(with: vm)
+        }
     }
 
     private func summary(from counts: [String: LifetimeTracker.Entry]) -> NSAttributedString {
