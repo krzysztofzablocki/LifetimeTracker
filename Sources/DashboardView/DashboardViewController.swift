@@ -121,7 +121,7 @@ final class DashboardViewController: UIViewController {
         self.view.addGestureRecognizer(panGestureRecognizer)
     }
 
-    func toolbarPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func toolbarPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
         switch gestureRecognizer.state {
         case .began:
             originalOffset = dragOffset
