@@ -49,6 +49,10 @@ class SectionFrontViewController: UIViewController, LifetimeTrackable {
 
 When you have more than `maxCount` items alive, the tracker will let you know.
 
+## Writing integration tests for memory leaks
+
+You can access the summary label using accessibility identifier `LifetimeTracker.summaryLabel`, which allows you to write integration tests that end up with looking up whether any issues were found.
+
 ## License 
 LifetimeTracker is available under the MIT license. See [LICENSE](LICENSE) for more information.
 

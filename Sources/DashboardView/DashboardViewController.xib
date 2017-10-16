@@ -36,6 +36,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No issues detected." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lf6-bT-Ehs" userLabel="Summary">
                                 <rect key="frame" x="44" y="12" width="331" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LifetimeTracker.summaryLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="uea-b2-P8n"/>
                                 </constraints>
