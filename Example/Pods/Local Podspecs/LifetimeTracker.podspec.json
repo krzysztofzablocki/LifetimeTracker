@@ -1,6 +1,6 @@
 {
   "name": "LifetimeTracker",
-  "version": "1.0",
+  "version": "1.0.9",
   "summary": "Framework to visually warn you when retain cycle / leak happens.",
   "description": "Mini framework that can surface retain cycle issues sooner.",
   "homepage": "https://github.com/krzysztofzablocki/LifetimeTracker",
@@ -16,8 +16,8 @@
     "ios": "8.0"
   },
   "source": {
-    "git": ".git",
-    "tag": "1.0"
+    "git": "https://github.com/krzysztofzablocki/LifetimeTracker.git",
+    "tag": "1.0.9"
   },
   "source_files": "Sources/**/*.swift",
   "resources": "Sources/**/*.xib",
