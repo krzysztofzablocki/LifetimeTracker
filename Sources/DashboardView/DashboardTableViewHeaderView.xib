@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DashboardTableViewHeaderView" customModule="LifetimeTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-rc-Ex7" userLabel="Background Color View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-27-AII">
+                    <rect key="frame" x="0.0" y="0.0" width="10" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="dd4-4d-A4o"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSD-gq-zyC">
+                    <rect key="frame" x="20" y="6" width="335" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="O7g-rc-Ex7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5dN-HS-J09"/>
+                <constraint firstItem="Tld-27-AII" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KgJ-LM-FmW"/>
+                <constraint firstItem="O7g-rc-Ex7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lc1-7V-Xfy"/>
+                <constraint firstAttribute="bottom" secondItem="Tld-27-AII" secondAttribute="bottom" id="RZW-16-MQQ"/>
+                <constraint firstAttribute="bottom" secondItem="O7g-rc-Ex7" secondAttribute="bottom" id="Rso-8m-3VG"/>
+                <constraint firstItem="NSD-gq-zyC" firstAttribute="leading" secondItem="Tld-27-AII" secondAttribute="trailing" constant="10" id="XVy-pm-erD"/>
+                <constraint firstAttribute="trailing" secondItem="O7g-rc-Ex7" secondAttribute="trailing" id="fuA-5b-KEC"/>
+                <constraint firstAttribute="trailing" secondItem="NSD-gq-zyC" secondAttribute="trailing" constant="20" id="lWo-Rm-Wcj"/>
+                <constraint firstItem="Tld-27-AII" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="odv-eO-PiJ"/>
+                <constraint firstItem="NSD-gq-zyC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vf0-Nb-teb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="groupNameLabel" destination="NSD-gq-zyC" id="fwH-29-HTt"/>
+                <outlet property="indicatorView" destination="Tld-27-AII" id="W6K-47-klJ"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-261"/>
+        </view>
+    </objects>
+</document>

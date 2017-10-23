@@ -29,6 +29,9 @@ extension NSAttributedString {
     }
 }
 
+typealias EntryModel = (color: UIColor, description: String)
+typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
+
 public final class LifetimeTrackerDashboardIntegration {
 
     private lazy var vc: DashboardViewController = {
@@ -47,23 +50,25 @@ public final class LifetimeTrackerDashboardIntegration {
 
     public init() {}
 
-    public func refreshUI(counts: [String: LifetimeTracker.Entry], fullEntries: [String: LifetimeTracker.Entry]) {
+	public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
             self.window.isHidden = false
-            let vm = DashboardViewModel(summary: self.summary(from: counts), entries: self.entries(from: fullEntries))
+            let vm = DashboardViewModel(summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))
             self.vc.update(with: vm)
         }
     }
 
-    private func summary(from counts: [String: LifetimeTracker.Entry]) -> NSAttributedString {
-        let keys = counts.keys.sorted(by: >)
-        let list = keys.filter { key in
-                return counts[key]?.shouldDisplay == true
-            }.map { key in
-                return "\(counts[key]!.count) \(key)"
+    private func summary(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> NSAttributedString {
+        let groupNames = trackedGroups.keys.sorted(by: >)
+        let leakyGroupSummaries = groupNames.filter { groupName in
+                return trackedGroups[groupName]?.lifetimeState == .leaky
+            }.map { groupName in
+				let group = trackedGroups[groupName]!
+				let maxCountString = group.maxCount == Int.max ? "∞" : "\(group.maxCount)"
+                return "\(group.name ?? "Others") (\(group.count)/\(maxCountString))"
             }.joined(separator: ", ")
 
-        if list.isEmpty {
+        if leakyGroupSummaries.isEmpty {
             return "No issues detected".attributed([
                 String.foregroundColorAttributeName: UIColor.green
                 ])
@@ -71,16 +76,44 @@ public final class LifetimeTrackerDashboardIntegration {
 
         return ("Detected: ").attributed([
             String.foregroundColorAttributeName: UIColor.red
-            ]) + list.attributed()
+            ]) + leakyGroupSummaries.attributed()
     }
 
-    private func entries(from fullEntries: [String: LifetimeTracker.Entry]) -> [String] {
-        return fullEntries
-            .sorted { (left, right) -> Bool in
-                left.value.count < right.value.count
+	private func entries(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> [GroupModel] {
+		var sections = [GroupModel]()
+        trackedGroups
+			.filter { (_, group: LifetimeTracker.EntriesGroup) -> Bool in
+				group.count > 0
+			}
+			.sorted { (lhs: (key: String, value: LifetimeTracker.EntriesGroup), rhs: (key: String, value: LifetimeTracker.EntriesGroup)) -> Bool in
+                return (lhs.value.maxCount - lhs.value.count) < (rhs.value.maxCount - rhs.value.count)
             }
-            .map { (key, value) -> String in
-                return "\(value.count) \(value.fullName): \(value.pointers.joined(separator: ", "))"
-        }
-    }
+			.forEach { (groupName: String, group: LifetimeTracker.EntriesGroup) in
+				var groupColor: UIColor
+				switch group.lifetimeState {
+				case .valid: groupColor = .green
+				case .leaky: groupColor = .red
+				}
+				let groupMaxCountString = group.maxCount == Int.max ? "∞" : "\(group.maxCount)"
+				let title = "\(group.name ?? "Others") (\(group.count)/\(groupMaxCountString))"
+				var rows = [EntryModel]()
+				group.entries.sorted { (lhs: (key: String, value: LifetimeTracker.Entry), rhs: (key: String, value: LifetimeTracker.Entry)) -> Bool in
+					lhs.value.count > rhs.value.count
+				}
+				.filter { (_, entry: LifetimeTracker.Entry) -> Bool in
+					entry.count > 0
+				}.forEach { (_, entry: LifetimeTracker.Entry) in
+					var color: UIColor
+					switch entry.lifetimeState {
+					case .valid: color = .green
+					case .leaky: color = .red
+					}
+					let entryMaxCountString = entry.maxCount == Int.max ? "∞" : "\(entry.maxCount)"
+					let description = "\(entry.name) (\(entry.count)/\(entryMaxCountString)):\n\(entry.pointers.joined(separator: ", "))"
+					rows.append((color: color, description: description))
+				}
+				sections.append((color: groupColor, title: title, entries: rows))
+			}
+		return sections
+	}
 }

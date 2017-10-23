@@ -9,7 +9,7 @@ import UIKit
 
 struct DashboardViewModel {
     let summary: NSAttributedString
-    let entries: [String]
+	let sections: [GroupModel]
 }
 
 final class DashboardViewController: UIViewController {
@@ -30,11 +30,13 @@ final class DashboardViewController: UIViewController {
         case bottom
     }
 
+	@IBOutlet weak var heightConstraint: NSLayoutConstraint!
+
     private var state: State = .closed {
         didSet { self.clampDragOffset() }
-    }
+	}
 
-    fileprivate var entries = [String]()
+	fileprivate var sections: [GroupModel] = []
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var summaryLabel: UILabel!
     public var edge: Edge = .bottom
@@ -44,11 +46,16 @@ final class DashboardViewController: UIViewController {
     private var dragOffset: CGFloat = 0 {
         didSet { relayout() }
     }
+	private var offsetForCloseJumpBack: CGFloat = 0
+	private var currentScreenSize: CGSize = CGSize.zero
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+
+		tableView.register(UINib(nibName: "DashboardTableViewCell", bundle: Bundle(for: DashboardTableViewCell.self)), forCellReuseIdentifier: "lifetimeTrackerDashboardTableViewCell")
+		tableView.register(UINib(nibName: "DashboardTableViewHeaderView", bundle: Bundle(for: DashboardTableViewHeaderView.self)), forHeaderFooterViewReuseIdentifier: "lifetimeTrackerDashboardHeaderViewCell")
 
         addPanGestureRecognizer()
         dragOffset = maximumYPosition
@@ -61,36 +68,56 @@ final class DashboardViewController: UIViewController {
     func update(with vm: DashboardViewModel) {
         summaryLabel?.attributedText = vm.summary
 
-        entries = vm.entries
+        sections = vm.sections
 
         tableView.reloadData()
         tableView.layoutIfNeeded()
+
+		// Update the drag offset as the height might increase. The offset has to be decreased in this case
+		if (dragOffset + heightToShow) > maximumHeight {
+			dragOffset = maximumHeight - heightToShow
+			offsetForCloseJumpBack = maximumHeight - closedHeight
+		}
+
         relayout()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+		if currentScreenSize != UIScreen.main.bounds.size {
+			dragOffset = maximumYPosition
+			offsetForCloseJumpBack = maximumHeight - closedHeight
+		}
+		currentScreenSize = UIScreen.main.bounds.size
+
         relayout()
     }
 
     // MARK: - Layout
 
     private var heightToShow: CGFloat {
-        switch state {
+		var height = CGFloat(0)
+		switch state {
         case .closed:
-            return closedHeight
+            height = closedHeight
         case .open:
-            return heightToFitTableView
+            height = heightToFitTableView
         }
+		return min(maximumHeight, height)
     }
 
+	private var maximumHeight: CGFloat {
+		return UIScreen.main.bounds.height
+	}
+
     private var maximumYPosition: CGFloat {
-        return UIScreen.main.bounds.height - heightToShow
+        return maximumHeight - heightToShow
     }
 
     private var heightToFitTableView: CGFloat {
         let size = tableView.contentSize
-        return max(CGFloat(129), size.height + closedHeight + 10)
+        return max(CGFloat(88), size.height + closedHeight)
     }
 
     private var layoutWidth: CGFloat { return UIScreen.main.bounds.width }
@@ -98,16 +125,25 @@ final class DashboardViewController: UIViewController {
     private func relayout() {
         guard let window = view.window else { return }
 
-        view.frame = CGRect(x: 0, y: 0, width: layoutWidth, height: heightToShow)
-        window.frame = CGRect(x: 0, y: dragOffset, width: UIScreen.main.bounds.width, height: view.frame.height)
+		// Prevent black areas during device orientation
+		window.clipsToBounds = true
 
+		window.frame = CGRect(x: 0, y: dragOffset, width: UIScreen.main.bounds.width, height: heightToShow)
+		heightConstraint.constant = heightToShow
         view.layoutIfNeeded()
     }
 
     // MARK: - Expand / collapse
 
     @IBAction private func expandTapped(_ sender: UIButton) {
-        state = state.opposite
+		if state == .closed {
+			offsetForCloseJumpBack = dragOffset
+		}
+		state = state.opposite
+
+		if state == .closed && offsetForCloseJumpBack == maximumYPosition {
+			dragOffset = offsetForCloseJumpBack
+		}
 
         UIView.animateKeyframes(withDuration: 0.3, delay: 0, options: [.beginFromCurrentState, .calculationModeCubicPaced] , animations: {
             self.relayout()
@@ -129,25 +165,60 @@ final class DashboardViewController: UIViewController {
             let translation = gestureRecognizer.translation(in: self.view)
             dragOffset = originalOffset + translation.y
             clampDragOffset()
+			if state == .open {
+				offsetForCloseJumpBack = dragOffset
+			}
         default: break
         }
     }
 
     func clampDragOffset() {
-        dragOffset = max(44, min(maximumYPosition, dragOffset))
+        dragOffset = min(maximumYPosition, dragOffset)
     }
 }
 
 extension DashboardViewController: UITableViewDataSource {
+
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return sections.count
+	}
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count
+		guard section < sections.count else {
+			return 0
+		}
+
+		return sections[section].entries.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = entries[indexPath.row]
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "lifetimeTrackerDashboardTableViewCell", for: indexPath) as? DashboardTableViewCell else {
+			return UITableViewCell()
+		}
+
+		let group =  sections[indexPath.section]
+		let entry = group.entries[indexPath.row]
+		cell.setup(groupColor: group.color, classColor: entry.color, description: entry.description)
+
         return cell
     }
+}
+
+extension DashboardViewController: UITableViewDelegate {
+
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		guard section < sections.count,
+			let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "lifetimeTrackerDashboardHeaderViewCell") as? DashboardTableViewHeaderView else {
+			return nil
+		}
+
+		let section = sections[section]
+		headerView.setup(color: section.color, title: section.title)
+
+		return headerView
+	}
+
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return 30
+	}
 }
