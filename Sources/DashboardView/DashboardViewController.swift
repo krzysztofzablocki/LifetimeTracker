@@ -30,6 +30,11 @@ final class DashboardViewController: UIViewController {
         case bottom
     }
 
+	class func makeFromNib() -> DashboardViewController {
+		let viewController = Bundle(for: self).loadNibNamed("\(self)", owner: nil, options: nil)!.first as! DashboardViewController
+		return viewController
+	}
+
 	@IBOutlet weak var heightConstraint: NSLayoutConstraint!
 
     private var state: State = .closed {
@@ -41,7 +46,7 @@ final class DashboardViewController: UIViewController {
     @IBOutlet private var summaryLabel: UILabel!
     public var edge: Edge = .bottom
 
-    private let closedHeight: CGFloat = 44
+    private let closedHeight: CGFloat = Constants.Layout.Dashboard.headerHeight
     private var originalOffset: CGFloat = 0
     private var dragOffset: CGFloat = 0 {
         didSet { relayout() }
@@ -54,8 +59,8 @@ final class DashboardViewController: UIViewController {
 
         view.translatesAutoresizingMaskIntoConstraints = false
 
-		tableView.register(UINib(nibName: "DashboardTableViewCell", bundle: Bundle(for: DashboardTableViewCell.self)), forCellReuseIdentifier: "lifetimeTrackerDashboardTableViewCell")
-		tableView.register(UINib(nibName: "DashboardTableViewHeaderView", bundle: Bundle(for: DashboardTableViewHeaderView.self)), forHeaderFooterViewReuseIdentifier: "lifetimeTrackerDashboardHeaderViewCell")
+		tableView.register(DashboardTableViewCell.lt_nibInOwnBundle, forCellReuseIdentifier: Constants.ReuseIdentifer.dashboardCell)
+		tableView.register(DashboardTableViewHeaderView.lt_nibInOwnBundle, forHeaderFooterViewReuseIdentifier: Constants.ReuseIdentifer.dashboardHeader)
 
         addPanGestureRecognizer()
         dragOffset = maximumYPosition
@@ -117,7 +122,7 @@ final class DashboardViewController: UIViewController {
 
     private var heightToFitTableView: CGFloat {
         let size = tableView.contentSize
-        return max(CGFloat(88), size.height + closedHeight)
+        return max(Constants.Layout.Dashboard.minTotalHeight, size.height + closedHeight)
     }
 
     private var layoutWidth: CGFloat { return UIScreen.main.bounds.width }
@@ -145,7 +150,7 @@ final class DashboardViewController: UIViewController {
 			dragOffset = offsetForCloseJumpBack
 		}
 
-        UIView.animateKeyframes(withDuration: 0.3, delay: 0, options: [.beginFromCurrentState, .calculationModeCubicPaced] , animations: {
+        UIView.animateKeyframes(withDuration: Constants.Layout.animationDuration, delay: 0, options: [.beginFromCurrentState, .calculationModeCubicPaced] , animations: {
             self.relayout()
         }, completion: nil)
     }
@@ -192,7 +197,7 @@ extension DashboardViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "lifetimeTrackerDashboardTableViewCell", for: indexPath) as? DashboardTableViewCell else {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifer.dashboardCell, for: indexPath) as? DashboardTableViewCell else {
 			return UITableViewCell()
 		}
 
@@ -202,13 +207,17 @@ extension DashboardViewController: UITableViewDataSource {
 
         return cell
     }
+
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return Constants.Layout.Dashboard.cellHeight
+	}
 }
 
 extension DashboardViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		guard section < sections.count,
-			let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "lifetimeTrackerDashboardHeaderViewCell") as? DashboardTableViewHeaderView else {
+			let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.ReuseIdentifer.dashboardHeader) as? DashboardTableViewHeaderView else {
 			return nil
 		}
 
@@ -219,6 +228,6 @@ extension DashboardViewController: UITableViewDelegate {
 	}
 
 	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		return 30
+		return Constants.Layout.Dashboard.sectionHeaderHeight
 	}
 }

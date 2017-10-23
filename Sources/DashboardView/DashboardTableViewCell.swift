@@ -13,6 +13,10 @@ class DashboardTableViewCell: UITableViewCell {
 	@IBOutlet private weak var classIndicatorView: UIView!
 	@IBOutlet private weak var descriptionLabel: UILabel!
 
+	class var nib: UINib {
+		return UINib(nibName: "\(self)", bundle: Bundle(for: self))
+	}
+
 	override func prepareForReuse() {
 		groupIndicatorView.backgroundColor = .clear
 		classIndicatorView.backgroundColor = .clear

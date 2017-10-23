@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/krzysztofzablocki/LifetimeTracker.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*.swift"
-  s.resources     = "Sources/**/*.xib"
+  s.resources     = "Sources/**/*.{xib}"
+  s.resource_bundle = { "LifetimeTracker" => ["Sources/**/*.{strings}"] }
   s.frameworks  = ["Foundation", "UIKit"]
 end

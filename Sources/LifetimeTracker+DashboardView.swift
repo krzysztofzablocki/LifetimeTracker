@@ -35,10 +35,7 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
 public final class LifetimeTrackerDashboardIntegration {
 
     private lazy var vc: DashboardViewController = {
-        let bundle = Bundle(for: DashboardViewController.self)
-        let vc =
-            bundle.loadNibNamed("DashboardViewController", owner: nil, options: nil)!.first as! DashboardViewController
-        return vc
+        return DashboardViewController.makeFromNib()
     }()
 
     private lazy var window: UIWindow = {
@@ -64,17 +61,17 @@ public final class LifetimeTrackerDashboardIntegration {
                 return trackedGroups[groupName]?.lifetimeState == .leaky
             }.map { groupName in
 				let group = trackedGroups[groupName]!
-				let maxCountString = group.maxCount == Int.max ? "∞" : "\(group.maxCount)"
-                return "\(group.name ?? "Others") (\(group.count)/\(maxCountString))"
+				let maxCountString = group.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(group.maxCount)"
+                return "\(group.name ?? "dashboard.sectionHeader.title.noGroup".lt_localized) (\(group.count)/\(maxCountString))"
             }.joined(separator: ", ")
 
         if leakyGroupSummaries.isEmpty {
-            return "No issues detected".attributed([
+            return "dashboard.header.issue.description.noIssues".lt_localized.attributed([
                 String.foregroundColorAttributeName: UIColor.green
                 ])
         }
 
-        return ("Detected: ").attributed([
+        return ("\("dashboard.header.issue.description.leakDetected".lt_localized): ").attributed([
             String.foregroundColorAttributeName: UIColor.red
             ]) + leakyGroupSummaries.attributed()
     }
@@ -94,8 +91,8 @@ public final class LifetimeTrackerDashboardIntegration {
 				case .valid: groupColor = .green
 				case .leaky: groupColor = .red
 				}
-				let groupMaxCountString = group.maxCount == Int.max ? "∞" : "\(group.maxCount)"
-				let title = "\(group.name ?? "Others") (\(group.count)/\(groupMaxCountString))"
+				let groupMaxCountString = group.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(group.maxCount)"
+				let title = "\(group.name ?? "dashboard.sectionHeader.title.noGroup".lt_localized) (\(group.count)/\(groupMaxCountString))"
 				var rows = [EntryModel]()
 				group.entries.sorted { (lhs: (key: String, value: LifetimeTracker.Entry), rhs: (key: String, value: LifetimeTracker.Entry)) -> Bool in
 					lhs.value.count > rhs.value.count
@@ -108,7 +105,7 @@ public final class LifetimeTrackerDashboardIntegration {
 					case .valid: color = .green
 					case .leaky: color = .red
 					}
-					let entryMaxCountString = entry.maxCount == Int.max ? "∞" : "\(entry.maxCount)"
+					let entryMaxCountString = entry.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(entry.maxCount)"
 					let description = "\(entry.name) (\(entry.count)/\(entryMaxCountString)):\n\(entry.pointers.joined(separator: ", "))"
 					rows.append((color: color, description: description))
 				}

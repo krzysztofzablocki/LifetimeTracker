@@ -12,6 +12,10 @@ class DashboardTableViewHeaderView: UITableViewHeaderFooterView {
 	@IBOutlet private weak var indicatorView: UIView!
 	@IBOutlet private weak var groupNameLabel: UILabel!
 
+	class var nib: UINib {
+		return UINib(nibName: "\(self)", bundle: Bundle(for: self))
+	}
+	
 	override func prepareForReuse() {
 		indicatorView.backgroundColor = .clear
 		groupNameLabel.text = nil
