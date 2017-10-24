@@ -45,11 +45,29 @@ public final class LifetimeTrackerDashboardIntegration {
         return window
     }()
 
-    public init() {}
+    public enum Visibility {
+        case alwaysHidden
+        case alwaysVisible
+        case visibleWithIssuesDetected
+
+        func windowIsHidden(hasIssuesToDisplay: Bool) -> Bool {
+            switch self {
+            case .alwaysHidden: return true
+            case .alwaysVisible: return false
+            case .visibleWithIssuesDetected: return !hasIssuesToDisplay
+            }
+        }
+    }
+
+    public var visibility: Visibility
+
+    public init(visibility: Visibility = .alwaysVisible) {
+        self.visibility = visibility
+    }
 
     public func refreshUI(counts: [String: LifetimeTracker.Entry], fullEntries: [String: LifetimeTracker.Entry]) {
         DispatchQueue.main.async {
-            self.window.isHidden = false
+            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: counts.hasIssuesToDisplay)
             let vm = DashboardViewModel(summary: self.summary(from: counts), entries: self.entries(from: fullEntries))
             self.vc.update(with: vm)
         }
@@ -82,5 +100,12 @@ public final class LifetimeTrackerDashboardIntegration {
             .map { (key, value) -> String in
                 return "\(value.count) \(value.fullName): \(value.pointers.joined(separator: ", "))"
         }
+    }
+}
+
+extension Dictionary where Key == String, Value == LifetimeTracker.Entry {
+    var hasIssuesToDisplay: Bool {
+        let aDetectedIssue = keys.first { self[$0]?.shouldDisplay == true }
+        return aDetectedIssue != nil
     }
 }
