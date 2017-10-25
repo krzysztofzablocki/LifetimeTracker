@@ -50,4 +50,12 @@ class VisibilityTests: XCTestCase {
         XCTAssertFalse(behavior.windowIsHidden(hasIssuesToDisplay: hasIssuesToDisplay))
     }
 
+    static var allTests = [
+        ("testHidesWindowWhenBehaviorIsAlwaysHiddenAndThereAreNoIssuesToDisplay", testHidesWindowWhenBehaviorIsAlwaysHiddenAndThereAreNoIssuesToDisplay),
+        ("testHidesWindowWhenBehaviorIsAlwaysHiddenAndThereAreIssuesToDisplay", testHidesWindowWhenBehaviorIsAlwaysHiddenAndThereAreIssuesToDisplay),
+        ("testDoesNotHideWindowWhenBehaviorIsAlwaysVisibleAndThereAreNoIssuesToDisplay", testDoesNotHideWindowWhenBehaviorIsAlwaysVisibleAndThereAreNoIssuesToDisplay),
+        ("testDoesNotHideWindowWhenBehaviorIsAlwaysVisibleAndThereAreIssuesToDisplay", testDoesNotHideWindowWhenBehaviorIsAlwaysVisibleAndThereAreIssuesToDisplay),
+        ("testHidesWindowWhenBehaviorIsVisibleWithIssuesDetectedAndThereAreNoIssuesToDisplay", testHidesWindowWhenBehaviorIsVisibleWithIssuesDetectedAndThereAreNoIssuesToDisplay),
+        ("testDoesNotHideWindowWhenBehaviorIsVisibleWithIssuesDetectedAndThereAreIssuesToDisplay", testDoesNotHideWindowWhenBehaviorIsVisibleWithIssuesDetectedAndThereAreIssuesToDisplay),
+    ]
 }

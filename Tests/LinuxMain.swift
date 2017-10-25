@@ -3,4 +3,5 @@ import XCTest
 
 XCTMain([
     testCase(LifetimeTrackerTests.allTests),
+    testCase(VisibilityTests.allTests),
 ])
