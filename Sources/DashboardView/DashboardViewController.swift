@@ -49,6 +49,7 @@ final class DashboardViewController: UIViewController {
         super.viewDidLoad()
         view.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        tableView.scrollsToTop = false
 
         addPanGestureRecognizer()
         dragOffset = maximumYPosition
