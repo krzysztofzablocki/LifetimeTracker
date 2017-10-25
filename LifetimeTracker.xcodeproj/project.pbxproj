@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383869131F9FEE7800B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
+		383869141F9FEE7E00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
+		383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		52D6D9871BEFF229002C0205 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */; };
 		8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */; };
 		8933C7861EB5B820000D00A4 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */; };
@@ -51,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383869121F9FEE7800B1A6AB /* VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityTests.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* LifetimeTracker-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */,
+				383869121F9FEE7800B1A6AB /* VisibilityTests.swift */,
 			);
 			name = Tests;
 			path = Tests/LifetimeTrackerTests;
@@ -495,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C7901EB5B82D000D00A4 /* LifetimeTrackerTests.swift in Sources */,
+				383869131F9FEE7800B1A6AB /* VisibilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78F1EB5B82C000D00A4 /* LifetimeTrackerTests.swift in Sources */,
+				383869141F9FEE7E00B1A6AB /* VisibilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8933C78E1EB5B82C000D00A4 /* LifetimeTrackerTests.swift in Sources */,
+				383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
