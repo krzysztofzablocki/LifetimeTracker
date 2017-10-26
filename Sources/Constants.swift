@@ -2,7 +2,7 @@
 //  Constants.swift
 //  LifetimeTracker
 //
-//  Created by SMF on 23.10.17.
+//  Created by Hans Seiffert on 23.10.17.
 //
 
 import Foundation
