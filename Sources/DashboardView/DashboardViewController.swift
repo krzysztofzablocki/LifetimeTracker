@@ -60,6 +60,8 @@ final class DashboardViewController: UIViewController {
 		tableView.register(DashboardTableViewCell.lt_nibInOwnBundle, forCellReuseIdentifier: Constants.ReuseIdentifer.dashboardCell)
 		tableView.register(DashboardTableViewHeaderView.lt_nibInOwnBundle, forHeaderFooterViewReuseIdentifier: Constants.ReuseIdentifer.dashboardHeader)
 
+        tableView.scrollsToTop = false
+
         addPanGestureRecognizer()
         dragOffset = maximumYPosition
     }

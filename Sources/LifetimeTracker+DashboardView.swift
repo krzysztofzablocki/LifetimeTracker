@@ -46,12 +46,30 @@ public final class LifetimeTrackerDashboardIntegration {
         return window
     }()
 
-    public init() {}
+    public enum Visibility {
+        case alwaysHidden
+        case alwaysVisible
+        case visibleWithIssuesDetected
+
+        func windowIsHidden(hasIssuesToDisplay: Bool) -> Bool {
+            switch self {
+            case .alwaysHidden: return true
+            case .alwaysVisible: return false
+            case .visibleWithIssuesDetected: return !hasIssuesToDisplay
+            }
+        }
+    }
+
+    public var visibility: Visibility
+
+    public init(visibility: Visibility = .alwaysVisible) {
+        self.visibility = visibility
+    }
 
 	public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
-            self.window.isHidden = false
-            let vm = DashboardViewModel(summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))
+            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
+			let vm = DashboardViewModel(summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))
             self.vc.update(with: vm)
         }
     }
@@ -113,5 +131,10 @@ public final class LifetimeTrackerDashboardIntegration {
 				sections.append((color: groupColor, title: title, entries: rows))
 			}
 		return sections
+	}
+
+	func hasIssuesToDisplay(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Bool {
+		let aDetectedIssue = trackedGroups.keys.first { trackedGroups[$0]?.lifetimeState == .leaky }
+		return aDetectedIssue != nil
 	}
 }

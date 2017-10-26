@@ -1,5 +1,5 @@
 PODS:
-  - LifetimeTracker (1.0.9)
+  - LifetimeTracker (1.1.1)
 
 DEPENDENCIES:
   - LifetimeTracker (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LifetimeTracker: 1095d44f39dae2ee0528d563a929aadd485ef09a
+  LifetimeTracker: ba8f828abe32b1599d6ab589d3908db64db2c571
 
 PODFILE CHECKSUM: e3b075b5fca0dc05847d269357a995091ce77cdc
 

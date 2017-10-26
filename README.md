@@ -25,9 +25,11 @@ To Integrate visual notifications simply add following line at the start of `App
 
 ```swift
 #if DEBUG
-  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration().refreshUI)
+  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .visibleWithIssuesDetected).refreshUI)
 #endif
 ```
+
+You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, or `visibleWithIssuesDetected`.
 
 ## Tracking key actors
 

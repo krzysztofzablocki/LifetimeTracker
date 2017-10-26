@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LifetimeTracker"
-  s.version      = "1.0.9"
+  s.version      = "1.1.1"
   s.summary      = "Framework to visually warn you when retain cycle / leak happens."
   s.description  = <<-DESC
     Mini framework that can surface retain cycle issues sooner.
