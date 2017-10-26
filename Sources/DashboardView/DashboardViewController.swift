@@ -35,8 +35,6 @@ final class DashboardViewController: UIViewController {
 		return viewController
 	}
 
-	@IBOutlet weak var heightConstraint: NSLayoutConstraint!
-
     private var state: State = .closed {
         didSet { self.clampDragOffset() }
 	}
@@ -132,9 +130,8 @@ final class DashboardViewController: UIViewController {
 
 		// Prevent black areas during device orientation
 		window.clipsToBounds = true
-
+		window.translatesAutoresizingMaskIntoConstraints = true
 		window.frame = CGRect(x: 0, y: dragOffset, width: UIScreen.main.bounds.width, height: heightToShow)
-		heightConstraint.constant = heightToShow
         view.layoutIfNeeded()
     }
 

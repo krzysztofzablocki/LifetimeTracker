@@ -41,6 +41,7 @@ public final class LifetimeTrackerDashboardIntegration {
     private lazy var window: UIWindow = {
         let window = UIWindow(frame: .zero)
         window.windowLevel = UIWindowLevelStatusBar
+		window.frame =  UIScreen.main.bounds
         window.rootViewController = self.vc
         return window
     }()
