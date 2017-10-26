@@ -67,7 +67,7 @@ public final class LifetimeTrackerDashboardIntegration {
 
     public func refreshUI(counts: [String: LifetimeTracker.Entry], fullEntries: [String: LifetimeTracker.Entry]) {
         DispatchQueue.main.async {
-            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: counts.hasIssuesToDisplay)
+            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(counts: counts))
             let vm = DashboardViewModel(summary: self.summary(from: counts), entries: self.entries(from: fullEntries))
             self.vc.update(with: vm)
         }
@@ -101,11 +101,9 @@ public final class LifetimeTrackerDashboardIntegration {
                 return "\(value.count) \(value.fullName): \(value.pointers.joined(separator: ", "))"
         }
     }
-}
 
-extension Dictionary where Key == String, Value == LifetimeTracker.Entry {
-    var hasIssuesToDisplay: Bool {
-        let aDetectedIssue = keys.first { self[$0]?.shouldDisplay == true }
+    func hasIssuesToDisplay(counts: [String: LifetimeTracker.Entry]) -> Bool {
+        let aDetectedIssue = counts.keys.first { counts[$0]?.shouldDisplay == true }
         return aDetectedIssue != nil
     }
 }
