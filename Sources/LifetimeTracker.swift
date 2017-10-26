@@ -196,7 +196,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         let keys = trackedGroups.keys.sorted(by: >)
         return keys.reduce("") { acc, key in
             if let group = trackedGroups[key], group.lifetimeState == .leaky {
-                return acc + "\(group.name): \(group.count)\n"
+				return acc + "\(String(describing: group.name)): \(group.count)\n"
             }
 
             return acc
