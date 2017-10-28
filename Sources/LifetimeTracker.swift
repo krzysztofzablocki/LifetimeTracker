@@ -105,7 +105,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
 		private var usedMaxCountOverride = false
 
 		init(name: String) {
-			if name != "lifetimetracker.nogroup.identifier" {
+			if name != Constants.Identifier.EntryGroup.none {
 				self.name = name
 			}
 		}
@@ -166,7 +166,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
 
 		func update(_ configuration: LifetimeConfiguration, with countDelta: Int) {
 
-			let groupName = configuration.groupName ?? "lifetimetracker.nogroup.identifier"
+			let groupName = configuration.groupName ?? Constants.Identifier.EntryGroup.none
 
 			let group = self.trackedGroups[groupName] ?? EntriesGroup(name: groupName)
 			group.updateEntry(configuration, with: countDelta)

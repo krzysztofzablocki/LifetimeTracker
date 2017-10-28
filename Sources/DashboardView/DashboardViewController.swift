@@ -57,8 +57,8 @@ final class DashboardViewController: UIViewController {
 
         view.translatesAutoresizingMaskIntoConstraints = false
 
-		tableView.register(DashboardTableViewCell.lt_nibInOwnBundle, forCellReuseIdentifier: Constants.ReuseIdentifer.dashboardCell)
-		tableView.register(DashboardTableViewHeaderView.lt_nibInOwnBundle, forHeaderFooterViewReuseIdentifier: Constants.ReuseIdentifer.dashboardHeader)
+		tableView.register(DashboardTableViewCell.lt_nibInOwnBundle, forCellReuseIdentifier: Constants.Identifier.Reuse.dashboardCell)
+		tableView.register(DashboardTableViewHeaderView.lt_nibInOwnBundle, forHeaderFooterViewReuseIdentifier: Constants.Identifier.Reuse.dashboardHeader)
 
         tableView.scrollsToTop = false
 
@@ -196,7 +196,7 @@ extension DashboardViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifer.dashboardCell, for: indexPath) as? DashboardTableViewCell else {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifier.Reuse.dashboardCell, for: indexPath) as? DashboardTableViewCell else {
 			return UITableViewCell()
 		}
 
@@ -216,7 +216,7 @@ extension DashboardViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		guard section < sections.count,
-			let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.ReuseIdentifer.dashboardHeader) as? DashboardTableViewHeaderView else {
+			let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Identifier.Reuse.dashboardHeader) as? DashboardTableViewHeaderView else {
 			return nil
 		}
 
