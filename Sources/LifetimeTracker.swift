@@ -8,27 +8,77 @@
 
 import Foundation
 
+/// Holds the properties which are needed to configure a `LifetimeTrackable`
 public struct LifetimeConfiguration {
+
+	/// Maximum count of valid instances
+	///
+	/// LifetimeTracker will show a warning if more instance of the class are alive.
 	public var maxCount: Int
+
+	/// Name which defines that the instance should be tracked as part of the chosen group.
+	///
+	/// A group will automatically be created if there is none with a matching name.
+	///
+	/// The usage is optional. The instances will be tracked as standalone items based on their class names if no group is chosen.
 	public var groupName: String? = nil
+
+	/// Maximum count of valid entries in the whole group.
+	///
+	/// LifetimeTracker will through a warning if `groupMaxCount` is too high although all members didn't reach their own `maxCount`
+	/// Set a value here if you want the group's `maxCount` to be different than the sum of the `maxCount` of all members.
+	///
+	/// The usage is optional. No value or `nil` defines that `groupMaxCount` is the sum of all `maxCount` values of the members of the group.
+	/// - Note: The usage of `groupMaxCount` requires that a group is defined by setting `groupName`.
 	public var groupMaxCount: Int? = nil
 
 	internal var instanceName: String = ""
 	internal var pointerString: String = ""
 
+	/// Defines objects which are tracked based on their class names.
+	///
+	/// LifetimeTracker will show a warning if more instances of the class are alive.
+	///
+	/// Use `LifetimeConfiguration(maxCount:groupName:)` or `LifetimeConfiguration(maxCount:groupName:groupMaxCount:)` if you want to add the class to an existing or new group.
+	///
+	/// - Parameters:
+	///   - maxCount: Maximum count of valid instances
 	public init(maxCount: Int) {
 		self.maxCount = maxCount
 	}
 
+	/// Defines objects which are tracked based in their class names and as part of a group.
+	///
+	/// LifetimeTracker will show a warning if more instances of the class or group are alive.
+	///
+	/// Use `LifetimeConfiguration(maxCount:)` if you want to track the class without a group membership.
+	///
+	/// Use `LifetimeConfiguration(maxCount:groupName:groupMaxCount:)` if you want the group's `maxCount` to be different than the sum of the `maxCount` of all members.
+	///
+	/// - Parameters:
+	///   - maxCount: Maximum count of valid instances
+	///   - groupName: Name which defines that the instance should be tracked as part of the chosen group. A group will automatically be created if there is none with a matching name.
 	public init(maxCount: Int, groupName: String) {
 		self.maxCount = maxCount
 		self.groupName = groupName
 	}
 
-	public init(maxCount: Int, groupName: String, overrideGroupMaxCount: Int) {
+	/// Defines objects which are tracked based in their class names and as part of a group with a custom `groupMaxCount`.
+	///
+ 	/// LifetimeTracker will show a warning if more instances of the class or group are alive.
+	///
+	/// Use `LifetimeConfiguration(maxCount:)` if you want to track the class without a group membership.
+	///
+	/// Use `LifetimeConfiguration(maxCount:groupName:)` if you want the group's `maxCount` to be the sum of the `maxCount` of all members.
+	///
+	/// - Parameters:
+	///   - maxCount: Maximum count of valid instances. LifetimeTracker will show a warning if more instances of the class are alive
+	///   - groupName: Name which defines that the instance should be tracked as part of the chosen group. A group will automatically be created if there is none with a matching name.
+	///   - groupMaxCount: Maximum count of valid entries in the whole group. LifetimeTracker will through a warning if `groupMaxCount` is too high although all members didn't reach their own `maxCount`
+	public init(maxCount: Int, groupName: String, groupMaxCount: Int) {
 		self.maxCount = maxCount
 		self.groupName = groupName
-		self.groupMaxCount = overrideGroupMaxCount
+		self.groupMaxCount = groupMaxCount
 	}
 
 	internal static func makeCompleteConfiguration(with instance: LifetimeTrackable) -> LifetimeConfiguration {

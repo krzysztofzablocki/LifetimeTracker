@@ -15,7 +15,7 @@ class DetailItem: NSObject, LifetimeTrackable {
 
 	class var lifetimeConfiguration: LifetimeConfiguration {
 		// There can be up to three 3 instances from the class. But only three in total including the subclasses
-		return LifetimeConfiguration(maxCount: 3, groupName: "Detail Item", overrideGroupMaxCount: 3)
+		return LifetimeConfiguration(maxCount: 3, groupName: "Detail Item", groupMaxCount: 3)
 	}
 
 	override init() {
