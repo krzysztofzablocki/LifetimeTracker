@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  LifetimeTracker
+
+  Created by Hans Seiffert on 23.10.17.
+  
+*/
+
+"dashboard.header.issue.description.leakDetected" = "Detected";
+
+"dashboard.header.issue.description.noIssues" = "No issues detected";
+
+"dashboard.sectionHeader.title.noGroup" = "Others";
+
+"macCount.notSpecified" = "∞";

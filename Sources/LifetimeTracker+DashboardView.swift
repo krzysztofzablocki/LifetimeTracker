@@ -29,18 +29,19 @@ extension NSAttributedString {
     }
 }
 
+typealias EntryModel = (color: UIColor, description: String)
+typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
+
 public final class LifetimeTrackerDashboardIntegration {
 
     private lazy var vc: DashboardViewController = {
-        let bundle = Bundle(for: DashboardViewController.self)
-        let vc =
-            bundle.loadNibNamed("DashboardViewController", owner: nil, options: nil)!.first as! DashboardViewController
-        return vc
+        return DashboardViewController.makeFromNib()
     }()
 
     private lazy var window: UIWindow = {
         let window = UIWindow(frame: .zero)
         window.windowLevel = UIWindowLevelStatusBar
+		window.frame =  UIScreen.main.bounds
         window.rootViewController = self.vc
         return window
     }()
@@ -65,45 +66,75 @@ public final class LifetimeTrackerDashboardIntegration {
         self.visibility = visibility
     }
 
-    public func refreshUI(counts: [String: LifetimeTracker.Entry], fullEntries: [String: LifetimeTracker.Entry]) {
+	public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
-            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(counts: counts))
-            let vm = DashboardViewModel(summary: self.summary(from: counts), entries: self.entries(from: fullEntries))
+            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
+			let vm = DashboardViewModel(summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))
             self.vc.update(with: vm)
         }
     }
 
-    private func summary(from counts: [String: LifetimeTracker.Entry]) -> NSAttributedString {
-        let keys = counts.keys.sorted(by: >)
-        let list = keys.filter { key in
-                return counts[key]?.shouldDisplay == true
-            }.map { key in
-                return "\(counts[key]!.count) \(key)"
+    private func summary(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> NSAttributedString {
+        let groupNames = trackedGroups.keys.sorted(by: >)
+        let leakyGroupSummaries = groupNames.filter { groupName in
+                return trackedGroups[groupName]?.lifetimeState == .leaky
+            }.map { groupName in
+				let group = trackedGroups[groupName]!
+				let maxCountString = group.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(group.maxCount)"
+                return "\(group.name ?? "dashboard.sectionHeader.title.noGroup".lt_localized) (\(group.count)/\(maxCountString))"
             }.joined(separator: ", ")
 
-        if list.isEmpty {
-            return "No issues detected".attributed([
+        if leakyGroupSummaries.isEmpty {
+            return "dashboard.header.issue.description.noIssues".lt_localized.attributed([
                 String.foregroundColorAttributeName: UIColor.green
                 ])
         }
 
-        return ("Detected: ").attributed([
+        return ("\("dashboard.header.issue.description.leakDetected".lt_localized): ").attributed([
             String.foregroundColorAttributeName: UIColor.red
-            ]) + list.attributed()
+            ]) + leakyGroupSummaries.attributed()
     }
 
-    private func entries(from fullEntries: [String: LifetimeTracker.Entry]) -> [String] {
-        return fullEntries
-            .sorted { (left, right) -> Bool in
-                left.value.count < right.value.count
+	private func entries(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> [GroupModel] {
+		var sections = [GroupModel]()
+        trackedGroups
+			.filter { (_, group: LifetimeTracker.EntriesGroup) -> Bool in
+				group.count > 0
+			}
+			.sorted { (lhs: (key: String, value: LifetimeTracker.EntriesGroup), rhs: (key: String, value: LifetimeTracker.EntriesGroup)) -> Bool in
+                return (lhs.value.maxCount - lhs.value.count) < (rhs.value.maxCount - rhs.value.count)
             }
-            .map { (key, value) -> String in
-                return "\(value.count) \(value.fullName): \(value.pointers.joined(separator: ", "))"
-        }
-    }
+			.forEach { (groupName: String, group: LifetimeTracker.EntriesGroup) in
+				var groupColor: UIColor
+				switch group.lifetimeState {
+				case .valid: groupColor = .green
+				case .leaky: groupColor = .red
+				}
+				let groupMaxCountString = group.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(group.maxCount)"
+				let title = "\(group.name ?? "dashboard.sectionHeader.title.noGroup".lt_localized) (\(group.count)/\(groupMaxCountString))"
+				var rows = [EntryModel]()
+				group.entries.sorted { (lhs: (key: String, value: LifetimeTracker.Entry), rhs: (key: String, value: LifetimeTracker.Entry)) -> Bool in
+					lhs.value.count > rhs.value.count
+				}
+				.filter { (_, entry: LifetimeTracker.Entry) -> Bool in
+					entry.count > 0
+				}.forEach { (_, entry: LifetimeTracker.Entry) in
+					var color: UIColor
+					switch entry.lifetimeState {
+					case .valid: color = .green
+					case .leaky: color = .red
+					}
+					let entryMaxCountString = entry.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(entry.maxCount)"
+					let description = "\(entry.name) (\(entry.count)/\(entryMaxCountString)):\n\(entry.pointers.joined(separator: ", "))"
+					rows.append((color: color, description: description))
+				}
+				sections.append((color: groupColor, title: title, entries: rows))
+			}
+		return sections
+	}
 
-    func hasIssuesToDisplay(counts: [String: LifetimeTracker.Entry]) -> Bool {
-        let aDetectedIssue = counts.keys.first { counts[$0]?.shouldDisplay == true }
-        return aDetectedIssue != nil
-    }
+	func hasIssuesToDisplay(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Bool {
+		let aDetectedIssue = trackedGroups.keys.first { trackedGroups[$0]?.lifetimeState == .leaky }
+		return aDetectedIssue != nil
+	}
 }

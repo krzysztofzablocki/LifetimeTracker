@@ -39,7 +39,7 @@ You conform to `LifetimeTrackable` and call `trackLifetime()` at the end of your
 
 ```swift
 class SectionFrontViewController: UIViewController, LifetimeTrackable {
-    static var lifetimeConfiguration: LifetimeConfiguration = (identifier: "VC", maxCount: 1)
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "VC")
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -50,6 +50,33 @@ class SectionFrontViewController: UIViewController, LifetimeTrackable {
 ```
 
 When you have more than `maxCount` items alive, the tracker will let you know.
+
+## Group tracked objects
+
+You can group tracked objects together. `maxCount` of a group will be calculated by `maxCount` of all members per default. However, you can override it and provide a separate value to the group with `overrideGroupMaxCount`.
+
+You may want to do this when you have a set of sublasses which can appear x times each, but in total only less than the sum of all sublcasses:
+
+```swift
+// DetailPage: UIViewController
+
+// VideoDetailPage: DetailItem
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page")
+
+// ImageDetailPage: DetailItem
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page")
+
+=> Group warning if 7 DetailPage objects are alive
+
+// VideoDetailPage: DetailItem
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", overrideGroupMaxCount: 3)
+
+// ImageDetailPage: DetailItem
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", overrideGroupMaxCount: 3)
+
+=> Group warning if 4 DetailPage object are alive
+
+```
 
 ## Writing integration tests for memory leaks
 
