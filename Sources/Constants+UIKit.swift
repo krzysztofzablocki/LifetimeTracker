@@ -6,7 +6,6 @@
 //  Copyright © 2017 LifetimeTracker. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension Constants {
