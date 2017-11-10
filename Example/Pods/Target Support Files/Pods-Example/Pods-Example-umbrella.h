@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LifetimeTracker_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LifetimeTracker_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_ExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ExampleVersionString[];
 

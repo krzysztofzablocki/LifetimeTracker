@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'LifetimeTracker_Example' do
+target 'Example' do
   pod 'LifetimeTracker', :path => '../'
 
-  target 'LifetimeTracker_Tests' do
+  target 'Example_Tests' do
     inherit! :search_paths
 
 

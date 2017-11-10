@@ -8,33 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0A3518478D773C735C1ACA7A880F3D36 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD734DE34B3CA83C76B3FAC09BC54C3A /* DashboardTableViewHeaderView.xib */; };
-		13ACC3A500F8D7EC37A4E479E00C9970 /* Pods-LifetimeTracker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05612B0BA69243F654553A97EC7E77 /* Pods-LifetimeTracker_Example-dummy.m */; };
 		1476F266588374015A689F1A7D7CDCA5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC44CC9DC9914439EEDE8B59B8109B /* Extensions.swift */; };
 		1CE9D4EC1841CF6AA08AB59696E4E97D /* LifetimeTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B788C62DAFB6FCA7F023E712D7FCBF73 /* LifetimeTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DFD470CE55A5B6D2014A17DAD63E25C /* LifetimeTracker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4AB5FC7B6DE71A731B87BBEAA0E3403 /* LifetimeTracker.bundle */; };
+		1DFD470CE55A5B6D2014A17DAD63E25C /* LifetimeTracker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8F01584C877A9394CF1CFCA2F22FB4B /* LifetimeTracker.bundle */; };
 		2184AD84680109257770725C4C085629 /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB90AF94E8D72D3409429C4B8F8127F /* Constants+UIKit.swift */; };
 		3059DBD6AFEBCF40AC1A9408528059F9 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1415B8678B8E78166CB55F418EFAAC /* DashboardTableViewHeaderView.swift */; };
-		392F666F93D968CFF1019A0FB0595567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		3C7294555CE49345A5D2E5730BFFFB8A /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10D6B4E4751B10EA43B7D4DCC31809 /* Extensions+UIKit.swift */; };
-		3D32938B891807586612023EA7D6460A /* Pods-LifetimeTracker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 343D96300F6D6ECA540D2BE117B04BAE /* Pods-LifetimeTracker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4146DE73A45EFD9EDBB994EAF15F6592 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BBDFD81C9199819CE9A36B94A7CC6 /* DashboardTableViewCell.xib */; };
-		69192CC89049081EF7CA0723A6E65DD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4E23DAFE33F8DFC0BB4A1E7C0C5AAAD5 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDA8766245BF8B487421384C094BA9F /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D8A2633546FFC6F0C826135EC4210BA /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BECDC7AF594BF3B9F3C18DBAD3B003 /* LifetimeTracker.swift */; };
 		788BDB95058248373395262B959C82EE /* LifetimeTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1C050802628E83292A8C32954B4D40 /* LifetimeTracker-dummy.m */; };
 		7E6B37C5AB45D9F1BC39C714A598ACB1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC90BBF1513E94C4FB3213CFD087DD0 /* DashboardViewController.swift */; };
 		83395FE68A62D761D9F0882A9B44F059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		905D77C40351528136BFB3AAD5859681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		9E9A855484401410855A9A5BD51477B5 /* Pods-Example_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 269497C682E634B8221B61C4ABE77334 /* Pods-Example_Tests-dummy.m */; };
 		A081BCF1AA3FB88069D7C33123AD99A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 889B119F9495B428764B92177F649325 /* Localizable.strings */; };
-		B7F1ACE1FE00D1543FEDA358661B4E09 /* Pods-LifetimeTracker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC3D11BE5DFD5D7ADB78264C4B08377 /* Pods-LifetimeTracker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43CD1AF7BA3EEB2EFC6AD3ACFA202A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		C94972FFC3F37A0BD4E8D027D773B322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		D80BBDD09C3580D71B0B8E95F8BABFD7 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997AC26AD7FC0E9A90D8F944FE9969D /* DashboardTableViewCell.swift */; };
 		DD52BA3024914B8D34A4DF0C2B27A58F /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F476F7F6B022F7199922F3E83CB4DE5 /* LifetimeTracker+DashboardView.swift */; };
-		E4E1710500F2366660E61A7836D77160 /* Pods-LifetimeTracker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB77A5DA16E79DFE08BAEDC8A57A5DB /* Pods-LifetimeTracker_Tests-dummy.m */; };
 		E6312730FCD32BA9A8DEEFCCF015D126 /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8183EEDE37824CD882FCE326C822958E /* DeallocTracker.swift */; };
+		ED1D0D0F012D2BDAE87130EF28C9A604 /* Pods-Example_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C32525E8118AF2DF788DD3D107050 /* Pods-Example_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF84347F96C0CE739962EE54BAE6FEF5 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8351843421C21044E2CB2E78B8B78128 /* DashboardViewController.xib */; };
+		F8B9455BF31FF7DED8CCEFD61BFA3158 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D064D390BC8A4DF49EBD789AB3013 /* Pods-Example-dummy.m */; };
 		FE37ED7C3AE295FA6C512412BC0656EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9710CCD5B6AB3FD65032F81E701FFC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03E6818D8D1C4F4F407AB2D4B7FD727F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6198026C053ED2B18825778987A6A33B;
+			remoteInfo = LifetimeTracker;
+		};
 		2CA7CBF4BC9466F6C8F18C52EC1409F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -42,75 +49,60 @@
 			remoteGlobalIDString = AFADAB8DC67812852AAED074E467EA64;
 			remoteInfo = "LifetimeTracker-LifetimeTracker";
 		};
-		330654E667C1B917D59842B4B858D061 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6198026C053ED2B18825778987A6A33B;
-			remoteInfo = LifetimeTracker;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04F26E153F47735E8D8C2046758A393F /* Pods-LifetimeTracker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifetimeTracker_Tests-resources.sh"; sourceTree = "<group>"; };
 		0A29C96131C257A72A6F016880C635C5 /* ResourceBundle-LifetimeTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LifetimeTracker-Info.plist"; sourceTree = "<group>"; };
-		0C611728EC5CF3DBAB43589ED63CBECA /* Pods_LifetimeTracker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LifetimeTracker_Example.framework; path = "Pods-LifetimeTracker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB90AF94E8D72D3409429C4B8F8127F /* Constants+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Constants+UIKit.swift"; path = "Sources/Constants+UIKit.swift"; sourceTree = "<group>"; };
 		0F476F7F6B022F7199922F3E83CB4DE5 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LifetimeTracker+DashboardView.swift"; path = "Sources/LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
-		109CBDD025BE5065C29A9752088BE2D8 /* Pods-LifetimeTracker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LifetimeTracker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		168C32525E8118AF2DF788DD3D107050 /* Pods-Example_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example_Tests-umbrella.h"; sourceTree = "<group>"; };
+		189D064D390BC8A4DF49EBD789AB3013 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		1B76C67AE86954D5428B6AB26BCCF5BF /* Pods_Example_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_Tests.framework; path = "Pods-Example_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDF0B8266CC6281A7B2D5A0025F82BD /* LifetimeTracker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LifetimeTracker.xcconfig; sourceTree = "<group>"; };
-		278A0A224A854093ADF2606C90AA8752 /* Pods-LifetimeTracker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifetimeTracker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		343D96300F6D6ECA540D2BE117B04BAE /* Pods-LifetimeTracker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LifetimeTracker_Example-umbrella.h"; sourceTree = "<group>"; };
+		214B4A96293B79D9F4CC187DFD5DA517 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		269497C682E634B8221B61C4ABE77334 /* Pods-Example_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example_Tests-dummy.m"; sourceTree = "<group>"; };
+		2DDD2FE8B3341F824DEF7E38A1202649 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		37BECDC7AF594BF3B9F3C18DBAD3B003 /* LifetimeTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LifetimeTracker.swift; path = Sources/LifetimeTracker.swift; sourceTree = "<group>"; };
-		3B466DDE19E21197488B6DBD3FB1F470 /* Pods-LifetimeTracker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifetimeTracker_Example-resources.sh"; sourceTree = "<group>"; };
-		3E2FB58274121140899A481DBADDF95D /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LifetimeTracker.framework; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA7814187A37E8A5246DA108082FD52 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3ED55215CBBB9AB8156E6262FFA780B0 /* Pods-Example_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example_Tests.modulemap"; sourceTree = "<group>"; };
 		3F10D6B4E4751B10EA43B7D4DCC31809 /* Extensions+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Extensions+UIKit.swift"; path = "Sources/Extensions+UIKit.swift"; sourceTree = "<group>"; };
 		4AC90BBF1513E94C4FB3213CFD087DD0 /* DashboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		4BB77A5DA16E79DFE08BAEDC8A57A5DB /* Pods-LifetimeTracker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LifetimeTracker_Tests-dummy.m"; sourceTree = "<group>"; };
 		4CEC44CC9DC9914439EEDE8B59B8109B /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
-		4E24C465B51769659AC062F5438631E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D1B896F45AAF2468013C635B12E3948 /* Pods-Example_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		55C1BCC74C4544D11DF31B2040CA064D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		5F942C84216E9A310CAF97BA82A3E578 /* Pods-Example_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		647AF124AC221F8C34F4EB6CB077B8DC /* LifetimeTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LifetimeTracker.modulemap; sourceTree = "<group>"; };
-		6848B6E2C5CB4B0530DE91AEBD39BD9F /* Pods-LifetimeTracker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LifetimeTracker_Example.modulemap"; sourceTree = "<group>"; };
+		64DD6A873DFA096CC3267E3CEFC9180F /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LifetimeTracker.framework; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7566771B4A091080CFA4CD56594D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7997AC26AD7FC0E9A90D8F944FE9969D /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
-		7C05612B0BA69243F654553A97EC7E77 /* Pods-LifetimeTracker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LifetimeTracker_Example-dummy.m"; sourceTree = "<group>"; };
-		80E0A5BC207E6A2D868803940315351B /* Pods-LifetimeTracker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifetimeTracker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8161EDDF9415BF28E858609F648DD9D4 /* LifetimeTracker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-prefix.pch"; sourceTree = "<group>"; };
 		8183EEDE37824CD882FCE326C822958E /* DeallocTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeallocTracker.swift; path = Sources/DeallocTracker.swift; sourceTree = "<group>"; };
 		8351843421C21044E2CB2E78B8B78128 /* DashboardViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DashboardViewController.xib; path = Sources/DashboardView/DashboardViewController.xib; sourceTree = "<group>"; };
-		8894B92DE5CC9EBB460FADDB503293CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889B119F9495B428764B92177F649325 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Sources/Localizable.strings; sourceTree = "<group>"; };
-		8AEA7179C61E909382FDA15F6BF1A776 /* Pods_LifetimeTracker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LifetimeTracker_Tests.framework; path = "Pods-LifetimeTracker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDA8766245BF8B487421384C094BA9F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AD71AA1721DABAAF3552E1274FEE40C /* Pods-LifetimeTracker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LifetimeTracker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D1F5B34442E15AE42398763E1466F4E /* Pods-LifetimeTracker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifetimeTracker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9DB78F6A19D8126D5B404CAEA5E27E27 /* Pods-Example_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		9E9710CCD5B6AB3FD65032F81E701FFC /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Constants.swift; sourceTree = "<group>"; };
-		AAA5F2154DE710C923321CB3EDB2EDAD /* Pods-LifetimeTracker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifetimeTracker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AA4E0A054836CA8C7716F1308D9DFDC4 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B788C62DAFB6FCA7F023E712D7FCBF73 /* LifetimeTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-umbrella.h"; sourceTree = "<group>"; };
+		B799D2CE8616DA5B4922CE1F5689E1A9 /* Pods-Example_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example_Tests-resources.sh"; sourceTree = "<group>"; };
+		B8F01584C877A9394CF1CFCA2F22FB4B /* LifetimeTracker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LifetimeTracker.bundle; path = LifetimeTracker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1415B8678B8E78166CB55F418EFAAC /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
 		BD734DE34B3CA83C76B3FAC09BC54C3A /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DashboardTableViewHeaderView.xib; path = Sources/DashboardView/DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
-		C13CDEE4E8CA271D8DB791CFFC822D22 /* Pods-LifetimeTracker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LifetimeTracker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C1FA9D34EAE54DD2F386D7E43EED3582 /* Pods-LifetimeTracker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LifetimeTracker_Tests.modulemap"; sourceTree = "<group>"; };
 		C69D4B42A1BCFFAB5AE8F470F9775439 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD1C050802628E83292A8C32954B4D40 /* LifetimeTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LifetimeTracker-dummy.m"; sourceTree = "<group>"; };
-		CDBBFC23C7E9B797A7C8EF24BF788025 /* Pods-LifetimeTracker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LifetimeTracker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CEB340B4BEB878506113EFECAAD23048 /* Pods-Example_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D8479F8782FCCD65C2E0B7B703FCE39F /* Pods-Example_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D933624109802D03E3182208164CA559 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E05BBDFD81C9199819CE9A36B94A7CC6 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = Sources/DashboardView/DashboardTableViewCell.xib; sourceTree = "<group>"; };
-		E4AB5FC7B6DE71A731B87BBEAA0E3403 /* LifetimeTracker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LifetimeTracker.bundle; path = LifetimeTracker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECC3D11BE5DFD5D7ADB78264C4B08377 /* Pods-LifetimeTracker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LifetimeTracker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		EE190D8DA6371CC9EDF3515BA00AF393 /* Pods-LifetimeTracker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifetimeTracker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F7B34BD1F6F909B399E92CE774BE12E1 /* Pods-LifetimeTracker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifetimeTracker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E29E5AE5BA52EDE3874E75BE235B022F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB8D2F892946E4E3FA371225C1A51379 /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		F8B7840AB2F55C1348AAA380673090E2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D28FA9B17E7161FE8B3D88979F45C40 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				392F666F93D968CFF1019A0FB0595567 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6FD347AF79820A0BF5942206D157147E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,11 +110,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC28A8E681DEF443D9A608B1D0151A9F /* Frameworks */ = {
+		E2A97871D69418941CD8BEBA9676596E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69192CC89049081EF7CA0723A6E65DD5 /* Foundation.framework in Frameworks */,
+				C43CD1AF7BA3EEB2EFC6AD3ACFA202A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +124,14 @@
 			files = (
 				83395FE68A62D761D9F0882A9B44F059 /* Foundation.framework in Frameworks */,
 				905D77C40351528136BFB3AAD5859681 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD843D6F3D686DC71720534D576371B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94972FFC3F37A0BD4E8D027D773B322 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,17 +167,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		248977B3923BC2E86ACF498E3AB96655 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E4AB5FC7B6DE71A731B87BBEAA0E3403 /* LifetimeTracker.bundle */,
-				3E2FB58274121140899A481DBADDF95D /* LifetimeTracker.framework */,
-				0C611728EC5CF3DBAB43589ED63CBECA /* Pods_LifetimeTracker_Example.framework */,
-				8AEA7179C61E909382FDA15F6BF1A776 /* Pods_LifetimeTracker_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,42 +184,42 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6AF0B99783CCEC622D9735A88A440AB2 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D196114C56F46462A2F894B827179650 /* Pods-LifetimeTracker_Example */,
-				7307897955ECF35C0B629EF05C509555 /* Pods-LifetimeTracker_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7307897955ECF35C0B629EF05C509555 /* Pods-LifetimeTracker_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				4E24C465B51769659AC062F5438631E3 /* Info.plist */,
-				C1FA9D34EAE54DD2F386D7E43EED3582 /* Pods-LifetimeTracker_Tests.modulemap */,
-				CDBBFC23C7E9B797A7C8EF24BF788025 /* Pods-LifetimeTracker_Tests-acknowledgements.markdown */,
-				109CBDD025BE5065C29A9752088BE2D8 /* Pods-LifetimeTracker_Tests-acknowledgements.plist */,
-				4BB77A5DA16E79DFE08BAEDC8A57A5DB /* Pods-LifetimeTracker_Tests-dummy.m */,
-				9D1F5B34442E15AE42398763E1466F4E /* Pods-LifetimeTracker_Tests-frameworks.sh */,
-				04F26E153F47735E8D8C2046758A393F /* Pods-LifetimeTracker_Tests-resources.sh */,
-				ECC3D11BE5DFD5D7ADB78264C4B08377 /* Pods-LifetimeTracker_Tests-umbrella.h */,
-				F7B34BD1F6F909B399E92CE774BE12E1 /* Pods-LifetimeTracker_Tests.debug.xcconfig */,
-				EE190D8DA6371CC9EDF3515BA00AF393 /* Pods-LifetimeTracker_Tests.release.xcconfig */,
-			);
-			name = "Pods-LifetimeTracker_Tests";
-			path = "Target Support Files/Pods-LifetimeTracker_Tests";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				B60F26D3CDB24CF3976D5054935ACC88 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				248977B3923BC2E86ACF498E3AB96655 /* Products */,
-				6AF0B99783CCEC622D9735A88A440AB2 /* Targets Support Files */,
+				CB3A10AA5F32E8583A4E33F976376614 /* Products */,
+				8E7D79350590A8248994B5CCE346DCAC /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8D48374944DD747817742A794AD60223 /* Pods-Example_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				67C7566771B4A091080CFA4CD56594D3 /* Info.plist */,
+				3ED55215CBBB9AB8156E6262FFA780B0 /* Pods-Example_Tests.modulemap */,
+				CEB340B4BEB878506113EFECAAD23048 /* Pods-Example_Tests-acknowledgements.markdown */,
+				D8479F8782FCCD65C2E0B7B703FCE39F /* Pods-Example_Tests-acknowledgements.plist */,
+				269497C682E634B8221B61C4ABE77334 /* Pods-Example_Tests-dummy.m */,
+				9DB78F6A19D8126D5B404CAEA5E27E27 /* Pods-Example_Tests-frameworks.sh */,
+				B799D2CE8616DA5B4922CE1F5689E1A9 /* Pods-Example_Tests-resources.sh */,
+				168C32525E8118AF2DF788DD3D107050 /* Pods-Example_Tests-umbrella.h */,
+				4D1B896F45AAF2468013C635B12E3948 /* Pods-Example_Tests.debug.xcconfig */,
+				5F942C84216E9A310CAF97BA82A3E578 /* Pods-Example_Tests.release.xcconfig */,
+			);
+			name = "Pods-Example_Tests";
+			path = "Target Support Files/Pods-Example_Tests";
+			sourceTree = "<group>";
+		};
+		8E7D79350590A8248994B5CCE346DCAC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4D48A7693FDEE424A77F0C79E798F67 /* Pods-Example */,
+				8D48374944DD747817742A794AD60223 /* Pods-Example_Tests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		93FFCAADD4038D484E24CE66A6A50C44 /* Resources */ = {
@@ -252,22 +241,33 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		D196114C56F46462A2F894B827179650 /* Pods-LifetimeTracker_Example */ = {
+		C4D48A7693FDEE424A77F0C79E798F67 /* Pods-Example */ = {
 			isa = PBXGroup;
 			children = (
-				8894B92DE5CC9EBB460FADDB503293CC /* Info.plist */,
-				6848B6E2C5CB4B0530DE91AEBD39BD9F /* Pods-LifetimeTracker_Example.modulemap */,
-				C13CDEE4E8CA271D8DB791CFFC822D22 /* Pods-LifetimeTracker_Example-acknowledgements.markdown */,
-				9AD71AA1721DABAAF3552E1274FEE40C /* Pods-LifetimeTracker_Example-acknowledgements.plist */,
-				7C05612B0BA69243F654553A97EC7E77 /* Pods-LifetimeTracker_Example-dummy.m */,
-				AAA5F2154DE710C923321CB3EDB2EDAD /* Pods-LifetimeTracker_Example-frameworks.sh */,
-				3B466DDE19E21197488B6DBD3FB1F470 /* Pods-LifetimeTracker_Example-resources.sh */,
-				343D96300F6D6ECA540D2BE117B04BAE /* Pods-LifetimeTracker_Example-umbrella.h */,
-				80E0A5BC207E6A2D868803940315351B /* Pods-LifetimeTracker_Example.debug.xcconfig */,
-				278A0A224A854093ADF2606C90AA8752 /* Pods-LifetimeTracker_Example.release.xcconfig */,
+				E29E5AE5BA52EDE3874E75BE235B022F /* Info.plist */,
+				2DDD2FE8B3341F824DEF7E38A1202649 /* Pods-Example.modulemap */,
+				3CA7814187A37E8A5246DA108082FD52 /* Pods-Example-acknowledgements.markdown */,
+				D933624109802D03E3182208164CA559 /* Pods-Example-acknowledgements.plist */,
+				189D064D390BC8A4DF49EBD789AB3013 /* Pods-Example-dummy.m */,
+				214B4A96293B79D9F4CC187DFD5DA517 /* Pods-Example-frameworks.sh */,
+				EB8D2F892946E4E3FA371225C1A51379 /* Pods-Example-resources.sh */,
+				8DDA8766245BF8B487421384C094BA9F /* Pods-Example-umbrella.h */,
+				F8B7840AB2F55C1348AAA380673090E2 /* Pods-Example.debug.xcconfig */,
+				55C1BCC74C4544D11DF31B2040CA064D /* Pods-Example.release.xcconfig */,
 			);
-			name = "Pods-LifetimeTracker_Example";
-			path = "Target Support Files/Pods-LifetimeTracker_Example";
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
+			sourceTree = "<group>";
+		};
+		CB3A10AA5F32E8583A4E33F976376614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8F01584C877A9394CF1CFCA2F22FB4B /* LifetimeTracker.bundle */,
+				64DD6A873DFA096CC3267E3CEFC9180F /* LifetimeTracker.framework */,
+				AA4E0A054836CA8C7716F1308D9DFDC4 /* Pods_Example.framework */,
+				1B76C67AE86954D5428B6AB26BCCF5BF /* Pods_Example_Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F76B22C0C2A94DA8AA226E9B7E0C8717 /* Support Files */ = {
@@ -288,14 +288,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		173956E722702FB46BC9FC1C249E330E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7F1ACE1FE00D1543FEDA358661B4E09 /* Pods-LifetimeTracker_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		392D8FE07041B0FE241ABE27830A4F57 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,33 +296,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D24EB70175093F97588E5285B0A121C5 /* Headers */ = {
+		AECC821ACB1875DD6F0E6E3D37B1A934 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D32938B891807586612023EA7D6460A /* Pods-LifetimeTracker_Example-umbrella.h in Headers */,
+				ED1D0D0F012D2BDAE87130EF28C9A604 /* Pods-Example_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA56FFFCBC8A9F03D77C7AB568F964A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E23DAFE33F8DFC0BB4A1E7C0C5AAAD5 /* Pods-Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B7AB5CE721B1C7B4C1FC14E5A8CF979 /* Pods-LifetimeTracker_Example */ = {
+		555FA40AD2A1B679F1F76A07474AE726 /* Pods-Example_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8E63A3C8FC534E155DDEAAAACC2884A /* Build configuration list for PBXNativeTarget "Pods-LifetimeTracker_Example" */;
+			buildConfigurationList = BA527DFF82DDA341FCD233E7848DD379 /* Build configuration list for PBXNativeTarget "Pods-Example_Tests" */;
 			buildPhases = (
-				8078140FCDC1B9ECA3E5CE240A19BF81 /* Sources */,
-				2D28FA9B17E7161FE8B3D88979F45C40 /* Frameworks */,
-				D24EB70175093F97588E5285B0A121C5 /* Headers */,
+				A10457526AFA806568180478B0FC01CD /* Sources */,
+				E2A97871D69418941CD8BEBA9676596E /* Frameworks */,
+				AECC821ACB1875DD6F0E6E3D37B1A934 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD11531675FBC99F33B02123ECADE5C6 /* PBXTargetDependency */,
 			);
-			name = "Pods-LifetimeTracker_Example";
-			productName = "Pods-LifetimeTracker_Example";
-			productReference = 0C611728EC5CF3DBAB43589ED63CBECA /* Pods_LifetimeTracker_Example.framework */;
+			name = "Pods-Example_Tests";
+			productName = "Pods-Example_Tests";
+			productReference = 1B76C67AE86954D5428B6AB26BCCF5BF /* Pods_Example_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6198026C053ED2B18825778987A6A33B /* LifetimeTracker */ = {
@@ -349,7 +348,25 @@
 			);
 			name = LifetimeTracker;
 			productName = LifetimeTracker;
-			productReference = 3E2FB58274121140899A481DBADDF95D /* LifetimeTracker.framework */;
+			productReference = 64DD6A873DFA096CC3267E3CEFC9180F /* LifetimeTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1D8548390E0A14F3C38BAA2A98EA339 /* Pods-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94FE403644C0297D6C2BAE9F6F3C47C /* Build configuration list for PBXNativeTarget "Pods-Example" */;
+			buildPhases = (
+				3184EF0ECC55E30A6473EE04ED6CD023 /* Sources */,
+				FAD843D6F3D686DC71720534D576371B /* Frameworks */,
+				CBA56FFFCBC8A9F03D77C7AB568F964A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3E883883A09CBA29D00EFEA0E396414 /* PBXTargetDependency */,
+			);
+			name = "Pods-Example";
+			productName = "Pods-Example";
+			productReference = AA4E0A054836CA8C7716F1308D9DFDC4 /* Pods_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AFADAB8DC67812852AAED074E467EA64 /* LifetimeTracker-LifetimeTracker */ = {
@@ -366,25 +383,8 @@
 			);
 			name = "LifetimeTracker-LifetimeTracker";
 			productName = "LifetimeTracker-LifetimeTracker";
-			productReference = E4AB5FC7B6DE71A731B87BBEAA0E3403 /* LifetimeTracker.bundle */;
+			productReference = B8F01584C877A9394CF1CFCA2F22FB4B /* LifetimeTracker.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		D5F82BD0E6E92896AE8A97CD276367EA /* Pods-LifetimeTracker_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 401557F7D1A577FBC160ED90BC4A52F9 /* Build configuration list for PBXNativeTarget "Pods-LifetimeTracker_Tests" */;
-			buildPhases = (
-				17AAD54F244FBF701B240D853E97944C /* Sources */,
-				DC28A8E681DEF443D9A608B1D0151A9F /* Frameworks */,
-				173956E722702FB46BC9FC1C249E330E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-LifetimeTracker_Tests";
-			productName = "Pods-LifetimeTracker_Tests";
-			productReference = 8AEA7179C61E909382FDA15F6BF1A776 /* Pods_LifetimeTracker_Tests.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -403,14 +403,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 248977B3923BC2E86ACF498E3AB96655 /* Products */;
+			productRefGroup = CB3A10AA5F32E8583A4E33F976376614 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6198026C053ED2B18825778987A6A33B /* LifetimeTracker */,
 				AFADAB8DC67812852AAED074E467EA64 /* LifetimeTracker-LifetimeTracker */,
-				3B7AB5CE721B1C7B4C1FC14E5A8CF979 /* Pods-LifetimeTracker_Example */,
-				D5F82BD0E6E92896AE8A97CD276367EA /* Pods-LifetimeTracker_Tests */,
+				A1D8548390E0A14F3C38BAA2A98EA339 /* Pods-Example */,
+				555FA40AD2A1B679F1F76A07474AE726 /* Pods-Example_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -456,19 +456,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17AAD54F244FBF701B240D853E97944C /* Sources */ = {
+		3184EF0ECC55E30A6473EE04ED6CD023 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4E1710500F2366660E61A7836D77160 /* Pods-LifetimeTracker_Tests-dummy.m in Sources */,
+				F8B9455BF31FF7DED8CCEFD61BFA3158 /* Pods-Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8078140FCDC1B9ECA3E5CE240A19BF81 /* Sources */ = {
+		A10457526AFA806568180478B0FC01CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13ACC3A500F8D7EC37A4E479E00C9970 /* Pods-LifetimeTracker_Example-dummy.m in Sources */,
+				9E9A855484401410855A9A5BD51477B5 /* Pods-Example_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,11 +482,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD11531675FBC99F33B02123ECADE5C6 /* PBXTargetDependency */ = {
+		A3E883883A09CBA29D00EFEA0E396414 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LifetimeTracker;
 			target = 6198026C053ED2B18825778987A6A33B /* LifetimeTracker */;
-			targetProxy = 330654E667C1B917D59842B4B858D061 /* PBXContainerItemProxy */;
+			targetProxy = 03E6818D8D1C4F4F407AB2D4B7FD727F /* PBXContainerItemProxy */;
 		};
 		F89175F6E5D11FC119110A2A281A6B59 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -497,9 +497,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CB0810F78FEFA90A82E6164301FC521 /* Debug */ = {
+		1153E12C653579595731D77E89E1E37F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80E0A5BC207E6A2D868803940315351B /* Pods-LifetimeTracker_Example.debug.xcconfig */;
+			baseConfigurationReference = F8B7840AB2F55C1348AAA380673090E2 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -510,17 +510,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LifetimeTracker_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LifetimeTracker_Example/Pods-LifetimeTracker_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LifetimeTracker_Example;
+				PRODUCT_NAME = Pods_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -591,6 +591,39 @@
 			};
 			name = Debug;
 		};
+		271DECBD4F42AB7A472458243FFCE2D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F942C84216E9A310CAF97BA82A3E578 /* Pods-Example_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example_Tests/Pods-Example_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Example_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		318062FD102AD7DAB5CE4151C07F5647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DDF0B8266CC6281A7B2D5A0025F82BD /* LifetimeTracker.xcconfig */;
@@ -639,9 +672,9 @@
 			};
 			name = Debug;
 		};
-		7284F27D5871F4AB7F318BBC4C6C041C /* Debug */ = {
+		72F18630E4E4754DD4851B22AF1B7A82 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B34BD1F6F909B399E92CE774BE12E1 /* Pods-LifetimeTracker_Tests.debug.xcconfig */;
+			baseConfigurationReference = 4D1B896F45AAF2468013C635B12E3948 /* Pods-Example_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -652,17 +685,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LifetimeTracker_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LifetimeTracker_Tests/Pods-LifetimeTracker_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Example_Tests/Pods-Example_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LifetimeTracker_Tests;
+				PRODUCT_NAME = Pods_Example_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,39 +759,6 @@
 			};
 			name = Release;
 		};
-		8CB37F12F592A4DE4A1700EE7FCEE908 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE190D8DA6371CC9EDF3515BA00AF393 /* Pods-LifetimeTracker_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LifetimeTracker_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LifetimeTracker_Tests/Pods-LifetimeTracker_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LifetimeTracker_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B80FBD6777BEF3FB0DA558435D1BBD37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DDF0B8266CC6281A7B2D5A0025F82BD /* LifetimeTracker.xcconfig */;
@@ -806,9 +806,9 @@
 			};
 			name = Release;
 		};
-		C6A664A5423C31127E6B1CD8BB05F4E9 /* Release */ = {
+		CE03B3364DC68CA97BE1296A3C991B3B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 278A0A224A854093ADF2606C90AA8752 /* Pods-LifetimeTracker_Example.release.xcconfig */;
+			baseConfigurationReference = 55C1BCC74C4544D11DF31B2040CA064D /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -819,17 +819,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LifetimeTracker_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LifetimeTracker_Example/Pods-LifetimeTracker_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LifetimeTracker_Example;
+				PRODUCT_NAME = Pods_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -852,15 +852,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		401557F7D1A577FBC160ED90BC4A52F9 /* Build configuration list for PBXNativeTarget "Pods-LifetimeTracker_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7284F27D5871F4AB7F318BBC4C6C041C /* Debug */,
-				8CB37F12F592A4DE4A1700EE7FCEE908 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		489DF0EDE0C7EB8D8658C5833669F7D2 /* Build configuration list for PBXNativeTarget "LifetimeTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -879,11 +870,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8E63A3C8FC534E155DDEAAAACC2884A /* Build configuration list for PBXNativeTarget "Pods-LifetimeTracker_Example" */ = {
+		B94FE403644C0297D6C2BAE9F6F3C47C /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CB0810F78FEFA90A82E6164301FC521 /* Debug */,
-				C6A664A5423C31127E6B1CD8BB05F4E9 /* Release */,
+				1153E12C653579595731D77E89E1E37F /* Debug */,
+				CE03B3364DC68CA97BE1296A3C991B3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA527DFF82DDA341FCD233E7848DD379 /* Build configuration list for PBXNativeTarget "Pods-Example_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F18630E4E4754DD4851B22AF1B7A82 /* Debug */,
+				271DECBD4F42AB7A472458243FFCE2D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
