@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "LifetimeTracker_Example.app"
-               BlueprintName = "LifetimeTracker_Example"
-               ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+               BuildableName = "Example.app"
+               BlueprintName = "Example"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "LifetimeTracker_Tests.xctest"
-               BlueprintName = "LifetimeTracker_Tests"
-               ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+               BuildableName = "Example_Tests.xctest"
+               BlueprintName = "Example_Tests"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "LifetimeTracker_Tests.xctest"
-               BlueprintName = "LifetimeTracker_Tests"
-               ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+               BuildableName = "Example_Tests.xctest"
+               BlueprintName = "Example_Tests"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LifetimeTracker_Example.app"
-            BlueprintName = "LifetimeTracker_Example"
-            ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LifetimeTracker_Example.app"
-            BlueprintName = "LifetimeTracker_Example"
-            ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -101,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LifetimeTracker_Example.app"
-            BlueprintName = "LifetimeTracker_Example"
-            ReferencedContainer = "container:LifetimeTracker.xcodeproj">
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
