@@ -97,10 +97,10 @@ public final class LifetimeTrackerDashboardIntegration {
 
 	private func entries(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> [GroupModel] {
 		var sections = [GroupModel]()
-        trackedGroups
-			.filter { (_, group: LifetimeTracker.EntriesGroup) -> Bool in
-				group.count > 0
-			}
+        let filteredGroups = trackedGroups.filter { (_, group: LifetimeTracker.EntriesGroup) -> Bool in
+            group.count > 0
+        }
+        filteredGroups
 			.sorted { (lhs: (key: String, value: LifetimeTracker.EntriesGroup), rhs: (key: String, value: LifetimeTracker.EntriesGroup)) -> Bool in
                 return (lhs.value.maxCount - lhs.value.count) < (rhs.value.maxCount - rhs.value.count)
             }
