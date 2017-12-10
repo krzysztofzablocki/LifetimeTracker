@@ -37,7 +37,7 @@ You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, 
 ### Objective-C
 
 ```objc
-#import <LifetimeTracker/LifetimeTracker-Swift.h>
+@import LifetimeTracker;
 …
 #if DEBUG
     [LifetimeConfigurationObjc defaultSetup];
@@ -69,7 +69,7 @@ class SectionFrontViewController: UIViewController, LifetimeTrackable {
 You conform to `LifetimeTrackableObj` and call `[self trackLifetime]` at the end of your init functions:
 
 ```objc
-#import <LifetimeTracker/LifetimeTracker-Swift.h>
+@import LifetimeTracker;
 
 @interface SectionFrontViewController() <LifetimeTrackableObjc>
 
