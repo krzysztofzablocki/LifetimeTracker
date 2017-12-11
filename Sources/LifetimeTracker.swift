@@ -104,7 +104,7 @@ public protocol LifetimeTrackable: class {
 public extension LifetimeTrackable {
 	
     func trackLifetime() {
-        LifetimeTracker.instance?.track(self)
+        LifetimeTracker.instance?.track(self, configuration: type(of: self).lifetimeConfiguration)
     }
 }
 
@@ -202,7 +202,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         self.onUpdate = onUpdate
     }
 
-	fileprivate func track(_ instance: LifetimeTrackable, file: String = #file) {
+    internal func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
         lock.lock()
         defer {
             self.onUpdate(self.trackedGroups)
@@ -210,7 +210,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
 
 		let instanceType = type(of: instance)
-		var configuration = instanceType.lifetimeConfiguration
+        var configuration = configuration
 		configuration.instanceName = String(describing: instanceType)
 		configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
 
