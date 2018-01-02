@@ -11,14 +11,6 @@
 		383869141F9FEE7E00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		52D6D9871BEFF229002C0205 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */; };
-		710BCF451FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */; };
-		710BCF461FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */; };
-		710BCF471FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */; };
-		710BCF481FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */; };
-		710BCF511FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */; };
-		710BCF521FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */; };
-		710BCF531FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */; };
-		710BCF541FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */; };
 		87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF901FB5275B00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
@@ -82,9 +74,6 @@
 		52D6D9E21BEFFF6E002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		876BBAFA1FB5308C008C8621 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifetimeTrackableObjc.swift; sourceTree = "<group>"; };
-		710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifetimeConfigurationObjc.swift; sourceTree = "<group>"; };
 		87EDDF8D1FB5274400F1D107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87EDDF921FB5276E00F1D107 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		87EDDF931FB5276E00F1D107 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
@@ -203,11 +192,8 @@
 				CDA4DD721F29F70700F01611 /* DeallocTracker.swift */,
 				87EDDF9B1FB5278B00F1D107 /* Extensions.swift */,
 				87EDDFA61FB5281500F1D107 /* Extensions+UIKit.swift */,
-				710BCF501FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift */,
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
 				CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */,
-				710BCF441FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift */,
-				710BCF4F1FDBDD7400A8C1D4 /* Localizable.strings */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -534,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				710BCF451FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */,
 				87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */,
 				87EDDF981FB5276E00F1D107 /* DashboardViewController.swift in Sources */,
 				87EDDF9A1FB5276E00F1D107 /* DashboardTableViewCell.swift in Sources */,
@@ -545,7 +530,6 @@
 				CDDD75291F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift in Sources */,
 				87EDDFAA1FB5291000F1D107 /* Extensions+UIKit.swift in Sources */,
 				87EDDF991FB5276E00F1D107 /* DashboardTableViewHeaderView.swift in Sources */,
-				710BCF511FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,9 +549,7 @@
 				CD2064D01F7EB45A00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF901FB5275B00F1D107 /* Constants.swift in Sources */,
-				710BCF471FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */,
 				87EDDFAC1FB5291500F1D107 /* Extensions.swift in Sources */,
-				710BCF531FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,9 +560,7 @@
 				CD2064D11F7EB45F00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF911FB5275C00F1D107 /* Constants.swift in Sources */,
-				710BCF481FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */,
 				87EDDFAD1FB5291500F1D107 /* Extensions.swift in Sources */,
-				710BCF541FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,9 +571,7 @@
 				CD2064CF1F7EB44E00E8CBBD /* DeallocTracker.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */,
-				710BCF461FDBD63300A8C1D4 /* LifetimeTrackableObjc.swift in Sources */,
 				87EDDFAB1FB5291400F1D107 /* Extensions.swift in Sources */,
-				710BCF521FDBDE1C00A8C1D4 /* LifetimeConfigurationObjc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import Foundation
 
 /// Holds the properties which are needed to configure a `LifetimeTrackable`
-public struct LifetimeConfiguration {
+@objc public final class LifetimeConfiguration: NSObject {
 
 	/// Maximum count of valid instances
 	///
@@ -83,7 +83,7 @@ public struct LifetimeConfiguration {
 
 	internal static func makeCompleteConfiguration(with instance: LifetimeTrackable) -> LifetimeConfiguration {
 		let instanceType = type(of: instance)
-		var configuration = instanceType.lifetimeConfiguration
+		let configuration = instanceType.lifetimeConfiguration
 		configuration.instanceName = String(describing: instanceType)
 		configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
 		return configuration
@@ -92,7 +92,7 @@ public struct LifetimeConfiguration {
 
 
 /// Defines a type that can have its lifetime tracked
-public protocol LifetimeTrackable: class {
+@objc public protocol LifetimeTrackable: class {
 
     /// Configuration for lifetime tracking, contains identifier and leak classifier
 	static var lifetimeConfiguration: LifetimeConfiguration { get }
