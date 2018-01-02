@@ -102,9 +102,16 @@ import Foundation
 }
 
 public extension LifetimeTrackable {
-	
     func trackLifetime() {
         LifetimeTracker.instance?.track(self, configuration: type(of: self).lifetimeConfiguration)
+    }
+}
+
+@objc public extension NSObject {
+    @objc func trackLifetime() {
+        if let object = self as? LifetimeTrackable {
+            object.trackLifetime()
+        }
     }
 }
 
@@ -147,7 +154,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
     }
 
-	public final class EntriesGroup {
+    @objc public final class EntriesGroup: NSObject {
 		var maxCount: Int = 0
 		var name: String? = nil
 		fileprivate(set) var count: Int = 0

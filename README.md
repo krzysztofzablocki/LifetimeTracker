@@ -24,11 +24,9 @@ Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
 To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`.
 
-### Swift
-
 ```swift
 #if DEBUG
-  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .visibleWithIssuesDetected).refreshUI)
+  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration.visibleWithIssuesDetected().refreshUI)
 #endif
 ```
 
