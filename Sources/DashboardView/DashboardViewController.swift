@@ -112,12 +112,28 @@ final class DashboardViewController: UIViewController {
 		return min(maximumHeight, height)
     }
 
+    private var minimumYPosition: CGFloat {
+        if #available(iOS 11, *) {
+            return view.safeAreaInsets.top
+        } else {
+            return 0.0
+        }
+    }
+
 	private var maximumHeight: CGFloat {
-		return UIScreen.main.bounds.height
+        if #available(iOS 11, *) {
+            return UIScreen.main.bounds.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom
+        } else {
+            return UIScreen.main.bounds.height
+        }
 	}
 
     private var maximumYPosition: CGFloat {
-        return maximumHeight - heightToShow
+        if #available(iOS 11, *) {
+            return maximumHeight - heightToShow - view.safeAreaInsets.bottom + view.safeAreaInsets.top
+        } else {
+            return maximumHeight - heightToShow
+        }
     }
 
     private var heightToFitTableView: CGFloat {
@@ -177,7 +193,11 @@ final class DashboardViewController: UIViewController {
     }
 
     func clampDragOffset() {
-        dragOffset = min(maximumYPosition, dragOffset)
+        if dragOffset < minimumYPosition {
+            dragOffset = minimumYPosition
+        } else if dragOffset > maximumYPosition {
+            dragOffset = maximumYPosition
+        }
     }
 }
 
