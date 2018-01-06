@@ -113,7 +113,11 @@ final class DashboardViewController: UIViewController {
     }
 
 	private var maximumHeight: CGFloat {
-		return UIScreen.main.bounds.height
+        if #available(iOS 11, *) {
+            return UIScreen.main.bounds.height - view.safeAreaInsets.bottom
+        } else {
+            return UIScreen.main.bounds.height
+        }
 	}
 
     private var maximumYPosition: CGFloat {
