@@ -202,38 +202,38 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         self.onUpdate = onUpdate
     }
 
-	fileprivate func track(_ instance: LifetimeTrackable, file: String = #file) {
+    fileprivate func track(_ instance: LifetimeTrackable, file: String = #file) {
         lock.lock()
         defer {
             self.onUpdate(self.trackedGroups)
             lock.unlock()
         }
-
-		let instanceType = type(of: instance)
-		var configuration = instanceType.lifetimeConfiguration
-		configuration.instanceName = String(describing: instanceType)
-		configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
-
-		func update(_ configuration: LifetimeConfiguration, with countDelta: Int) {
-
-			let groupName = configuration.groupName ?? Constants.Identifier.EntryGroup.none
-
-			let group = self.trackedGroups[groupName] ?? EntriesGroup(name: groupName)
-			group.updateEntry(configuration, with: countDelta)
-
-			self.trackedGroups[groupName] = group
+        
+        let instanceType = type(of: instance)
+        var configuration = instanceType.lifetimeConfiguration
+        configuration.instanceName = String(describing: instanceType)
+        configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
+        
+        func update(_ configuration: LifetimeConfiguration, with countDelta: Int) {
+            
+            let groupName = configuration.groupName ?? Constants.Identifier.EntryGroup.none
+            
+            let group = self.trackedGroups[groupName] ?? EntriesGroup(name: groupName)
+            group.updateEntry(configuration, with: countDelta)
+            
+            self.trackedGroups[groupName] = group
         }
-
-		update(configuration, with: +1)
-
+        
+        update(configuration, with: +1)
+        
         onDealloc(of: instance) {
             self.lock.lock()
             defer {
                 self.onUpdate(self.trackedGroups)
                 self.lock.unlock()
             }
-
-			update(configuration, with: -1)
+            
+            update(configuration, with: -1)
         }
     }
 
