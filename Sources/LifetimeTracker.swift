@@ -9,7 +9,7 @@
 import Foundation
 
 /// Holds the properties which are needed to configure a `LifetimeTrackable`
-public struct LifetimeConfiguration {
+@objc public final class LifetimeConfiguration: NSObject {
 
 	/// Maximum count of valid instances
 	///
@@ -83,7 +83,7 @@ public struct LifetimeConfiguration {
 
 	internal static func makeCompleteConfiguration(with instance: LifetimeTrackable) -> LifetimeConfiguration {
 		let instanceType = type(of: instance)
-		var configuration = instanceType.lifetimeConfiguration
+		let configuration = instanceType.lifetimeConfiguration
 		configuration.instanceName = String(describing: instanceType)
 		configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
 		return configuration
@@ -92,7 +92,7 @@ public struct LifetimeConfiguration {
 
 
 /// Defines a type that can have its lifetime tracked
-public protocol LifetimeTrackable: class {
+@objc public protocol LifetimeTrackable: class {
 
     /// Configuration for lifetime tracking, contains identifier and leak classifier
 	static var lifetimeConfiguration: LifetimeConfiguration { get }
@@ -102,13 +102,20 @@ public protocol LifetimeTrackable: class {
 }
 
 public extension LifetimeTrackable {
-	
     func trackLifetime() {
-        LifetimeTracker.instance?.track(self)
+        LifetimeTracker.instance?.track(self, configuration: type(of: self).lifetimeConfiguration)
     }
 }
 
-public final class LifetimeTracker: CustomDebugStringConvertible {
+@objc public extension NSObject {
+    @objc func trackLifetime() {
+        if let object = self as? LifetimeTrackable {
+            LifetimeTracker.instance?.track(self, configuration: type(of: object).lifetimeConfiguration)
+        }
+    }
+}
+
+@objc public final class LifetimeTracker: NSObject {
 	public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
     public fileprivate(set) static var instance: LifetimeTracker?
     private let lock = NSRecursiveLock()
@@ -147,7 +154,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
     }
 
-	public final class EntriesGroup {
+    @objc public final class EntriesGroup: NSObject {
 		var maxCount: Int = 0
 		var name: String? = nil
 		fileprivate(set) var count: Int = 0
@@ -192,7 +199,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
 		}
 	}
 
-    public static func setup(onUpdate: @escaping UpdateClosure) {
+    @objc public static func setup(onUpdate: @escaping UpdateClosure) {
         assert(instance == nil)
         instance = LifetimeTracker(onUpdate: onUpdate)
     }
@@ -202,7 +209,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         self.onUpdate = onUpdate
     }
 
-	fileprivate func track(_ instance: LifetimeTrackable, file: String = #file) {
+    internal func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
         lock.lock()
         defer {
             self.onUpdate(self.trackedGroups)
@@ -210,7 +217,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
 
 		let instanceType = type(of: instance)
-		var configuration = instanceType.lifetimeConfiguration
+        var configuration = configuration
 		configuration.instanceName = String(describing: instanceType)
 		configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
 
@@ -237,7 +244,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
     }
 
-    public var debugDescription: String {
+    override public var debugDescription: String {
         lock.lock()
         defer {
             lock.unlock()

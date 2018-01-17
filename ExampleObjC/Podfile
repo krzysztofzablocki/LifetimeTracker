@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'ExampleObjC' do
+  pod 'LifetimeTracker', :path => '../'
+end

@@ -32,7 +32,7 @@ extension NSAttributedString {
 typealias EntryModel = (color: UIColor, description: String)
 typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
 
-public final class LifetimeTrackerDashboardIntegration {
+@objc public final class LifetimeTrackerDashboardIntegration: NSObject {
 
     private lazy var vc: DashboardViewController = {
         return DashboardViewController.makeFromNib()
@@ -62,11 +62,24 @@ public final class LifetimeTrackerDashboardIntegration {
 
     public var visibility: Visibility
 
-    public init(visibility: Visibility = .alwaysVisible) {
+    public init(visibility: Visibility) {
         self.visibility = visibility
+        super.init()
     }
 
-	public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
+    @objc public static func visibleWhenIssueDetected() -> LifetimeTrackerDashboardIntegration {
+        return LifetimeTrackerDashboardIntegration(visibility: .visibleWithIssuesDetected)
+    }
+
+    @objc public static func alwaysVisible() -> LifetimeTrackerDashboardIntegration {
+        return LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible)
+    }
+
+    @objc public static func alwaysHidden() -> LifetimeTrackerDashboardIntegration {
+        return LifetimeTrackerDashboardIntegration(visibility: .alwaysHidden)
+    }
+
+	@objc public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
             self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
 			let vm = DashboardViewModel(summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))

@@ -21,19 +21,33 @@ Add `pod 'LifetimeTracker'` to your Podfile.
 Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
 ## Integration
-To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`:
+
+To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`.
+
+Swift:
 
 ```swift
 #if DEBUG
-  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .visibleWithIssuesDetected).refreshUI)
+  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration.visibleWithIssuesDetected().refreshUI)
 #endif
+```
+
+Objective-C:
+
+```objc
+LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration visibleWhenIssueDetected];
+[LifetimeTracker setupOnUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
+    [dashboardIntegration refreshUIWithTrackedGroups: groups];
+}];
 ```
 
 You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, or `visibleWithIssuesDetected`.
 
 ## Tracking key actors
 
-Usually you want to use LifetimeTracker to track only key actors in your app, like ViewModels / Controllers etc. 
+Usually you want to use LifetimeTracker to track only key actors in your app, like ViewModels / Controllers etc. When you have more than `maxCount` items alive, the tracker will let you know.
+
+### Swift
 
 You conform to `LifetimeTrackable` and call `trackLifetime()` at the end of your init functions:
 
@@ -49,7 +63,34 @@ class SectionFrontViewController: UIViewController, LifetimeTrackable {
 }
 ```
 
-When you have more than `maxCount` items alive, the tracker will let you know.
+### Objective-C
+
+You conform to `LifetimeTrackable` and call `[self trackLifetime]` at the end of your init functions:
+
+```objc
+@import LifetimeTracker;
+
+@interface SectionFrontViewController() <LifetimeTrackable>
+
+@implementation SectionFrontViewController
+
++(LifetimeConfiguration *)lifetimeConfiguration
+{
+    return [[LifetimeConfiguration alloc] initWithMaxCount:1 groupName:@"VC"];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    	/// …
+        [self trackLifetime];
+    }
+    return self;
+}
+@end
+```
+
 
 ## Group tracked objects
 
