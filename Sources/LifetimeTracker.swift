@@ -110,12 +110,12 @@ public extension LifetimeTrackable {
 @objc public extension NSObject {
     @objc func trackLifetime() {
         if let object = self as? LifetimeTrackable {
-            object.trackLifetime()
+            LifetimeTracker.instance?.track(self, configuration: type(of: object).lifetimeConfiguration)
         }
     }
 }
 
-public final class LifetimeTracker: CustomDebugStringConvertible {
+@objc public final class LifetimeTracker: NSObject {
 	public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
     public fileprivate(set) static var instance: LifetimeTracker?
     private let lock = NSRecursiveLock()
@@ -199,7 +199,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
 		}
 	}
 
-    public static func setup(onUpdate: @escaping UpdateClosure) {
+    @objc public static func setup(onUpdate: @escaping UpdateClosure) {
         assert(instance == nil)
         instance = LifetimeTracker(onUpdate: onUpdate)
     }
@@ -244,7 +244,7 @@ public final class LifetimeTracker: CustomDebugStringConvertible {
         }
     }
 
-    public var debugDescription: String {
+    override public var debugDescription: String {
         lock.lock()
         defer {
             lock.unlock()

@@ -24,10 +24,21 @@ Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
 To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`.
 
+Swift:
+
 ```swift
 #if DEBUG
   LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration.visibleWithIssuesDetected().refreshUI)
 #endif
+```
+
+Objective-C:
+
+```objc
+LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration visibleWhenIssueDetected];
+[LifetimeTracker setupOnUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
+    [dashboardIntegration refreshUIWithTrackedGroups: groups];
+}];
 ```
 
 You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, or `visibleWithIssuesDetected`.
