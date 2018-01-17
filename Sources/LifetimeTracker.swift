@@ -96,18 +96,17 @@ import Foundation
     
     /// Configuration for lifetime tracking, contains identifier and leak classifier
     static var lifetimeConfiguration: LifetimeConfiguration { get }
-    
-    /// Starts tracking lifetime, should be called in each initializer
-    func trackLifetime()
 }
 
 public extension LifetimeTrackable {
+    /// Starts tracking lifetime, should be called in each initializer
     func trackLifetime() {
         LifetimeTracker.instance?.track(self, configuration: type(of: self).lifetimeConfiguration)
     }
 }
 
 @objc public extension NSObject {
+    /// Starts tracking lifetime, should be called in each initializer
     @objc func trackLifetime() {
         if let object = self as? LifetimeTrackable {
             LifetimeTracker.instance?.track(self, configuration: type(of: object).lifetimeConfiguration)

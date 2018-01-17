@@ -11,16 +11,14 @@ import LifetimeTracker
 
 // MARK: - DetailItem -
 
-class DetailItem: NSObject, LifetimeTrackable {
+class DetailItem: LifetimeTrackable {
 
 	class var lifetimeConfiguration: LifetimeConfiguration {
 		// There can be up to three 3 instances from the class. But only three in total including the subclasses
 		return LifetimeConfiguration(maxCount: 3, groupName: "Detail Item", groupMaxCount: 3)
 	}
 
-	override init() {
-		super.init()
-
+	init() {
 		self.trackLifetime()
 	}
 }
