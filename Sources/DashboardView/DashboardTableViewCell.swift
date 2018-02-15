@@ -18,6 +18,7 @@ class DashboardTableViewCell: UITableViewCell {
 	}
 
 	override func prepareForReuse() {
+		super.prepareForReuse()
 		groupIndicatorView.backgroundColor = .clear
 		classIndicatorView.backgroundColor = .clear
 		descriptionLabel.text = nil
