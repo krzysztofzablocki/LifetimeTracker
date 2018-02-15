@@ -17,6 +17,7 @@ class DashboardTableViewHeaderView: UITableViewHeaderFooterView {
 	}
 	
 	override func prepareForReuse() {
+		super.prepareForReuse()
 		indicatorView.backgroundColor = .clear
 		groupNameLabel.text = nil
 	}
