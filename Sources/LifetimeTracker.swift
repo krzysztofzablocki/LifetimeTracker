@@ -14,14 +14,14 @@ import Foundation
     /// Maximum count of valid instances
     ///
     /// LifetimeTracker will show a warning if more instance of the class are alive.
-    public var maxCount: Int
+    @objc public var maxCount: Int
     
     /// Name which defines that the instance should be tracked as part of the chosen group.
     ///
     /// A group will automatically be created if there is none with a matching name.
     ///
     /// The usage is optional. The instances will be tracked as standalone items based on their class names if no group is chosen.
-    public var groupName: String? = nil
+    @objc public var groupName: String? = nil
     
     /// Maximum count of valid entries in the whole group.
     ///
@@ -43,7 +43,7 @@ import Foundation
     ///
     /// - Parameters:
     ///   - maxCount: Maximum count of valid instances
-    public init(maxCount: Int) {
+    @objc public init(maxCount: Int) {
         self.maxCount = maxCount
     }
     
@@ -58,7 +58,7 @@ import Foundation
     /// - Parameters:
     ///   - maxCount: Maximum count of valid instances
     ///   - groupName: Name which defines that the instance should be tracked as part of the chosen group. A group will automatically be created if there is none with a matching name.
-    public init(maxCount: Int, groupName: String) {
+    @objc public init(maxCount: Int, groupName: String) {
         self.maxCount = maxCount
         self.groupName = groupName
     }
@@ -75,7 +75,7 @@ import Foundation
     ///   - maxCount: Maximum count of valid instances. LifetimeTracker will show a warning if more instances of the class are alive
     ///   - groupName: Name which defines that the instance should be tracked as part of the chosen group. A group will automatically be created if there is none with a matching name.
     ///   - groupMaxCount: Maximum count of valid entries in the whole group. LifetimeTracker will through a warning if `groupMaxCount` is too high although all members didn't reach their own `maxCount`
-    public init(maxCount: Int, groupName: String, groupMaxCount: Int) {
+    @objc public init(maxCount: Int, groupName: String, groupMaxCount: Int) {
         self.maxCount = maxCount
         self.groupName = groupName
         self.groupMaxCount = groupMaxCount
