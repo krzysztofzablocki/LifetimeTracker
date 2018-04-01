@@ -3,8 +3,7 @@
  
 | ![Demo (bar)](Resources/demo-bar.gif) | | ![Demo (circular)](Resources/demo-circular.gif) |
 |:--:| :--: | :--: |
-| Bar style | | Circular Style |
-
+| Bar style | | Circular style |
 
 LifetimeTracker can surface retain cycle / memory issues right as you develop your application, and it will surface them to you immediately, so you can find them with more ease.
 
