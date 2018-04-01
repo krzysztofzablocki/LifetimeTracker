@@ -24,8 +24,8 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     
     @IBOutlet weak var roundView: UIView!
     
-    @IBOutlet weak var issuesCountLabel: UILabel?
-    @IBOutlet weak var issuesTitleLabel: UILabel?
+    @IBOutlet weak var leaksCountLabel: UILabel?
+    @IBOutlet weak var leaksTitleLabel: UILabel?
     
     weak var lifetimeTrackerListViewController: LifetimeTrackerListViewController?
     
@@ -107,8 +107,9 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     
     
     func update(with vm: BarDashboardViewModel) {
-        issuesCountLabel?.text = "\(vm.issuesCount)"
-        issuesTitleLabel?.text = "issues"
+        leaksCountLabel?.text = "\(vm.leaksCount)"
+        leaksCountLabel?.textColor = vm.leaksCount == 0 ? .green : .red
+        leaksTitleLabel?.text = vm.leaksCount == 1 ? "word.leak".lt_localized : "word.leaks".lt_localized
         
         dashboardViewModel = vm
         

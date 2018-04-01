@@ -85,13 +85,9 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
     @objc public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
             self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
-            
-            let groupNames = trackedGroups.keys.sorted(by: >)
-            let leakyGroupSummaries = groupNames.filter { groupName in
-                return trackedGroups[groupName]?.lifetimeState == .leaky
-            }
-            
-            let vm = BarDashboardViewModel(issuesCount: leakyGroupSummaries.count, summary: self.summary(from: trackedGroups), sections: self.entries(from: trackedGroups))
+
+            let entries = self.entries(from: trackedGroups)
+            let vm = BarDashboardViewModel(leaksCount: entries.leaksCount, summary: self.summary(from: trackedGroups), sections: entries.groups)
             self.lifetimeTrackerView.update(with: vm)
         }
     }
@@ -117,7 +113,8 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
             ]) + leakyGroupSummaries.attributed()
     }
     
-    private func entries(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> [GroupModel] {
+    private func entries(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> (groups: [GroupModel], leaksCount: Int) {
+        var leaksCount = 0
         var sections = [GroupModel]()
         let filteredGroups = trackedGroups.filter { (_, group: LifetimeTracker.EntriesGroup) -> Bool in
             group.count > 0
@@ -144,7 +141,9 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
                         var color: UIColor
                         switch entry.lifetimeState {
                         case .valid: color = .green
-                        case .leaky: color = .red
+                        case .leaky:
+                            color = .red
+                            leaksCount += entry.count - entry.maxCount
                         }
                         let entryMaxCountString = entry.maxCount == Int.max ? "macCount.notSpecified".lt_localized : "\(entry.maxCount)"
                         let description = "\(entry.name) (\(entry.count)/\(entryMaxCountString)):\n\(entry.pointers.joined(separator: ", "))"
@@ -152,7 +151,7 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
                 }
                 sections.append((color: groupColor, title: title, entries: rows))
         }
-        return sections
+        return (groups: sections, leaksCount: leaksCount)
     }
     
     func hasIssuesToDisplay(from trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Bool {

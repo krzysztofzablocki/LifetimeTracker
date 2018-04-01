@@ -8,12 +8,12 @@
 import UIKit
 
 struct BarDashboardViewModel {
-    let issuesCount: Int
+    let leaksCount: Int
     let summary: NSAttributedString
     let sections: [GroupModel]
     
-    init(issuesCount: Int = 0, summary: NSAttributedString = NSAttributedString(), sections: [GroupModel] = []) {
-        self.issuesCount = issuesCount
+    init(leaksCount: Int = 0, summary: NSAttributedString = NSAttributedString(), sections: [GroupModel] = []) {
+        self.leaksCount = leaksCount
         self.summary = summary
         self.sections = sections
     }
