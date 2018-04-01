@@ -116,10 +116,10 @@ public extension LifetimeTrackable {
 
 @objc public final class LifetimeTracker: NSObject {
     public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
-    public fileprivate(set) static var instance: LifetimeTracker?
+    public internal(set) static var instance: LifetimeTracker?
     private let lock = NSRecursiveLock()
     
-    private var trackedGroups = [String: EntriesGroup]()
+    internal var trackedGroups = [String: EntriesGroup]()
     
     enum LifetimeState {
         case valid
