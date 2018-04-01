@@ -9,16 +9,16 @@
 import Foundation
 
 internal struct Constants {
-
-	struct Identifier {
-
-		struct EntryGroup {
-			static let none = "lifetimetracker.nogroup.identifier"
-		}
-
-		struct Reuse {
-			static let dashboardCell = "lifetimeTrackerDashboardTableViewCell"
-			static let dashboardHeader = "lifetimeTrackerDashboardHeaderViewCell"
-		}
-	}
+    
+    struct Identifier {
+        
+        struct EntryGroup {
+            static let none = "lifetimetracker.nogroup.identifier"
+        }
+        
+        struct Reuse {
+            static let dashboardCell = "lifetimeTrackerDashboardTableViewCell"
+            static let dashboardHeader = "lifetimeTrackerDashboardHeaderViewCell"
+        }
+    }
 }

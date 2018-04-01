@@ -6,6 +6,8 @@
   
 */
 
+"popover.dasboard.title" = "LifetimeTracker";
+
 "dashboard.header.issue.description.leakDetected" = "Detected";
 
 "dashboard.header.issue.description.noIssues" = "No issues detected";

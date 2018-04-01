@@ -10,11 +10,11 @@ import Foundation
 
 fileprivate final class DeallocTracker {
     let onDealloc: () -> Void
-
+    
     init(onDealloc: @escaping () -> Void) {
         self.onDealloc = onDealloc
     }
-
+    
     deinit {
         onDealloc()
     }

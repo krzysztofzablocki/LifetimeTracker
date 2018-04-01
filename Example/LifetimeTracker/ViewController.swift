@@ -13,14 +13,14 @@ import LifetimeTracker
 
 class DetailItem: LifetimeTrackable {
 
-	class var lifetimeConfiguration: LifetimeConfiguration {
-		// There can be up to three 3 instances from the class. But only three in total including the subclasses
-		return LifetimeConfiguration(maxCount: 3, groupName: "Detail Item", groupMaxCount: 3)
-	}
+    class var lifetimeConfiguration: LifetimeConfiguration {
+        // There can be up to three 3 instances from the class. But only three in total including the subclasses
+        return LifetimeConfiguration(maxCount: 3, groupName: "Detail Item", groupMaxCount: 3)
+    }
 
-	init() {
-		self.trackLifetime()
-	}
+    init() {
+        self.trackLifetime()
+    }
 }
 
 // MARK: - DetailItem Subclasses
@@ -29,12 +29,12 @@ class AudtioDetailItem: DetailItem { }
 class ImageDetailItem: DetailItem { }
 class VideoDetailItem: DetailItem {
 
-	override class var lifetimeConfiguration: LifetimeConfiguration {
-		// There should only be one video item as the memory usage is too high
-		var configuration = super.lifetimeConfiguration
-		configuration.maxCount = 1
-		return configuration
-	}
+    override class var lifetimeConfiguration: LifetimeConfiguration {
+        // There should only be one video item as the memory usage is too high
+        let configuration = super.lifetimeConfiguration
+        configuration.maxCount = 1
+        return configuration
+    }
 }
 
 // MARK: - ViewController -
@@ -42,35 +42,35 @@ class VideoDetailItem: DetailItem {
 var leakStorage = [AnyObject]()
 
 class ViewController: UIViewController, LifetimeTrackable {
+    
+    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "VC")
 
-	static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "VC")
+    // MARK: - Initialization
 
-	// MARK: - Initialization
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        trackLifetime()
 
-		trackLifetime()
+    }
 
-	}
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
 
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
+        trackLifetime()
+    }
 
-		trackLifetime()
-	}
+    // MARK: - IBActions
 
-	// MARK: - IBActions
+    @IBAction func createLeak(_ sender: Any) {
+        leakStorage.append(ViewController())
 
-	@IBAction func createLeak(_ sender: Any) {
-		leakStorage.append(ViewController())
+        leakStorage.append(AudtioDetailItem())
+        leakStorage.append(ImageDetailItem())
+        leakStorage.append(VideoDetailItem())
+    }
 
-		leakStorage.append(AudtioDetailItem())
-		leakStorage.append(ImageDetailItem())
-		leakStorage.append(VideoDetailItem())
-	}
-
-	@IBAction func removeLeaks(_ sender: Any) {
-		leakStorage.removeAll()
-	}
+    @IBAction func removeLeaks(_ sender: Any) {
+        leakStorage.removeAll()
+    }
 }

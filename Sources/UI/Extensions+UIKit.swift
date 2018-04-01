@@ -9,8 +9,8 @@
 import UIKit
 
 internal extension UIView {
-
-	class var lt_nibInOwnBundle: UINib {
-		return UINib(nibName: "\(self)", bundle: Bundle(for: self))
-	}
+    
+    class var lt_nibInOwnBundle: UINib {
+        return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+    }
 }

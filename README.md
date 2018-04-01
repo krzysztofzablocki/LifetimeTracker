@@ -1,6 +1,10 @@
 # LifetimeTracker
 
-![Demo](Resources/demo.gif)
+ 
+| ![Demo (bar)](Resources/demo-bar.gif) | | ![Demo (circular)](Resources/demo-circular.gif) |
+|:--:| :--: | :--: |
+| Bar style | | Circular Style |
+
 
 LifetimeTracker can surface retain cycle / memory issues right as you develop your application, and it will surface them to you immediately, so you can find them with more ease.
 
@@ -28,20 +32,24 @@ Swift:
 
 ```swift
 #if DEBUG
-  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration.visibleWithIssuesDetected().refreshUI)
+	LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .bar).refreshUI)
 #endif
 ```
 
 Objective-C:
 
 ```objc
-LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration visibleWhenIssueDetected];
+LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration new];
+[dashboardIntegration setVisibleWhenIssueDetected];
+[dashboardIntegration useBarStyle];
 [LifetimeTracker setupOnUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
     [dashboardIntegration refreshUIWithTrackedGroups: groups];
 }];
 ```
 
 You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, or `visibleWithIssuesDetected`.
+
+There are two styles available. A overlay bar view which shows the detailed list of issues directly on the screen or a circular view which displays only the amount of issues and opens the detailed list as modal view controller.
 
 ## Tracking key actors
 
