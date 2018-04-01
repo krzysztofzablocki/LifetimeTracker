@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1We-aU-RGw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -16,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="EKh-Hq-gM8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="egZ-fJ-ECM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K3-PR-mfM">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <segue destination="Ltv-l9-n8R" kind="embed" identifier="embedDashboardTableViewController" id="aPS-h2-jLg"/>
                                 </connections>
@@ -85,13 +89,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obg-8G-sso">
-                                <rect key="frame" x="0.0" y="50" width="200" height="200"/>
+                                <rect key="frame" x="10" y="60" width="180" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tak-3C-dxR">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="121"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="109"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="kmp-36-vvG" userLabel="3">
-                                                <rect key="frame" x="20" y="15" width="160" height="106"/>
+                                                <rect key="frame" x="20" y="15" width="140" height="94"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -106,10 +110,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3R-fU-xRh">
-                                        <rect key="frame" x="0.0" y="121" width="200" height="79"/>
+                                        <rect key="frame" x="0.0" y="109" width="180" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Twa-ee-Aig">
-                                                <rect key="frame" x="20" y="0.0" width="160" height="64"/>
+                                                <rect key="frame" x="20" y="0.0" width="140" height="56"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -140,16 +144,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="obg-8G-sso" secondAttribute="trailing" id="BrM-cX-aMM"/>
-                            <constraint firstItem="obg-8G-sso" firstAttribute="leading" secondItem="REx-RF-Zi3" secondAttribute="leading" priority="999" id="CKJ-ao-FrX"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="obg-8G-sso" secondAttribute="bottom" id="TXo-3l-PkT"/>
-                            <constraint firstAttribute="bottom" secondItem="obg-8G-sso" secondAttribute="bottom" priority="999" id="YJO-Mt-eJa"/>
-                            <constraint firstAttribute="trailing" secondItem="obg-8G-sso" secondAttribute="trailing" priority="999" id="cKD-h7-DDX"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="obg-8G-sso" secondAttribute="trailing" constant="10" id="BrM-cX-aMM"/>
+                            <constraint firstItem="obg-8G-sso" firstAttribute="leading" secondItem="REx-RF-Zi3" secondAttribute="leading" priority="999" constant="10" id="CKJ-ao-FrX"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="obg-8G-sso" secondAttribute="bottom" constant="10" id="TXo-3l-PkT"/>
+                            <constraint firstAttribute="bottom" secondItem="obg-8G-sso" secondAttribute="bottom" priority="999" constant="10" id="YJO-Mt-eJa"/>
+                            <constraint firstAttribute="trailing" secondItem="obg-8G-sso" secondAttribute="trailing" priority="999" constant="10" id="cKD-h7-DDX"/>
                             <constraint firstItem="obg-8G-sso" firstAttribute="centerX" secondItem="REx-RF-Zi3" secondAttribute="centerX" id="lNQ-uh-M9E"/>
-                            <constraint firstItem="obg-8G-sso" firstAttribute="top" secondItem="REx-RF-Zi3" secondAttribute="top" priority="999" id="o0S-RI-FL1"/>
-                            <constraint firstItem="obg-8G-sso" firstAttribute="top" relation="greaterThanOrEqual" secondItem="REx-RF-Zi3" secondAttribute="top" id="tDp-93-scI"/>
+                            <constraint firstItem="obg-8G-sso" firstAttribute="top" secondItem="REx-RF-Zi3" secondAttribute="top" priority="999" constant="10" id="o0S-RI-FL1"/>
+                            <constraint firstItem="obg-8G-sso" firstAttribute="top" relation="greaterThanOrEqual" secondItem="REx-RF-Zi3" secondAttribute="top" constant="10" id="tDp-93-scI"/>
                             <constraint firstItem="obg-8G-sso" firstAttribute="centerY" secondItem="REx-RF-Zi3" secondAttribute="centerY" id="tJm-xD-D19"/>
-                            <constraint firstItem="obg-8G-sso" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="REx-RF-Zi3" secondAttribute="leading" id="ykq-kw-V5M"/>
+                            <constraint firstItem="obg-8G-sso" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="REx-RF-Zi3" secondAttribute="leading" constant="10" id="ykq-kw-V5M"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

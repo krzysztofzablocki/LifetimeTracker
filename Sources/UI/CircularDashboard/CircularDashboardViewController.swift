@@ -29,7 +29,9 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     weak var lifetimeTrackerListViewController: LifetimeTrackerListViewController?
 
-    var formerStatusBarStyle = UIApplication.shared.statusBarStyle
+    fileprivate var formerStatusBarStyle = UIApplication.shared.statusBarStyle
+
+    private var didInitializeRoundView = false
 
     private var dashboardViewModel = BarDashboardViewModel() {
         didSet {
@@ -47,17 +49,10 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
         view.translatesAutoresizingMaskIntoConstraints = false
 
-        roundView.layer.borderColor = UIColor.black.cgColor
-        roundView.layer.borderWidth = 2
-
         addPanGestureRecognizer()
         addTapGestureRecognizer()
 
         relayout()
-    }
-
-    override func viewDidLayoutSubviews() {
-        roundView.layer.cornerRadius = self.roundView.frame.height / 2
     }
 
     func addPanGestureRecognizer() {
@@ -123,10 +118,27 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
             return
         }
 
+        let width = CGFloat(100)
+
+        if !didInitializeRoundView {
+            didInitializeRoundView = true
+            dragOffset = CGSize(width: UIScreen.main.bounds.size.width - width * 0.7, height: 100)
+            clampDragOffset()
+
+            roundView.layer.cornerRadius = self.roundView.frame.height / 2
+
+            roundView.clipsToBounds = false
+            roundView.layer.shadowColor = UIColor.black.cgColor
+            roundView.layer.shadowOpacity = 1
+            roundView.layer.shadowOffset = CGSize.zero
+            roundView.layer.shadowRadius = 4
+            roundView.layer.shadowPath = UIBezierPath(roundedRect: roundView.bounds, cornerRadius: self.roundView.frame.height / 2).cgPath
+        }
+
         // Prevent black areas during device orientation
         window.clipsToBounds = true
         window.translatesAutoresizingMaskIntoConstraints = true
-        window.frame = CGRect(x: dragOffset.width, y: dragOffset.height, width: 80, height: 80)
+        window.frame = CGRect(x: dragOffset.width, y: dragOffset.height, width: width, height: width)
         view.layoutIfNeeded()
     }
 
@@ -190,4 +202,3 @@ extension CircularDashboardViewController: UIPopoverPresentationControllerDelega
         popoverPresentationController.sourceView = self.roundView
     }
 }
-
