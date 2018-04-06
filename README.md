@@ -1,6 +1,9 @@
 # LifetimeTracker
 
-![Demo](Resources/demo.gif)
+ 
+| ![Demo (bar)](Resources/demo-bar.gif) | | ![Demo (circular)](Resources/demo-circular.gif) |
+|:--:| :--: | :--: |
+| Bar style | | Circular style |
 
 LifetimeTracker can surface retain cycle / memory issues right as you develop your application, and it will surface them to you immediately, so you can find them with more ease.
 
@@ -28,20 +31,24 @@ Swift:
 
 ```swift
 #if DEBUG
-  LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration.visibleWithIssuesDetected().refreshUI)
+	LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .bar).refreshUI)
 #endif
 ```
 
 Objective-C:
 
 ```objc
-LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration visibleWhenIssueDetected];
+LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration new];
+[dashboardIntegration setVisibleWhenIssueDetected];
+[dashboardIntegration useBarStyle];
 [LifetimeTracker setupOnUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
     [dashboardIntegration refreshUIWithTrackedGroups: groups];
 }];
 ```
 
 You can control when the dashboard is visible: `alwaysVisible`, `alwaysHidden`, or `visibleWithIssuesDetected`.
+
+There are two styles available. A overlay bar view which shows the detailed list of issues directly on the screen or a circular view which displays only the amount of issues and opens the detailed list as modal view controller.
 
 ## Tracking key actors
 
@@ -94,7 +101,7 @@ You conform to `LifetimeTrackable` and call `[self trackLifetime]` at the end of
 
 ## Group tracked objects
 
-You can group tracked objects together. `maxCount` of a group will be calculated by `maxCount` of all members per default. However, you can override it and provide a separate value to the group with `overrideGroupMaxCount`.
+You can group tracked objects together. `maxCount` of a group will be calculated by `maxCount` of all members per default. However, you can override it and provide a separate value to the group with `groupMaxCount`.
 
 You may want to do this when you have a set of sublasses which can appear x times each, but in total only less than the sum of all sublcasses:
 
@@ -110,10 +117,10 @@ LifetimeConfiguration(maxCount: 3, groupName: "Detail Page")
 => Group warning if 7 DetailPage objects are alive
 
 // VideoDetailPage: DetailItem
-LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", overrideGroupMaxCount: 3)
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", groupMaxCount: 3)
 
 // ImageDetailPage: DetailItem
-LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", overrideGroupMaxCount: 3)
+LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", groupMaxCount: 3)
 
 => Group warning if 4 DetailPage object are alive
 

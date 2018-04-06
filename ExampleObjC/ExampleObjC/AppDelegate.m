@@ -17,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration visibleWhenIssueDetected];
+    LifetimeTrackerDashboardIntegration *dashboardIntegration = [LifetimeTrackerDashboardIntegration new];
+    [dashboardIntegration setVisibleWhenIssueDetected];
+    [dashboardIntegration useBarStyle];
     [LifetimeTracker setupOnUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
         [dashboardIntegration refreshUIWithTrackedGroups: groups];
     }];

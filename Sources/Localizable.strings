@@ -6,6 +6,8 @@
   
 */
 
+"popover.dasboard.title" = "LifetimeTracker";
+
 "dashboard.header.issue.description.leakDetected" = "Detected";
 
 "dashboard.header.issue.description.noIssues" = "No issues detected";
@@ -13,3 +15,8 @@
 "dashboard.sectionHeader.title.noGroup" = "Others";
 
 "macCount.notSpecified" = "∞";
+
+"word.leak" = "leak";
+
+"word.leaks" = "leaks";
+

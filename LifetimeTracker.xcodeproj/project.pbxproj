@@ -15,18 +15,24 @@
 		87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF901FB5275B00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF911FB5275C00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
-		87EDDF981FB5276E00F1D107 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF921FB5276E00F1D107 /* DashboardViewController.swift */; };
-		87EDDF991FB5276E00F1D107 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF951FB5276E00F1D107 /* DashboardTableViewHeaderView.swift */; };
-		87EDDF9A1FB5276E00F1D107 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF971FB5276E00F1D107 /* DashboardTableViewCell.swift */; };
 		87EDDFA21FB527E700F1D107 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF9B1FB5278B00F1D107 /* Extensions.swift */; };
-		87EDDFA71FB528F700F1D107 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87EDDF941FB5276E00F1D107 /* DashboardTableViewCell.xib */; };
-		87EDDFA81FB528F700F1D107 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87EDDF931FB5276E00F1D107 /* DashboardTableViewHeaderView.xib */; };
-		87EDDFA91FB528F700F1D107 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87EDDF961FB5276E00F1D107 /* DashboardViewController.xib */; };
-		87EDDFAA1FB5291000F1D107 /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDFA61FB5281500F1D107 /* Extensions+UIKit.swift */; };
 		87EDDFAB1FB5291400F1D107 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF9B1FB5278B00F1D107 /* Extensions.swift */; };
 		87EDDFAC1FB5291500F1D107 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF9B1FB5278B00F1D107 /* Extensions.swift */; };
 		87EDDFAD1FB5291500F1D107 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF9B1FB5278B00F1D107 /* Extensions.swift */; };
-		87EDDFB11FB529AB00F1D107 /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDFB01FB529A400F1D107 /* Constants+UIKit.swift */; };
+		87F76A37206FE07D00F2BFF4 /* LifetimeTrackerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A26206FE07D00F2BFF4 /* LifetimeTrackerListViewController.swift */; };
+		87F76A39206FE07D00F2BFF4 /* BarDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F76A29206FE07D00F2BFF4 /* BarDashboard.storyboard */; };
+		87F76A3A206FE07D00F2BFF4 /* DashboardTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F76A2B206FE07D00F2BFF4 /* DashboardTableView.storyboard */; };
+		87F76A3B206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A2C206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift */; };
+		87F76A3C206FE07D00F2BFF4 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A2D206FE07D00F2BFF4 /* DashboardTableViewCell.swift */; };
+		87F76A3D206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F76A2E206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib */; };
+		87F76A3E206FE07D00F2BFF4 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F76A2F206FE07D00F2BFF4 /* DashboardTableViewCell.xib */; };
+		87F76A3F206FE07D00F2BFF4 /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A30206FE07D00F2BFF4 /* DashboardTableViewController.swift */; };
+		87F76A40206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A31206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift */; };
+		87F76A41206FE07D00F2BFF4 /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A32206FE07D00F2BFF4 /* Extensions+UIKit.swift */; };
+		87F76A44206FE07D00F2BFF4 /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A36206FE07D00F2BFF4 /* Constants+UIKit.swift */; };
+		87F76A4A206FE85000F2BFF4 /* BarDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A49206FE85000F2BFF4 /* BarDashboardViewController.swift */; };
+		87F76A4E206FE85800F2BFF4 /* CircularDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F76A4C206FE85800F2BFF4 /* CircularDashboardViewController.swift */; };
+		87F76A4F206FE85800F2BFF4 /* CircularDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F76A4D206FE85800F2BFF4 /* CircularDashboard.storyboard */; };
 		8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */; };
 		8933C7861EB5B820000D00A4 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */; };
 		8933C7871EB5B820000D00A4 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */; };
@@ -38,7 +44,6 @@
 		CD2064D01F7EB45A00E8CBBD /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
 		CD2064D11F7EB45F00E8CBBD /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
 		CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4DD721F29F70700F01611 /* DeallocTracker.swift */; };
-		CDDD75291F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */; };
 		DD7502881C68FEDE006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */; };
 		DD7502921C690C7A006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */; };
 /* End PBXBuildFile section */
@@ -75,21 +80,26 @@
 		52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EDDF8D1FB5274400F1D107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		87EDDF921FB5276E00F1D107 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		87EDDF931FB5276E00F1D107 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
-		87EDDF941FB5276E00F1D107 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
-		87EDDF951FB5276E00F1D107 /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
-		87EDDF961FB5276E00F1D107 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
-		87EDDF971FB5276E00F1D107 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		87EDDF9B1FB5278B00F1D107 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		87EDDFA61FB5281500F1D107 /* Extensions+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIKit.swift"; sourceTree = "<group>"; };
-		87EDDFB01FB529A400F1D107 /* Constants+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+UIKit.swift"; sourceTree = "<group>"; };
+		87F76A26206FE07D00F2BFF4 /* LifetimeTrackerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifetimeTrackerListViewController.swift; sourceTree = "<group>"; };
+		87F76A29206FE07D00F2BFF4 /* BarDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarDashboard.storyboard; sourceTree = "<group>"; };
+		87F76A2B206FE07D00F2BFF4 /* DashboardTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardTableView.storyboard; sourceTree = "<group>"; };
+		87F76A2C206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
+		87F76A2D206FE07D00F2BFF4 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		87F76A2E206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
+		87F76A2F206FE07D00F2BFF4 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		87F76A30206FE07D00F2BFF4 /* DashboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
+		87F76A31206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
+		87F76A32206FE07D00F2BFF4 /* Extensions+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIKit.swift"; sourceTree = "<group>"; };
+		87F76A36206FE07D00F2BFF4 /* Constants+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+UIKit.swift"; sourceTree = "<group>"; };
+		87F76A49206FE85000F2BFF4 /* BarDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDashboardViewController.swift; sourceTree = "<group>"; };
+		87F76A4C206FE85800F2BFF4 /* CircularDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularDashboardViewController.swift; sourceTree = "<group>"; };
+		87F76A4D206FE85800F2BFF4 /* CircularDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircularDashboard.storyboard; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifetimeTracker.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* LifetimeTrackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifetimeTrackerTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* LifetimeTracker.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LifetimeTracker.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* LifetimeTrackerTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LifetimeTrackerTests.plist; sourceTree = "<group>"; };
 		CDA4DD721F29F70700F01611 /* DeallocTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeallocTracker.swift; sourceTree = "<group>"; };
-		CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* LifetimeTracker-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* LifetimeTracker-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,17 +193,59 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		87F76A25206FE07D00F2BFF4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				87F76A26206FE07D00F2BFF4 /* LifetimeTrackerListViewController.swift */,
+				87F76A27206FE07D00F2BFF4 /* BarDashboard */,
+				87F76A2A206FE07D00F2BFF4 /* DashboardTableView */,
+				87F76A31206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift */,
+				87F76A32206FE07D00F2BFF4 /* Extensions+UIKit.swift */,
+				87F76A4B206FE85800F2BFF4 /* CircularDashboard */,
+				87F76A36206FE07D00F2BFF4 /* Constants+UIKit.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		87F76A27206FE07D00F2BFF4 /* BarDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				87F76A49206FE85000F2BFF4 /* BarDashboardViewController.swift */,
+				87F76A29206FE07D00F2BFF4 /* BarDashboard.storyboard */,
+			);
+			path = BarDashboard;
+			sourceTree = "<group>";
+		};
+		87F76A2A206FE07D00F2BFF4 /* DashboardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				87F76A2B206FE07D00F2BFF4 /* DashboardTableView.storyboard */,
+				87F76A2C206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift */,
+				87F76A2D206FE07D00F2BFF4 /* DashboardTableViewCell.swift */,
+				87F76A2E206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib */,
+				87F76A2F206FE07D00F2BFF4 /* DashboardTableViewCell.xib */,
+				87F76A30206FE07D00F2BFF4 /* DashboardTableViewController.swift */,
+			);
+			path = DashboardTableView;
+			sourceTree = "<group>";
+		};
+		87F76A4B206FE85800F2BFF4 /* CircularDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				87F76A4C206FE85800F2BFF4 /* CircularDashboardViewController.swift */,
+				87F76A4D206FE85800F2BFF4 /* CircularDashboard.storyboard */,
+			);
+			path = CircularDashboard;
+			sourceTree = "<group>";
+		};
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				87EDDF8D1FB5274400F1D107 /* Constants.swift */,
-				87EDDFB01FB529A400F1D107 /* Constants+UIKit.swift */,
-				CDDD75231F7D3664001BCD29 /* DashboardView */,
 				CDA4DD721F29F70700F01611 /* DeallocTracker.swift */,
 				87EDDF9B1FB5278B00F1D107 /* Extensions.swift */,
-				87EDDFA61FB5281500F1D107 /* Extensions+UIKit.swift */,
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
-				CDDD75261F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift */,
+				87F76A25206FE07D00F2BFF4 /* UI */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -206,19 +258,6 @@
 			);
 			name = Tests;
 			path = Tests/LifetimeTrackerTests;
-			sourceTree = "<group>";
-		};
-		CDDD75231F7D3664001BCD29 /* DashboardView */ = {
-			isa = PBXGroup;
-			children = (
-				87EDDF971FB5276E00F1D107 /* DashboardTableViewCell.swift */,
-				87EDDF941FB5276E00F1D107 /* DashboardTableViewCell.xib */,
-				87EDDF951FB5276E00F1D107 /* DashboardTableViewHeaderView.swift */,
-				87EDDF931FB5276E00F1D107 /* DashboardTableViewHeaderView.xib */,
-				87EDDF921FB5276E00F1D107 /* DashboardViewController.swift */,
-				87EDDF961FB5276E00F1D107 /* DashboardViewController.xib */,
-			);
-			path = DashboardView;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {
@@ -465,9 +504,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87EDDFA71FB528F700F1D107 /* DashboardTableViewCell.xib in Resources */,
-				87EDDFA81FB528F700F1D107 /* DashboardTableViewHeaderView.xib in Resources */,
-				87EDDFA91FB528F700F1D107 /* DashboardViewController.xib in Resources */,
+				87F76A4F206FE85800F2BFF4 /* CircularDashboard.storyboard in Resources */,
+				87F76A3D206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib in Resources */,
+				87F76A39206FE07D00F2BFF4 /* BarDashboard.storyboard in Resources */,
+				87F76A3A206FE07D00F2BFF4 /* DashboardTableView.storyboard in Resources */,
+				87F76A3E206FE07D00F2BFF4 /* DashboardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,16 +561,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F76A37206FE07D00F2BFF4 /* LifetimeTrackerListViewController.swift in Sources */,
 				87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */,
-				87EDDF981FB5276E00F1D107 /* DashboardViewController.swift in Sources */,
-				87EDDF9A1FB5276E00F1D107 /* DashboardTableViewCell.swift in Sources */,
+				87F76A41206FE07D00F2BFF4 /* Extensions+UIKit.swift in Sources */,
+				87F76A3C206FE07D00F2BFF4 /* DashboardTableViewCell.swift in Sources */,
 				87EDDFA21FB527E700F1D107 /* Extensions.swift in Sources */,
-				87EDDFB11FB529AB00F1D107 /* Constants+UIKit.swift in Sources */,
+				87F76A44206FE07D00F2BFF4 /* Constants+UIKit.swift in Sources */,
+				87F76A4A206FE85000F2BFF4 /* BarDashboardViewController.swift in Sources */,
+				87F76A40206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */,
-				CDDD75291F7D3664001BCD29 /* LifetimeTracker+DashboardView.swift in Sources */,
-				87EDDFAA1FB5291000F1D107 /* Extensions+UIKit.swift in Sources */,
-				87EDDF991FB5276E00F1D107 /* DashboardTableViewHeaderView.swift in Sources */,
+				87F76A3B206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift in Sources */,
+				87F76A4E206FE85800F2BFF4 /* CircularDashboardViewController.swift in Sources */,
+				87F76A3F206FE07D00F2BFF4 /* DashboardTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

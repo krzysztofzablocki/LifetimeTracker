@@ -116,10 +116,10 @@ public extension LifetimeTrackable {
 
 @objc public final class LifetimeTracker: NSObject {
     public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
-    public fileprivate(set) static var instance: LifetimeTracker?
+    public internal(set) static var instance: LifetimeTracker?
     private let lock = NSRecursiveLock()
     
-    private var trackedGroups = [String: EntriesGroup]()
+    internal var trackedGroups = [String: EntriesGroup]()
     
     enum LifetimeState {
         case valid
@@ -127,7 +127,7 @@ public extension LifetimeTrackable {
     }
     
     public final class Entry {
-        let maxCount: Int
+        var maxCount: Int
         let name: String
         fileprivate(set) var count: Int
         fileprivate(set) var pointers: Set<String>
@@ -179,21 +179,26 @@ public extension LifetimeTrackable {
         }
         
         func updateEntry(_ configuration: LifetimeConfiguration, with countDelta: Int) {
-            
+
             let entryName = configuration.instanceName
             let didEntryExistBefore = entries[entryName] != nil
-            
+
             let entry = entries[entryName] ?? Entry(name: entryName, maxCount:configuration.maxCount)
+            // Calculate the offset between the current and former maxCount in case the value was changed dynamically during the runtime
+            let entryMaxCountOffset = configuration.maxCount - entry.maxCount
+            entry.maxCount += entryMaxCountOffset
             entry.update(pointerString: configuration.pointerString, for: countDelta)
             entries[entryName] = entry
-            
+
             count += countDelta
-            
+
             if let groupMaxCount = configuration.groupMaxCount {
                 usedMaxCountOverride = true
                 maxCount = groupMaxCount
             } else if !usedMaxCountOverride && !didEntryExistBefore {
                 maxCount += configuration.maxCount
+            } else if entryMaxCountOffset != 0 {
+                maxCount += entryMaxCountOffset
             }
         }
     }
