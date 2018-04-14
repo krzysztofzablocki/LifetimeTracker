@@ -71,7 +71,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     var originalOffset = CGSize.zero
 
-    func toolbarPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func toolbarPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
         switch gestureRecognizer.state {
         case .began:
             originalOffset = dragOffset
@@ -158,7 +158,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
         return popoverWindow
     }()
 
-    func showPopover() {
+    @objc func showPopover() {
         formerStatusBarStyle = UIApplication.shared.statusBarStyle
         UIApplication.shared.statusBarStyle = .default
         updatePopoverVisibility(to: .open)
