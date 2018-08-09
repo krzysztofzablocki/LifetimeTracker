@@ -98,6 +98,67 @@ You conform to `LifetimeTrackable` and call `[self trackLifetime]` at the end of
 @end
 ```
 
+## Integrating with [Danger](https://danger.systems)
+
+If you are using Danger, you can use it to add both checkbox to each PR to ensure people have verified no retain cycles were created but also to inform you when someone forgets to call `trackLifetime()` function.
+
+```ruby
+# 
+# ** FILE CHECKS **
+# Checks for certain rules and warns if needed.
+# Some rules can be disabled by using // danger:disable rule_name
+# 
+# Rules:
+# - Check if the modified file is a View and doesn't implement LifetimeTrackable (lifetime_tracking)
+
+# Sometimes an added file is also counted as modified. We want the files to be checked only once. 
+files_to_check = (git.modified_files + git.added_files).uniq
+(files_to_check - %w(Dangerfile)).each do |file|
+	next unless File.file?(file)
+	# Only check inside swift files
+  next unless File.extname(file).include?(".swift")
+    	
+  # Will be used to check if we're inside a comment block.
+	is_comment_block = false
+
+	# Collects all disabled rules for this file.
+	disabled_rules = []
+
+	filelines = File.readlines(file)
+	filelines.each_with_index do |line, index|
+		if is_comment_block
+			if line.include?("*/")
+				is_comment_block = false
+			end
+		elsif line.include?("/*")
+			is_comment_block = true
+		elsif line.include?("danger:disable")
+			rule_to_disable = line.split.last
+			disabled_rules.push(rule_to_disable)
+		else
+			# Start our custom line checks
+			# e.g. you could do something like check for methods that only call the super class' method
+			#if line.include?("override") and line.include?("func") and filelines[index+1].include?("super") and filelines[index+2].include?("}")
+			#	warn("Override methods which only call super can be removed", file: file, line: index+3) 
+			#end
+    end
+	end
+	
+	# Only continue checks for Lifetime Trackable types
+	next unless (File.basename(file).include?("ViewModel") or File.basename(file).include?("ViewController") or File.basename(file).include?("View.swift")) and !File.basename(file).include?("Node") and !File.basename(file).include?("Tests") and !File.basename(file).include?("FlowCoordinator")
+
+	if disabled_rules.include?("lifetime_tracking") == false 
+		if File.readlines(file).grep(/LifetimeTrackable/).any? 
+			fail("You forgot to call trackLifetime() from your initializers in " + File.basename(file, ".*") + " (lifetime_tracking)") unless File.readlines(file).grep(/trackLifetime()/).any? 
+		else
+			warn("Please add support for LifetimeTrackable to " + File.basename(file, ".*") + " . (lifetime_tracking)")
+		end
+		markdown("- [ ] I've verified that showing and hiding " + File.basename(file, ".*") + " doesn't surface any [LifetimeTracker](https://github.com/krzysztofzablocki/LifetimeTracker) issues")
+	end
+
+end
+```
+
 
 ## Group tracked objects
 
