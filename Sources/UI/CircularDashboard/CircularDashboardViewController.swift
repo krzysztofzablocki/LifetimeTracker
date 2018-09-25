@@ -144,14 +144,14 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     private lazy var popoverWindow: UIWindow = {
         let popoverWindow = UIWindow(frame: .zero)
-        popoverWindow.windowLevel = UIWindowLevelNormal
+        popoverWindow.windowLevel = UIWindow.Level.normal
         popoverWindow.frame =  UIScreen.main.bounds
 
         let navigationController = UIStoryboard(name: Constants.Storyboard.circularDashboard.name, bundle: Bundle(for: CircularDashboardViewController.self)).instantiateInitialViewController()
         popoverWindow.rootViewController = navigationController
         popoverWindow.rootViewController?.view.backgroundColor = UIColor.yellow
 
-        self.lifetimeTrackerListViewController = navigationController?.childViewControllers.first as? LifetimeTrackerListViewController
+        self.lifetimeTrackerListViewController = navigationController?.children.first as? LifetimeTrackerListViewController
         self.lifetimeTrackerListViewController?.delegate = self
         self.lifetimeTrackerListViewController?.update(dashboardViewModel: self.dashboardViewModel)
 

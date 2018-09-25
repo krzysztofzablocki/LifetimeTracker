@@ -9,8 +9,8 @@ import UIKit
 
 fileprivate extension String {
     #if swift(>=4.0)
-    typealias AttributedStringKey = NSAttributedStringKey
-    static let foregroundColorAttributeName = NSAttributedStringKey.foregroundColor
+    typealias AttributedStringKey = NSAttributedString.Key
+    static let foregroundColorAttributeName = NSAttributedString.Key.foregroundColor
     #else
     typealias AttributedStringKey = String
     static let foregroundColorAttributeName = NSForegroundColorAttributeName
@@ -66,7 +66,7 @@ typealias GroupModel = (color: UIColor, title: String, entries: [EntryModel])
 
     private lazy var window: UIWindow = {
         let window = UIWindow(frame: .zero)
-        window.windowLevel = UIWindowLevelStatusBar
+        window.windowLevel = UIWindow.Level.statusBar
         window.frame =  UIScreen.main.bounds
         window.rootViewController = self.lifetimeTrackerView
         return window
