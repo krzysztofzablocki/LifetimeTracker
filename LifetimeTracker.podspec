@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LifetimeTracker"
-  s.version      = "1.4.0"
+  s.version      = "1.5.0"
   s.summary      = "Framework to visually warn you when retain cycle / leak happens."
   s.description  = <<-DESC
     Mini framework that can surface retain cycle issues sooner.
@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.resources     = "Sources/**/*.{xib,storyboard}"
   s.resource_bundle = { "LifetimeTracker" => ["Sources/**/*.{strings}"] }
   s.frameworks  = ["Foundation", "UIKit"]
-  s.swift_version = "4.0"
+  s.swift_version = "4.2"
 end
