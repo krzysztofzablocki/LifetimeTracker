@@ -10,6 +10,7 @@ import UIKit
 
 protocol PopoverViewControllerDelegate: class {
     func dismissPopoverViewController()
+    func changeHideOption(for hideOption: HideOption)
 }
 
 class LifetimeTrackerListViewController: UIViewController {
@@ -28,6 +29,12 @@ class LifetimeTrackerListViewController: UIViewController {
         delegate?.dismissPopoverViewController()
     }
     
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        SettingsManager.showSettingsActionSheet(on: self, completionHandler: { [weak self] (selectedOption: HideOption) in
+            self?.delegate?.changeHideOption(for: selectedOption)
+        })
+    }
+
     func update(dashboardViewModel: BarDashboardViewModel) {
         self.dashboardViewModel = dashboardViewModel
         

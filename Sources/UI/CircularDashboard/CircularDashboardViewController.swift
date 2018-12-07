@@ -33,6 +33,14 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     private var didInitializeRoundView = false
 
+    private var hideOption: HideOption = .none {
+        didSet {
+            if hideOption != .none {
+                view.isHidden = true
+            }
+        }
+    }
+
     private var dashboardViewModel = BarDashboardViewModel() {
         didSet {
             lifetimeTrackerListViewController?.update(dashboardViewModel: dashboardViewModel)
@@ -51,6 +59,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
         addPanGestureRecognizer()
         addTapGestureRecognizer()
+        addLongPressGestureRecognizer()
 
         relayout()
     }
@@ -63,6 +72,11 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     func addTapGestureRecognizer() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPopover))
         view.addGestureRecognizer(tapGestureRecognizer)
+    }
+
+    func addLongPressGestureRecognizer() {
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(showSettings))
+        view.addGestureRecognizer(longPressGestureRecognizer)
     }
 
     var dragOffset = CGSize.zero {
@@ -86,6 +100,23 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
         }
     }
 
+    @objc func showSettings(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            guard let originalFrame = view.window?.frame else {
+                return
+            }
+            let roundViewFrame = roundView.frame
+            roundView.translatesAutoresizingMaskIntoConstraints = true
+            roundView.frame = CGRect(x: originalFrame.origin.x + roundViewFrame.origin.x, y: originalFrame.origin.y + roundViewFrame.origin.y, width: roundViewFrame.width, height: roundViewFrame.height)
+            view.window?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            SettingsManager.showSettingsActionSheet(on: self, completionHandler: { [weak self] (selecetedOption: HideOption) in
+                self?.changeHideOption(for: selecetedOption)
+                self?.roundView.translatesAutoresizingMaskIntoConstraints = false
+                self?.relayout()
+            })
+        }
+    }
+
     func clampDragOffset() {
         let maxHiddenWidth = view.frame.size.width * 0.4
         if dragOffset.width < -maxHiddenWidth {
@@ -102,11 +133,15 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
         }
     }
 
-
     func update(with vm: BarDashboardViewModel) {
         leaksCountLabel?.text = "\(vm.leaksCount)"
         leaksCountLabel?.textColor = vm.leaksCount == 0 ? .green : .red
         leaksTitleLabel?.text = vm.leaksCount == 1 ? "word.leak".lt_localized : "word.leaks".lt_localized
+
+        if hideOption.shouldUIBeShown(oldModel: dashboardViewModel, newModel: vm) {
+            view.isHidden = false
+            hideOption = .none
+        }
 
         dashboardViewModel = vm
 
@@ -188,6 +223,13 @@ extension CircularDashboardViewController: PopoverViewControllerDelegate {
     func dismissPopoverViewController() {
         updatePopoverVisibility(to: .closed)
         UIApplication.shared.statusBarStyle = formerStatusBarStyle
+    }
+
+    func changeHideOption(for hideOption: HideOption) {
+        self.hideOption = hideOption
+        if !popoverWindow.isHidden {
+            dismissPopoverViewController()
+        }
     }
 }
 

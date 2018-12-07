@@ -20,3 +20,16 @@
 
 "word.leaks" = "leaks";
 
+"settings" = "Settings";
+
+"settings.cancel" = "Cancel";
+
+"settings.hide.title" = "Hide LifetimeTracker";
+
+"settings.hide.sheet.title" = "Hide until ...";
+
+"settings.hide.sheet.untilMoreIssue" = "more issues are detected";
+
+"settings.hide.sheet.untilNewType" = "new issue types are detected";
+
+"settings.hide.sheet.untilRestart" = "the app was restarted";

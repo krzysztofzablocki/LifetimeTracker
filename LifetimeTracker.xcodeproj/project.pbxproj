@@ -10,6 +10,8 @@
 		383869131F9FEE7800B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		383869141F9FEE7E00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
+		4ACDB013212ED6440012CE2F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDB012212ED6440012CE2F /* SettingsManager.swift */; };
+		4AFAE7042136E6DB001A63C7 /* HideOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE7032136E6DB001A63C7 /* HideOption.swift */; };
 		52D6D9871BEFF229002C0205 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */; };
 		87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
@@ -74,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		383869121F9FEE7800B1A6AB /* VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityTests.swift; sourceTree = "<group>"; };
+		4ACDB012212ED6440012CE2F /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		4AFAE7032136E6DB001A63C7 /* HideOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOption.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* LifetimeTracker-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +207,7 @@
 				87F76A32206FE07D00F2BFF4 /* Extensions+UIKit.swift */,
 				87F76A4B206FE85800F2BFF4 /* CircularDashboard */,
 				87F76A36206FE07D00F2BFF4 /* Constants+UIKit.swift */,
+				4AFAE7032136E6DB001A63C7 /* HideOption.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				CDA4DD721F29F70700F01611 /* DeallocTracker.swift */,
 				87EDDF9B1FB5278B00F1D107 /* Extensions.swift */,
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
+				4ACDB012212ED6440012CE2F /* SettingsManager.swift */,
 				87F76A25206FE07D00F2BFF4 /* UI */,
 			);
 			path = Sources;
@@ -571,6 +577,8 @@
 				87F76A40206FE07D00F2BFF4 /* LifetimeTracker+DashboardView.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				CDA4DD731F29F70700F01611 /* DeallocTracker.swift in Sources */,
+				4ACDB013212ED6440012CE2F /* SettingsManager.swift in Sources */,
+				4AFAE7042136E6DB001A63C7 /* HideOption.swift in Sources */,
 				87F76A3B206FE07D00F2BFF4 /* DashboardTableViewHeaderView.swift in Sources */,
 				87F76A4E206FE85800F2BFF4 /* CircularDashboardViewController.swift in Sources */,
 				87F76A3F206FE07D00F2BFF4 /* DashboardTableViewController.swift in Sources */,
