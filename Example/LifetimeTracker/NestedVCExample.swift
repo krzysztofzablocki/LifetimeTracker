@@ -11,7 +11,9 @@ import LifetimeTracker
 
 class BaseViewController: UIViewController, LifetimeTrackable {
 	
-	static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1)
+	static var lifetimeConfiguration: LifetimeConfiguration {
+		return LifetimeConfiguration(maxCount: 2)
+	}
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
