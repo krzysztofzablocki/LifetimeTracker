@@ -11,9 +11,7 @@ import Foundation
 internal extension String {
 
     var lt_localized: String {
-        guard let path = Bundle(for: LifetimeTracker.self).path(forResource: "LifetimeTracker", ofType: "bundle"), let bundle = Bundle(path: path) else {
-            return self
-        }
+        let bundle = Bundle(for: LifetimeTracker.self)
         return NSLocalizedString(self, bundle: bundle, comment: self)
     }
 }

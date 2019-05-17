@@ -10,6 +10,7 @@
 		383869131F9FEE7800B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		383869141F9FEE7E00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
+		4A563B28228C9655009C389D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A563B27228C9655009C389D /* Localizable.strings */; };
 		4ACDB013212ED6440012CE2F /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDB012212ED6440012CE2F /* SettingsManager.swift */; };
 		4AFAE7042136E6DB001A63C7 /* HideOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAE7032136E6DB001A63C7 /* HideOption.swift */; };
 		52D6D9871BEFF229002C0205 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		383869121F9FEE7800B1A6AB /* VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityTests.swift; sourceTree = "<group>"; };
+		4A563B27228C9655009C389D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4ACDB012212ED6440012CE2F /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		4AFAE7032136E6DB001A63C7 /* HideOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOption.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
 				4ACDB012212ED6440012CE2F /* SettingsManager.swift */,
 				87F76A25206FE07D00F2BFF4 /* UI */,
+				4A563B27228C9655009C389D /* Localizable.strings */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F76A4F206FE85800F2BFF4 /* CircularDashboard.storyboard in Resources */,
+				4A563B28228C9655009C389D /* Localizable.strings in Resources */,
 				87F76A3D206FE07D00F2BFF4 /* DashboardTableViewHeaderView.xib in Resources */,
 				87F76A39206FE07D00F2BFF4 /* BarDashboard.storyboard in Resources */,
 				87F76A3A206FE07D00F2BFF4 /* DashboardTableView.storyboard in Resources */,
