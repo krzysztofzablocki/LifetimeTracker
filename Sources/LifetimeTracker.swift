@@ -84,7 +84,7 @@ import Foundation
     internal static func makeCompleteConfiguration(with instance: LifetimeTrackable) -> LifetimeConfiguration {
         let instanceType = type(of: instance)
         let configuration = instanceType.lifetimeConfiguration
-        configuration.instanceName = String(describing: instanceType)
+        configuration.instanceName = String(reflecting: instanceType)
         configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
         return configuration
     }
@@ -222,7 +222,7 @@ public extension LifetimeTrackable {
         
         let instanceType = type(of: instance)
         var configuration = configuration
-        configuration.instanceName = String(describing: instanceType)
+        configuration.instanceName = String(reflecting: instanceType)
         configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
         
         func update(_ configuration: LifetimeConfiguration, with countDelta: Int) {
