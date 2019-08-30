@@ -60,8 +60,9 @@ You conform to `LifetimeTrackable` and call `trackLifetime()` at the end of your
 
 ```swift
 class SectionFrontViewController: UIViewController, LifetimeTrackable {
-    static var lifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "VC")
-
+    class var lifetimeConfiguration: LifetimeConfiguration {
+        return LifetimeConfiguration(maxCount: 1, groupName: "VC")
+    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         /// ...
