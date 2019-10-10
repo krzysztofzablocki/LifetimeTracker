@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.resources     = "Sources/**/*.{xib,storyboard}"
   s.resource_bundle = { "LifetimeTracker" => ["Sources/**/*.{strings}"] }
   s.frameworks  = ["Foundation", "UIKit"]
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 end
