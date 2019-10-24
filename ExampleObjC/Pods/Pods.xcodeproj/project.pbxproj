@@ -7,354 +7,386 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06B87AE942EADBC2B1619D28681018E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC68BCC1F416D23CCDC21121788DA4C /* Extensions.swift */; };
-		1A6E33FADAA75FF943806B1F850F4C97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6773D27C5C42CF13EB80E3753393F053 /* Localizable.strings */; };
-		1C3B5FBC37983A9085D126DA2C8DE62B /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C898D864744593EFA318B7D3AB5E6 /* DeallocTracker.swift */; };
-		1EA0970A278E67599DE8984659D93293 /* BarDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185FC0D01CAE0B1D9A7A9FEA751B4AD /* BarDashboardViewController.swift */; };
-		2DEBED517C6741850D728D4FAFED9EC5 /* LifetimeTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 809CE1B632552A628268DB5227673302 /* LifetimeTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E65E68AD27346B28829AB9D1A16B3D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE78F3066DC0092EB7B69A5B580B04 /* Constants.swift */; };
-		34C98C341E8CB7C40A1D4F1E69622FA1 /* Pods-ExampleObjC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E068132705ABB361305808AFD17C87 /* Pods-ExampleObjC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		361D0FACBEBE0C2E1DDAF9BA333E1E8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		3A5AED3107383415E4FB7FAD33A6803E /* DashboardTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1735248170EBF24D3E828C7665E7E6F /* DashboardTableView.storyboard */; };
-		3E9990F33034A01A34920FA87199308E /* Pods-ExampleObjC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4117E609326FACF0F6A1057D0CD8EF /* Pods-ExampleObjC-dummy.m */; };
-		57E41E191F02FEB44D33418884A81317 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A87582C419E8DB5FA903DE4162EA72 /* LifetimeTracker.swift */; };
-		626C303A8129A41B3E0C46420CC95D68 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C639D8126597A0E12C4558DBA55A1DF /* DashboardTableViewHeaderView.swift */; };
-		62F17DE3E6267BBC0A73BBB12BF97C8F /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D93749CA880DD2419D31BC4091913 /* Extensions+UIKit.swift */; };
-		78386DFA74A9B4776EB2D97D2FD913D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		7D0AAAF5E2FFCE0540261ADC2C99B20F /* LifetimeTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FFED678B3800C81EDE9476780F8701 /* LifetimeTracker-dummy.m */; };
-		A2B359875E3D2659D3BED20E397F992D /* BarDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F181C9E8DC93FB96CB0FBCAA0EAF9A77 /* BarDashboard.storyboard */; };
-		AA8577E5991363010D4EE4822E523290 /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62100E393F608168F77E5D5A88DEC6F /* Constants+UIKit.swift */; };
-		B472BE788E5229FA10E778F1EA92ACBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		B5130617EE74EFA2FF1F990BE4787A44 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCA9F605F3A1CD9B6ADF2051C6D599E /* DashboardTableViewCell.xib */; };
-		BA531591E4129EE68CE220E6BFC6055B /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184A1EE23645282FB76BC931CB642C5 /* LifetimeTracker+DashboardView.swift */; };
-		D284C2A9B9BE3D43D92E0BEE373A49CE /* CircularDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE79DD3DC803123E38F6BCA8CB710A0 /* CircularDashboard.storyboard */; };
-		D2D708CCABA18E0CDEA6229AD23EB0EA /* LifetimeTracker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 42405E1D21C3441AC6CF54F3E4E2D760 /* LifetimeTracker.bundle */; };
-		E59EB76B91D2F5EFD95E6941E2A8377C /* CircularDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E47B75377DDC39E11B01FE9057B677A /* CircularDashboardViewController.swift */; };
-		E8A6F559B7978C6D988AD9BA71C1E378 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F464C75EBF3EE119D95CEB08E6E57 /* DashboardTableViewCell.swift */; };
-		EBA9D16AB16A21B078853AD6A9D57B7A /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E86E2FD64B9ABE0B5155DB669A1C3 /* DashboardTableViewController.swift */; };
-		F3A14766C7BD639FDDBE3FD48E614CD1 /* LifetimeTrackerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33861C92AEBA2BD70D1D941A6FA680BD /* LifetimeTrackerListViewController.swift */; };
-		FEC8C6FDBD24CE1851CA36533E733466 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6897A59EE905BD30D11B3164E6B061 /* DashboardTableViewHeaderView.xib */; };
+		04BE527037AF0A4BA7B632BFB024EA5E /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCB960E4EF97BF356314C92ED219D52 /* DashboardTableViewCell.xib */; };
+		06E148C40ECD6B1C543DFFF80CD1DC42 /* Pods-ExampleObjC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF6726DD100C34F5241EDB46E8AE88 /* Pods-ExampleObjC-dummy.m */; };
+		0D294BCA2A88C9CE45F4FF115D5ABF81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B44A25B747AE3EAA6B05F69865BBF31A /* Localizable.strings */; };
+		17776F036243213ED115AA2F9CB8E23F /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384C4BA45E88BB9A1E6F6C21E031119 /* Constants+UIKit.swift */; };
+		1F052E7EA0A2BD5CFDBAEBCFAEB92004 /* BarDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D1A51F4DBFB54C39AD37E531B18F45 /* BarDashboardViewController.swift */; };
+		1F14FFE03AD2E25AC51E6A57BF6AFB87 /* LifetimeTrackerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246749DBE6A5642CB9AEFF6C3624DDE /* LifetimeTrackerListViewController.swift */; };
+		2092533CDE30838FE91053B08D8976EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9B0D8C190238B3A9D64DE0EBF48C10 /* Constants.swift */; };
+		20DBACA5499900BE7889C86C3CA5AA2A /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA7A472D056BFD181559F72C8CB37F /* LifetimeTracker+DashboardView.swift */; };
+		30FC50AF93F7BB65DD18A6703252431F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		346F012A15621441C22FEF58D5D8E3F3 /* LifetimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39400A335356F47B442D841965F04E9 /* LifetimeTracker.swift */; };
+		35D544BE3288F0A394D29032C78C175B /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79A5F2232E456DBFB4ECA9B704DF3ED /* DashboardTableViewController.swift */; };
+		371B102D6B92E8FDCCB7573DD22716BF /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1DF216C91C768D814B5F29DBF66BD /* Extensions+UIKit.swift */; };
+		39FA7723E36E0171EB7FC8E71EB43771 /* CircularDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2122EB9E9CF3288DEE4CD4166B5BB3F7 /* CircularDashboardViewController.swift */; };
+		3AD1ACB682C65E2EE47600AB96F3CA90 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1DF08527ED797C42AE9144CDDC7CA /* DashboardTableViewHeaderView.swift */; };
+		5FFB51AB47CC50ACA6E3BAFF69652782 /* DeallocTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B082F4825E0580D0428732DADDDAD96C /* DeallocTracker.swift */; };
+		613B315F207D63ECB4F53602A8923ECB /* DashboardTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E387B62B033C5BAA671D60764539E74C /* DashboardTableView.storyboard */; };
+		65BA39A546D94C6A6C7764FB6EBAF04A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		7D4CBEE0C188464D94CFA40836F28417 /* LifetimeTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD57EB677F2B6D7D477BEF5871777F7 /* LifetimeTracker-dummy.m */; };
+		802DB61093DB5578B66D9BEDC0CF2771 /* BarDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69048CB9E8E6622CE0A373DFD7B02365 /* BarDashboard.storyboard */; };
+		82E0EBB8FDAD2CB7D87FF321067227F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B8AA6D2053F04E2CA6FC139A123E0 /* Extensions.swift */; };
+		A2EECF5D8C540DF1402DD36D89DCCB01 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78865D155099B8BD091CE1596C9FC5 /* SettingsManager.swift */; };
+		A43837CBD8C955B7427C2D52A2AC61F0 /* LifetimeTracker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACF9B2467B1B107EA3FA693EC5FC1B7C /* LifetimeTracker.bundle */; };
+		A47E1200C8D88132C1F06C63D8588E5A /* LifetimeTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77CD48D7CDDA06F2C27D32946EEB8B41 /* LifetimeTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62AF238A420066C7EDED10BACA6ABD4 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EF016CC43F4EDFDD5CBC26204C5C48 /* DashboardTableViewHeaderView.xib */; };
+		B39240193F62A0AFA75F334767657917 /* CircularDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530A1FC4B06B4E863E48CCD4FE7F9ABD /* CircularDashboard.storyboard */; };
+		C9886CA59A1311C561C552DB0CE5E27E /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584B0CECC15B894B0E97A308364E2DD /* DashboardTableViewCell.swift */; };
+		D6B0DE2DBFE3117438A37838AA3D3CAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		EB5D04F3CBBF74DB05B38B585D668599 /* HideOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F08FA7EB87CD65FFE9CC233EBDC343 /* HideOption.swift */; };
+		FD7D4EE2E7FE2AD7A670A147B8B50CAE /* Pods-ExampleObjC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 266220AE38D2A708E22116C10ADEF950 /* Pods-ExampleObjC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3439D6E29FAA4C2B4709BA5B28485351 /* PBXContainerItemProxy */ = {
+		A44370A0FA53080FC9CBC8699ECEDDE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8CE5E1A589C1687EDE2C77A9841A1C82;
+			remoteGlobalIDString = 78E7B1A961CC1062B27A64289AC00F1E;
 			remoteInfo = LifetimeTracker;
 		};
-		79020FD07A3BB8CA5E7568CAD71F8B36 /* PBXContainerItemProxy */ = {
+		E45A37E584C418E56C1470AB1CA0504F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6156C725C047E45E3D8BC7A9259D661A;
+			remoteGlobalIDString = A10CDC6C409CEBB3F18F37EC9C9FCBBA;
 			remoteInfo = "LifetimeTracker-LifetimeTracker";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E876D0E3C552546654DC79E6A743256 /* Pods-ExampleObjC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleObjC-frameworks.sh"; sourceTree = "<group>"; };
-		157084244B46D4E4FD1571D28FBFE657 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		187DF6081F88AEEA5EA0F63B5867B07D /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LifetimeTracker.framework; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19D07F536D744DF57600FBE2DDB65B47 /* LifetimeTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LifetimeTracker.modulemap; sourceTree = "<group>"; };
-		1C639D8126597A0E12C4558DBA55A1DF /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
-		2BC68BCC1F416D23CCDC21121788DA4C /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
-		32A87582C419E8DB5FA903DE4162EA72 /* LifetimeTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LifetimeTracker.swift; path = Sources/LifetimeTracker.swift; sourceTree = "<group>"; };
-		33861C92AEBA2BD70D1D941A6FA680BD /* LifetimeTrackerListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LifetimeTrackerListViewController.swift; sourceTree = "<group>"; };
-		3FD9E16887B82260A541FAF2E821A3D8 /* Pods-ExampleObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExampleObjC.modulemap"; sourceTree = "<group>"; };
-		42132D61B524568EFD102E0A0D3B82CC /* Pods_ExampleObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleObjC.framework; path = "Pods-ExampleObjC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42405E1D21C3441AC6CF54F3E4E2D760 /* LifetimeTracker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LifetimeTracker.bundle; path = "LifetimeTracker-LifetimeTracker.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45177E57F37F829ECD216D61B714CFF0 /* Pods-ExampleObjC-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleObjC-resources.sh"; sourceTree = "<group>"; };
-		4B4D93749CA880DD2419D31BC4091913 /* Extensions+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extensions+UIKit.swift"; sourceTree = "<group>"; };
-		4F432DA27A8AA00CA406989CA0EFD515 /* ResourceBundle-LifetimeTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LifetimeTracker-Info.plist"; sourceTree = "<group>"; };
-		5018C28CD79A9CA808B85E5757EEFE10 /* Pods-ExampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleObjC.release.xcconfig"; sourceTree = "<group>"; };
-		5184A1EE23645282FB76BC931CB642C5 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
-		5E47B75377DDC39E11B01FE9057B677A /* CircularDashboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircularDashboardViewController.swift; sourceTree = "<group>"; };
-		6773D27C5C42CF13EB80E3753393F053 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Sources/Localizable.strings; sourceTree = "<group>"; };
-		6F9E86E2FD64B9ABE0B5155DB669A1C3 /* DashboardTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
-		726B49C1FE97A9E176F492F29D025A41 /* LifetimeTracker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-prefix.pch"; sourceTree = "<group>"; };
-		78C31DE38FF70A415616458785397D97 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		809CE1B632552A628268DB5227673302 /* LifetimeTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-umbrella.h"; sourceTree = "<group>"; };
-		840C008E1D8421B02CD1427CEEC0F12C /* LifetimeTracker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LifetimeTracker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8766395F59FE2819E719BE030C919585 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		902F464C75EBF3EE119D95CEB08E6E57 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D6897A59EE905BD30D11B3164E6B061 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
-		A185FC0D01CAE0B1D9A7A9FEA751B4AD /* BarDashboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BarDashboardViewController.swift; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LifetimeTracker.xcconfig; sourceTree = "<group>"; };
-		C8045328A61340E64BDACD0A60AEA00B /* Pods-ExampleObjC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleObjC-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CEAE78F3066DC0092EB7B69A5B580B04 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Constants.swift; sourceTree = "<group>"; };
-		D16C898D864744593EFA318B7D3AB5E6 /* DeallocTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeallocTracker.swift; path = Sources/DeallocTracker.swift; sourceTree = "<group>"; };
-		D1735248170EBF24D3E828C7665E7E6F /* DashboardTableView.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = DashboardTableView.storyboard; sourceTree = "<group>"; };
-		D6FFED678B3800C81EDE9476780F8701 /* LifetimeTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LifetimeTracker-dummy.m"; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DF1B158266EC4BD6758E5DDF3B0CD585 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		E1E068132705ABB361305808AFD17C87 /* Pods-ExampleObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleObjC-umbrella.h"; sourceTree = "<group>"; };
-		EB4117E609326FACF0F6A1057D0CD8EF /* Pods-ExampleObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleObjC-dummy.m"; sourceTree = "<group>"; };
-		EDCA9F605F3A1CD9B6ADF2051C6D599E /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
-		F181C9E8DC93FB96CB0FBCAA0EAF9A77 /* BarDashboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = BarDashboard.storyboard; sourceTree = "<group>"; };
-		F62100E393F608168F77E5D5A88DEC6F /* Constants+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Constants+UIKit.swift"; sourceTree = "<group>"; };
-		F966C85F9127C9683B1CED3842750BCC /* Pods-ExampleObjC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleObjC-acknowledgements.plist"; sourceTree = "<group>"; };
-		FECBE637EBEAB178AF67881C0A016E51 /* Pods-ExampleObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleObjC.debug.xcconfig"; sourceTree = "<group>"; };
-		FFE79DD3DC803123E38F6BCA8CB710A0 /* CircularDashboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CircularDashboard.storyboard; sourceTree = "<group>"; };
+		011A91A550DFA36F28B3893854F99772 /* Pods-ExampleObjC-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleObjC-frameworks.sh"; sourceTree = "<group>"; };
+		029657076A5946BBCCAE25668AED31A9 /* Pods-ExampleObjC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleObjC-acknowledgements.plist"; sourceTree = "<group>"; };
+		03615831AF869656E494A83DD4D0CC5C /* Pods-ExampleObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		0584B0CECC15B894B0E97A308364E2DD /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		1398B7A47DCEA01AFE8563D9FD1CF694 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1CBF6726DD100C34F5241EDB46E8AE88 /* Pods-ExampleObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleObjC-dummy.m"; sourceTree = "<group>"; };
+		2122EB9E9CF3288DEE4CD4166B5BB3F7 /* CircularDashboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircularDashboardViewController.swift; sourceTree = "<group>"; };
+		25B5C7B8A8D6471EACB72DC8314CA151 /* ResourceBundle-LifetimeTracker-LifetimeTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LifetimeTracker-LifetimeTracker-Info.plist"; sourceTree = "<group>"; };
+		266220AE38D2A708E22116C10ADEF950 /* Pods-ExampleObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleObjC-umbrella.h"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4246749DBE6A5642CB9AEFF6C3624DDE /* LifetimeTrackerListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LifetimeTrackerListViewController.swift; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		478DFF6B7C400B6D7CD4DA47FED5855A /* Pods-ExampleObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExampleObjC.modulemap"; sourceTree = "<group>"; };
+		48A104DC9E41B0AA5ADF28206D28A804 /* Pods_ExampleObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExampleObjC.framework; path = "Pods-ExampleObjC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		530A1FC4B06B4E863E48CCD4FE7F9ABD /* CircularDashboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = CircularDashboard.storyboard; sourceTree = "<group>"; };
+		54D1A51F4DBFB54C39AD37E531B18F45 /* BarDashboardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BarDashboardViewController.swift; sourceTree = "<group>"; };
+		6384C4BA45E88BB9A1E6F6C21E031119 /* Constants+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Constants+UIKit.swift"; sourceTree = "<group>"; };
+		69048CB9E8E6622CE0A373DFD7B02365 /* BarDashboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = BarDashboard.storyboard; sourceTree = "<group>"; };
+		6E11AE22295D5A713797AFE569A925C5 /* LifetimeTracker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-prefix.pch"; sourceTree = "<group>"; };
+		6EF0C9F6FCE125BD61C12A93F3527CDE /* LifetimeTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LifetimeTracker.modulemap; sourceTree = "<group>"; };
+		76FA7A472D056BFD181559F72C8CB37F /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
+		77CD48D7CDDA06F2C27D32946EEB8B41 /* LifetimeTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LifetimeTracker-umbrella.h"; sourceTree = "<group>"; };
+		8765AA619367ADEB23E2BA3F391E3A52 /* Pods-ExampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleObjC.release.xcconfig"; sourceTree = "<group>"; };
+		8CD57EB677F2B6D7D477BEF5871777F7 /* LifetimeTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LifetimeTracker-dummy.m"; sourceTree = "<group>"; };
+		90E1DF08527ED797C42AE9144CDDC7CA /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
+		9B78865D155099B8BD091CE1596C9FC5 /* SettingsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		9C3B8AA6D2053F04E2CA6FC139A123E0 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FC6CB76E127DD1A9F56DFF6BD445400 /* Pods-ExampleObjC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleObjC-Info.plist"; sourceTree = "<group>"; };
+		A11769278917A6E0C62CEB6B6AA5CC46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A5F08FA7EB87CD65FFE9CC233EBDC343 /* HideOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HideOption.swift; sourceTree = "<group>"; };
+		ACF9B2467B1B107EA3FA693EC5FC1B7C /* LifetimeTracker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LifetimeTracker.bundle; path = "LifetimeTracker-LifetimeTracker.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B060D744C55BB781AB41E16629B8BC41 /* LifetimeTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LifetimeTracker-Info.plist"; sourceTree = "<group>"; };
+		B082F4825E0580D0428732DADDDAD96C /* DeallocTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeallocTracker.swift; path = Sources/DeallocTracker.swift; sourceTree = "<group>"; };
+		B44A25B747AE3EAA6B05F69865BBF31A /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = Sources/Localizable.strings; sourceTree = "<group>"; };
+		B8B1DF216C91C768D814B5F29DBF66BD /* Extensions+UIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extensions+UIKit.swift"; sourceTree = "<group>"; };
+		BD4471811F4B1A2981D0D0F410127DEF /* Pods-ExampleObjC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleObjC-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C39400A335356F47B442D841965F04E9 /* LifetimeTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LifetimeTracker.swift; path = Sources/LifetimeTracker.swift; sourceTree = "<group>"; };
+		CC04B78CE1105B76F6DEFFB401630B07 /* LifetimeTracker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LifetimeTracker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CDCB960E4EF97BF356314C92ED219D52 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LifetimeTracker.xcconfig; sourceTree = "<group>"; };
+		D74CAD4B0F42E2EF1CE07C6E2C38B949 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LifetimeTracker.framework; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79A5F2232E456DBFB4ECA9B704DF3ED /* DashboardTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
+		E387B62B033C5BAA671D60764539E74C /* DashboardTableView.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = DashboardTableView.storyboard; sourceTree = "<group>"; };
+		E5EF016CC43F4EDFDD5CBC26204C5C48 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
+		EE9B0D8C190238B3A9D64DE0EBF48C10 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		694E177C24DD3534F9C3F46FDF560770 /* Frameworks */ = {
+		0BE45D636AD016EDE5B23F247A5E7714 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				361D0FACBEBE0C2E1DDAF9BA333E1E8D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F269DDA5C0D89C3CB527C83910AC711 /* Frameworks */ = {
+		8900749F17650331A1094F0B8572F4A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78386DFA74A9B4776EB2D97D2FD913D6 /* Foundation.framework in Frameworks */,
-				B472BE788E5229FA10E778F1EA92ACBD /* UIKit.framework in Frameworks */,
+				30FC50AF93F7BB65DD18A6703252431F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADABDD1F44C31FFB1DE51063F76D707F /* Frameworks */ = {
+		8F9AF50F3D747A1BA1D75126163FA085 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BA39A546D94C6A6C7764FB6EBAF04A /* Foundation.framework in Frameworks */,
+				D6B0DE2DBFE3117438A37838AA3D3CAB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C0A3E1D2D5762656628EDE3E9EDD2B /* Products */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42405E1D21C3441AC6CF54F3E4E2D760 /* LifetimeTracker.bundle */,
-				187DF6081F88AEEA5EA0F63B5867B07D /* LifetimeTracker.framework */,
-				42132D61B524568EFD102E0A0D3B82CC /* Pods_ExampleObjC.framework */,
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		03EEABDE17335E6D75D518385E62785F /* BarDashboard */ = {
+		1B913EAF33392D2566459321F54AE39E /* BarDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				A185FC0D01CAE0B1D9A7A9FEA751B4AD /* BarDashboardViewController.swift */,
+				69048CB9E8E6622CE0A373DFD7B02365 /* BarDashboard.storyboard */,
 			);
 			name = BarDashboard;
-			path = BarDashboard;
+			path = Sources/iOS/UI/BarDashboard;
 			sourceTree = "<group>";
 		};
-		1484CDDD8F043C89D8E519DEFBBF024A /* Support Files */ = {
+		1DD3F5B20FF8C3E41961051CBC6AF095 /* CircularDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				157084244B46D4E4FD1571D28FBFE657 /* Info.plist */,
-				19D07F536D744DF57600FBE2DDB65B47 /* LifetimeTracker.modulemap */,
-				C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */,
-				D6FFED678B3800C81EDE9476780F8701 /* LifetimeTracker-dummy.m */,
-				726B49C1FE97A9E176F492F29D025A41 /* LifetimeTracker-prefix.pch */,
-				809CE1B632552A628268DB5227673302 /* LifetimeTracker-umbrella.h */,
-				4F432DA27A8AA00CA406989CA0EFD515 /* ResourceBundle-LifetimeTracker-Info.plist */,
-			);
-			name = "Support Files";
-			path = "ExampleObjC/Pods/Target Support Files/LifetimeTracker";
-			sourceTree = "<group>";
-		};
-		1603930AA0B1D82A04C91BEA243DE83D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EAA3DCF2FF03339C1D83E4790F09F41C /* Pods-ExampleObjC */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		1EAED2E602B3324EC5BDF3E9FB085E9F /* CircularDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				5E47B75377DDC39E11B01FE9057B677A /* CircularDashboardViewController.swift */,
+				2122EB9E9CF3288DEE4CD4166B5BB3F7 /* CircularDashboardViewController.swift */,
 			);
 			name = CircularDashboard;
 			path = CircularDashboard;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		201C8705745D71BC32F86061232358A1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				7AF2BA49C8EF2B1F4A7718CFD41AE5BD /* LifetimeTracker */,
 			);
-			name = Frameworks;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+		39A8A29A0135BB323FA89A02E1AB4EF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+				ACF9B2467B1B107EA3FA693EC5FC1B7C /* LifetimeTracker.bundle */,
+				D74CAD4B0F42E2EF1CE07C6E2C38B949 /* LifetimeTracker.framework */,
+				48A104DC9E41B0AA5ADF28206D28A804 /* Pods_ExampleObjC.framework */,
 			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		63D1EF1D32B6B8C1B72B24682A381A86 /* DashboardTableView */ = {
+		6ECA3AE5FBC457734BE28C5DD90B74B8 /* Pods-ExampleObjC */ = {
 			isa = PBXGroup;
 			children = (
-				902F464C75EBF3EE119D95CEB08E6E57 /* DashboardTableViewCell.swift */,
-				6F9E86E2FD64B9ABE0B5155DB669A1C3 /* DashboardTableViewController.swift */,
-				1C639D8126597A0E12C4558DBA55A1DF /* DashboardTableViewHeaderView.swift */,
-			);
-			name = DashboardTableView;
-			path = DashboardTableView;
-			sourceTree = "<group>";
-		};
-		6D6E13F7FD97BAF29E6E3D6011963694 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6773D27C5C42CF13EB80E3753393F053 /* Localizable.strings */,
-				73155847C19354393C4BA5D8ED434910 /* BarDashboard */,
-				F781E72EEFBE700656A6CA60B7D9F904 /* CircularDashboard */,
-				EE2518DCF8AE9F7E2DDC24FA15FF508B /* DashboardTableView */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		73155847C19354393C4BA5D8ED434910 /* BarDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				F181C9E8DC93FB96CB0FBCAA0EAF9A77 /* BarDashboard.storyboard */,
-			);
-			name = BarDashboard;
-			path = Sources/UI/BarDashboard;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F5026721D305979BA8937D775F367D4D /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				03C0A3E1D2D5762656628EDE3E9EDD2B /* Products */,
-				1603930AA0B1D82A04C91BEA243DE83D /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8F5CE0D4512BC32CF15E2CE9004A580F /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				F62100E393F608168F77E5D5A88DEC6F /* Constants+UIKit.swift */,
-				4B4D93749CA880DD2419D31BC4091913 /* Extensions+UIKit.swift */,
-				5184A1EE23645282FB76BC931CB642C5 /* LifetimeTracker+DashboardView.swift */,
-				33861C92AEBA2BD70D1D941A6FA680BD /* LifetimeTrackerListViewController.swift */,
-				03EEABDE17335E6D75D518385E62785F /* BarDashboard */,
-				1EAED2E602B3324EC5BDF3E9FB085E9F /* CircularDashboard */,
-				63D1EF1D32B6B8C1B72B24682A381A86 /* DashboardTableView */,
-			);
-			name = UI;
-			path = Sources/UI;
-			sourceTree = "<group>";
-		};
-		ABCD1DD480DF6056B8BCF6726EC27ADE /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				DF1B158266EC4BD6758E5DDF3B0CD585 /* LICENSE */,
-				840C008E1D8421B02CD1427CEEC0F12C /* LifetimeTracker.podspec */,
-				78C31DE38FF70A415616458785397D97 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		BA351E9DB8C3FC126C6B4B2D08ED04B7 /* LifetimeTracker */ = {
-			isa = PBXGroup;
-			children = (
-				CEAE78F3066DC0092EB7B69A5B580B04 /* Constants.swift */,
-				D16C898D864744593EFA318B7D3AB5E6 /* DeallocTracker.swift */,
-				2BC68BCC1F416D23CCDC21121788DA4C /* Extensions.swift */,
-				32A87582C419E8DB5FA903DE4162EA72 /* LifetimeTracker.swift */,
-				ABCD1DD480DF6056B8BCF6726EC27ADE /* Pod */,
-				6D6E13F7FD97BAF29E6E3D6011963694 /* Resources */,
-				1484CDDD8F043C89D8E519DEFBBF024A /* Support Files */,
-				8F5CE0D4512BC32CF15E2CE9004A580F /* UI */,
-			);
-			name = LifetimeTracker;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		EAA3DCF2FF03339C1D83E4790F09F41C /* Pods-ExampleObjC */ = {
-			isa = PBXGroup;
-			children = (
-				8766395F59FE2819E719BE030C919585 /* Info.plist */,
-				3FD9E16887B82260A541FAF2E821A3D8 /* Pods-ExampleObjC.modulemap */,
-				C8045328A61340E64BDACD0A60AEA00B /* Pods-ExampleObjC-acknowledgements.markdown */,
-				F966C85F9127C9683B1CED3842750BCC /* Pods-ExampleObjC-acknowledgements.plist */,
-				EB4117E609326FACF0F6A1057D0CD8EF /* Pods-ExampleObjC-dummy.m */,
-				0E876D0E3C552546654DC79E6A743256 /* Pods-ExampleObjC-frameworks.sh */,
-				45177E57F37F829ECD216D61B714CFF0 /* Pods-ExampleObjC-resources.sh */,
-				E1E068132705ABB361305808AFD17C87 /* Pods-ExampleObjC-umbrella.h */,
-				FECBE637EBEAB178AF67881C0A016E51 /* Pods-ExampleObjC.debug.xcconfig */,
-				5018C28CD79A9CA808B85E5757EEFE10 /* Pods-ExampleObjC.release.xcconfig */,
+				478DFF6B7C400B6D7CD4DA47FED5855A /* Pods-ExampleObjC.modulemap */,
+				BD4471811F4B1A2981D0D0F410127DEF /* Pods-ExampleObjC-acknowledgements.markdown */,
+				029657076A5946BBCCAE25668AED31A9 /* Pods-ExampleObjC-acknowledgements.plist */,
+				1CBF6726DD100C34F5241EDB46E8AE88 /* Pods-ExampleObjC-dummy.m */,
+				011A91A550DFA36F28B3893854F99772 /* Pods-ExampleObjC-frameworks.sh */,
+				9FC6CB76E127DD1A9F56DFF6BD445400 /* Pods-ExampleObjC-Info.plist */,
+				266220AE38D2A708E22116C10ADEF950 /* Pods-ExampleObjC-umbrella.h */,
+				03615831AF869656E494A83DD4D0CC5C /* Pods-ExampleObjC.debug.xcconfig */,
+				8765AA619367ADEB23E2BA3F391E3A52 /* Pods-ExampleObjC.release.xcconfig */,
 			);
 			name = "Pods-ExampleObjC";
 			path = "Target Support Files/Pods-ExampleObjC";
 			sourceTree = "<group>";
 		};
-		EE2518DCF8AE9F7E2DDC24FA15FF508B /* DashboardTableView */ = {
+		7AF2BA49C8EF2B1F4A7718CFD41AE5BD /* LifetimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				D1735248170EBF24D3E828C7665E7E6F /* DashboardTableView.storyboard */,
-				EDCA9F605F3A1CD9B6ADF2051C6D599E /* DashboardTableViewCell.xib */,
-				9D6897A59EE905BD30D11B3164E6B061 /* DashboardTableViewHeaderView.xib */,
+				EE9B0D8C190238B3A9D64DE0EBF48C10 /* Constants.swift */,
+				B082F4825E0580D0428732DADDDAD96C /* DeallocTracker.swift */,
+				9C3B8AA6D2053F04E2CA6FC139A123E0 /* Extensions.swift */,
+				C39400A335356F47B442D841965F04E9 /* LifetimeTracker.swift */,
+				E65AA9CCB03DF27ECB964143B1DFFAA1 /* iOS */,
+				D2117652C6C967024687AA94F12D4918 /* Pod */,
+				EA7DB389620C73A07583567DBA761E2E /* Resources */,
+				F49657F95738C1466D36B8C49A75D167 /* Support Files */,
+			);
+			name = LifetimeTracker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		851C085B8F8D46D59FF3DE4AE057DBF8 /* DashboardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E387B62B033C5BAA671D60764539E74C /* DashboardTableView.storyboard */,
+				CDCB960E4EF97BF356314C92ED219D52 /* DashboardTableViewCell.xib */,
+				E5EF016CC43F4EDFDD5CBC26204C5C48 /* DashboardTableViewHeaderView.xib */,
 			);
 			name = DashboardTableView;
-			path = Sources/UI/DashboardTableView;
+			path = Sources/iOS/UI/DashboardTableView;
 			sourceTree = "<group>";
 		};
-		F5026721D305979BA8937D775F367D4D /* Development Pods */ = {
+		872FAE65CDE90F34783676BDBDF0D089 /* BarDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				BA351E9DB8C3FC126C6B4B2D08ED04B7 /* LifetimeTracker */,
+				54D1A51F4DBFB54C39AD37E531B18F45 /* BarDashboardViewController.swift */,
 			);
-			name = "Development Pods";
+			name = BarDashboard;
+			path = BarDashboard;
 			sourceTree = "<group>";
 		};
-		F781E72EEFBE700656A6CA60B7D9F904 /* CircularDashboard */ = {
+		A851DC8D04BA1499C5758E3ACE5D0DA7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FFE79DD3DC803123E38F6BCA8CB710A0 /* CircularDashboard.storyboard */,
+				6384C4BA45E88BB9A1E6F6C21E031119 /* Constants+UIKit.swift */,
+				B8B1DF216C91C768D814B5F29DBF66BD /* Extensions+UIKit.swift */,
+				A5F08FA7EB87CD65FFE9CC233EBDC343 /* HideOption.swift */,
+				76FA7A472D056BFD181559F72C8CB37F /* LifetimeTracker+DashboardView.swift */,
+				4246749DBE6A5642CB9AEFF6C3624DDE /* LifetimeTrackerListViewController.swift */,
+				872FAE65CDE90F34783676BDBDF0D089 /* BarDashboard */,
+				1DD3F5B20FF8C3E41961051CBC6AF095 /* CircularDashboard */,
+				CC10EED828C22EAB6E0B5F3E102ECB79 /* DashboardTableView */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B67A0847DB500697448A4337868E3FA3 /* CircularDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				530A1FC4B06B4E863E48CCD4FE7F9ABD /* CircularDashboard.storyboard */,
 			);
 			name = CircularDashboard;
-			path = Sources/UI/CircularDashboard;
+			path = Sources/iOS/UI/CircularDashboard;
+			sourceTree = "<group>";
+		};
+		CC10EED828C22EAB6E0B5F3E102ECB79 /* DashboardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0584B0CECC15B894B0E97A308364E2DD /* DashboardTableViewCell.swift */,
+				D79A5F2232E456DBFB4ECA9B704DF3ED /* DashboardTableViewController.swift */,
+				90E1DF08527ED797C42AE9144CDDC7CA /* DashboardTableViewHeaderView.swift */,
+			);
+			name = DashboardTableView;
+			path = DashboardTableView;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				201C8705745D71BC32F86061232358A1 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				39A8A29A0135BB323FA89A02E1AB4EF4 /* Products */,
+				E6408A3EE721DEC15412D36A94804F6D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2117652C6C967024687AA94F12D4918 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1398B7A47DCEA01AFE8563D9FD1CF694 /* LICENSE */,
+				CC04B78CE1105B76F6DEFFB401630B07 /* LifetimeTracker.podspec */,
+				A11769278917A6E0C62CEB6B6AA5CC46 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E6408A3EE721DEC15412D36A94804F6D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6ECA3AE5FBC457734BE28C5DD90B74B8 /* Pods-ExampleObjC */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E65AA9CCB03DF27ECB964143B1DFFAA1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B78865D155099B8BD091CE1596C9FC5 /* SettingsManager.swift */,
+				A851DC8D04BA1499C5758E3ACE5D0DA7 /* UI */,
+			);
+			name = iOS;
+			path = Sources/iOS;
+			sourceTree = "<group>";
+		};
+		EA7DB389620C73A07583567DBA761E2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B44A25B747AE3EAA6B05F69865BBF31A /* Localizable.strings */,
+				1B913EAF33392D2566459321F54AE39E /* BarDashboard */,
+				B67A0847DB500697448A4337868E3FA3 /* CircularDashboard */,
+				851C085B8F8D46D59FF3DE4AE057DBF8 /* DashboardTableView */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F49657F95738C1466D36B8C49A75D167 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EF0C9F6FCE125BD61C12A93F3527CDE /* LifetimeTracker.modulemap */,
+				D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */,
+				8CD57EB677F2B6D7D477BEF5871777F7 /* LifetimeTracker-dummy.m */,
+				B060D744C55BB781AB41E16629B8BC41 /* LifetimeTracker-Info.plist */,
+				6E11AE22295D5A713797AFE569A925C5 /* LifetimeTracker-prefix.pch */,
+				77CD48D7CDDA06F2C27D32946EEB8B41 /* LifetimeTracker-umbrella.h */,
+				25B5C7B8A8D6471EACB72DC8314CA151 /* ResourceBundle-LifetimeTracker-LifetimeTracker-Info.plist */,
+			);
+			name = "Support Files";
+			path = "ExampleObjC/Pods/Target Support Files/LifetimeTracker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		358DBB423BFA4875E1FEFAADDAB48EFC /* Headers */ = {
+		3452E6E5525C3B073DCB9AF52EBDF8C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C98C341E8CB7C40A1D4F1E69622FA1 /* Pods-ExampleObjC-umbrella.h in Headers */,
+				A47E1200C8D88132C1F06C63D8588E5A /* LifetimeTracker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE5CF38B34B5EAE6517F7884EE545370 /* Headers */ = {
+		AF21DDC0C319847C3A6ABA6E4CC468B5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEBED517C6741850D728D4FAFED9EC5 /* LifetimeTracker-umbrella.h in Headers */,
+				FD7D4EE2E7FE2AD7A670A147B8B50CAE /* Pods-ExampleObjC-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6156C725C047E45E3D8BC7A9259D661A /* LifetimeTracker-LifetimeTracker */ = {
+		78E7B1A961CC1062B27A64289AC00F1E /* LifetimeTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2810ABD81F9EE2AF496C4D1B03027DB7 /* Build configuration list for PBXNativeTarget "LifetimeTracker-LifetimeTracker" */;
+			buildConfigurationList = A97BCBD287B2DCD46F9102DDE650EBFA /* Build configuration list for PBXNativeTarget "LifetimeTracker" */;
 			buildPhases = (
-				9EDFE0F7F96D57A984E5CFA20AD3D0FF /* Sources */,
-				ADABDD1F44C31FFB1DE51063F76D707F /* Frameworks */,
-				2E9E925C35BC9961633AC2F6EAFEBAB2 /* Resources */,
+				3452E6E5525C3B073DCB9AF52EBDF8C9 /* Headers */,
+				C34BF962862BCCFF2F4D008CEEDC2FD2 /* Sources */,
+				8F9AF50F3D747A1BA1D75126163FA085 /* Frameworks */,
+				EE3E2481FD5E2C11300A2566C7D1B579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C4726A0E097FBDB5E29CB884E117C90 /* PBXTargetDependency */,
+			);
+			name = LifetimeTracker;
+			productName = LifetimeTracker;
+			productReference = D74CAD4B0F42E2EF1CE07C6E2C38B949 /* LifetimeTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A10CDC6C409CEBB3F18F37EC9C9FCBBA /* LifetimeTracker-LifetimeTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C97464D237B6297B783B2BA44C881A3 /* Build configuration list for PBXNativeTarget "LifetimeTracker-LifetimeTracker" */;
+			buildPhases = (
+				7A1D44D58B2ECB083A24C84354D01682 /* Sources */,
+				0BE45D636AD016EDE5B23F247A5E7714 /* Frameworks */,
+				001C62AE803800E760A21163B28839D8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -362,188 +394,145 @@
 			);
 			name = "LifetimeTracker-LifetimeTracker";
 			productName = "LifetimeTracker-LifetimeTracker";
-			productReference = 42405E1D21C3441AC6CF54F3E4E2D760 /* LifetimeTracker.bundle */;
+			productReference = ACF9B2467B1B107EA3FA693EC5FC1B7C /* LifetimeTracker.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8CE5E1A589C1687EDE2C77A9841A1C82 /* LifetimeTracker */ = {
+		F53C6FC7355E9B8C5A0BDC1E70FDFD32 /* Pods-ExampleObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20B0248871F9C2E098455AE52CDA3D13 /* Build configuration list for PBXNativeTarget "LifetimeTracker" */;
+			buildConfigurationList = 21358F52A69CF929F57A37AC7D7CACC5 /* Build configuration list for PBXNativeTarget "Pods-ExampleObjC" */;
 			buildPhases = (
-				AE31AE571FF3DAF8AF8F950F3326D63C /* Sources */,
-				7F269DDA5C0D89C3CB527C83910AC711 /* Frameworks */,
-				E53683299157FECD2F484F861030D565 /* Resources */,
-				BE5CF38B34B5EAE6517F7884EE545370 /* Headers */,
+				AF21DDC0C319847C3A6ABA6E4CC468B5 /* Headers */,
+				08A1CAE0B216D0540A388DB261841FD9 /* Sources */,
+				8900749F17650331A1094F0B8572F4A5 /* Frameworks */,
+				9C6EBF202C94DF3D7284A5AEECF33728 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				37842E350F136002F06F67B467007CF2 /* PBXTargetDependency */,
-			);
-			name = LifetimeTracker;
-			productName = LifetimeTracker;
-			productReference = 187DF6081F88AEEA5EA0F63B5867B07D /* LifetimeTracker.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BE8600954419D816C2339A08CE6A6D3B /* Pods-ExampleObjC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 97EDFCE3E348944B3075BF0065D469EE /* Build configuration list for PBXNativeTarget "Pods-ExampleObjC" */;
-			buildPhases = (
-				DB78F6D52526850AE6BFE3230C21F706 /* Sources */,
-				694E177C24DD3534F9C3F46FDF560770 /* Frameworks */,
-				358DBB423BFA4875E1FEFAADDAB48EFC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E9C3958813A58631FD8FA4E4B8BFC5DC /* PBXTargetDependency */,
+				0662BE785BD054D141738C59DB76C9E2 /* PBXTargetDependency */,
 			);
 			name = "Pods-ExampleObjC";
 			productName = "Pods-ExampleObjC";
-			productReference = 42132D61B524568EFD102E0A0D3B82CC /* Pods_ExampleObjC.framework */;
+			productReference = 48A104DC9E41B0AA5ADF28206D28A804 /* Pods_ExampleObjC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 03C0A3E1D2D5762656628EDE3E9EDD2B /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 39A8A29A0135BB323FA89A02E1AB4EF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CE5E1A589C1687EDE2C77A9841A1C82 /* LifetimeTracker */,
-				6156C725C047E45E3D8BC7A9259D661A /* LifetimeTracker-LifetimeTracker */,
-				BE8600954419D816C2339A08CE6A6D3B /* Pods-ExampleObjC */,
+				78E7B1A961CC1062B27A64289AC00F1E /* LifetimeTracker */,
+				A10CDC6C409CEBB3F18F37EC9C9FCBBA /* LifetimeTracker-LifetimeTracker */,
+				F53C6FC7355E9B8C5A0BDC1E70FDFD32 /* Pods-ExampleObjC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2E9E925C35BC9961633AC2F6EAFEBAB2 /* Resources */ = {
+		001C62AE803800E760A21163B28839D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6E33FADAA75FF943806B1F850F4C97 /* Localizable.strings in Resources */,
+				0D294BCA2A88C9CE45F4FF115D5ABF81 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E53683299157FECD2F484F861030D565 /* Resources */ = {
+		9C6EBF202C94DF3D7284A5AEECF33728 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B359875E3D2659D3BED20E397F992D /* BarDashboard.storyboard in Resources */,
-				D284C2A9B9BE3D43D92E0BEE373A49CE /* CircularDashboard.storyboard in Resources */,
-				3A5AED3107383415E4FB7FAD33A6803E /* DashboardTableView.storyboard in Resources */,
-				B5130617EE74EFA2FF1F990BE4787A44 /* DashboardTableViewCell.xib in Resources */,
-				FEC8C6FDBD24CE1851CA36533E733466 /* DashboardTableViewHeaderView.xib in Resources */,
-				D2D708CCABA18E0CDEA6229AD23EB0EA /* LifetimeTracker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3E2481FD5E2C11300A2566C7D1B579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				802DB61093DB5578B66D9BEDC0CF2771 /* BarDashboard.storyboard in Resources */,
+				B39240193F62A0AFA75F334767657917 /* CircularDashboard.storyboard in Resources */,
+				613B315F207D63ECB4F53602A8923ECB /* DashboardTableView.storyboard in Resources */,
+				04BE527037AF0A4BA7B632BFB024EA5E /* DashboardTableViewCell.xib in Resources */,
+				A62AF238A420066C7EDED10BACA6ABD4 /* DashboardTableViewHeaderView.xib in Resources */,
+				A43837CBD8C955B7427C2D52A2AC61F0 /* LifetimeTracker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9EDFE0F7F96D57A984E5CFA20AD3D0FF /* Sources */ = {
+		08A1CAE0B216D0540A388DB261841FD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E148C40ECD6B1C543DFFF80CD1DC42 /* Pods-ExampleObjC-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A1D44D58B2ECB083A24C84354D01682 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE31AE571FF3DAF8AF8F950F3326D63C /* Sources */ = {
+		C34BF962862BCCFF2F4D008CEEDC2FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA0970A278E67599DE8984659D93293 /* BarDashboardViewController.swift in Sources */,
-				E59EB76B91D2F5EFD95E6941E2A8377C /* CircularDashboardViewController.swift in Sources */,
-				AA8577E5991363010D4EE4822E523290 /* Constants+UIKit.swift in Sources */,
-				2E65E68AD27346B28829AB9D1A16B3D2 /* Constants.swift in Sources */,
-				E8A6F559B7978C6D988AD9BA71C1E378 /* DashboardTableViewCell.swift in Sources */,
-				EBA9D16AB16A21B078853AD6A9D57B7A /* DashboardTableViewController.swift in Sources */,
-				626C303A8129A41B3E0C46420CC95D68 /* DashboardTableViewHeaderView.swift in Sources */,
-				1C3B5FBC37983A9085D126DA2C8DE62B /* DeallocTracker.swift in Sources */,
-				62F17DE3E6267BBC0A73BBB12BF97C8F /* Extensions+UIKit.swift in Sources */,
-				06B87AE942EADBC2B1619D28681018E9 /* Extensions.swift in Sources */,
-				BA531591E4129EE68CE220E6BFC6055B /* LifetimeTracker+DashboardView.swift in Sources */,
-				7D0AAAF5E2FFCE0540261ADC2C99B20F /* LifetimeTracker-dummy.m in Sources */,
-				57E41E191F02FEB44D33418884A81317 /* LifetimeTracker.swift in Sources */,
-				F3A14766C7BD639FDDBE3FD48E614CD1 /* LifetimeTrackerListViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB78F6D52526850AE6BFE3230C21F706 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E9990F33034A01A34920FA87199308E /* Pods-ExampleObjC-dummy.m in Sources */,
+				1F052E7EA0A2BD5CFDBAEBCFAEB92004 /* BarDashboardViewController.swift in Sources */,
+				39FA7723E36E0171EB7FC8E71EB43771 /* CircularDashboardViewController.swift in Sources */,
+				17776F036243213ED115AA2F9CB8E23F /* Constants+UIKit.swift in Sources */,
+				2092533CDE30838FE91053B08D8976EC /* Constants.swift in Sources */,
+				C9886CA59A1311C561C552DB0CE5E27E /* DashboardTableViewCell.swift in Sources */,
+				35D544BE3288F0A394D29032C78C175B /* DashboardTableViewController.swift in Sources */,
+				3AD1ACB682C65E2EE47600AB96F3CA90 /* DashboardTableViewHeaderView.swift in Sources */,
+				5FFB51AB47CC50ACA6E3BAFF69652782 /* DeallocTracker.swift in Sources */,
+				371B102D6B92E8FDCCB7573DD22716BF /* Extensions+UIKit.swift in Sources */,
+				82E0EBB8FDAD2CB7D87FF321067227F8 /* Extensions.swift in Sources */,
+				EB5D04F3CBBF74DB05B38B585D668599 /* HideOption.swift in Sources */,
+				20DBACA5499900BE7889C86C3CA5AA2A /* LifetimeTracker+DashboardView.swift in Sources */,
+				7D4CBEE0C188464D94CFA40836F28417 /* LifetimeTracker-dummy.m in Sources */,
+				346F012A15621441C22FEF58D5D8E3F3 /* LifetimeTracker.swift in Sources */,
+				1F14FFE03AD2E25AC51E6A57BF6AFB87 /* LifetimeTrackerListViewController.swift in Sources */,
+				A2EECF5D8C540DF1402DD36D89DCCB01 /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37842E350F136002F06F67B467007CF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "LifetimeTracker-LifetimeTracker";
-			target = 6156C725C047E45E3D8BC7A9259D661A /* LifetimeTracker-LifetimeTracker */;
-			targetProxy = 79020FD07A3BB8CA5E7568CAD71F8B36 /* PBXContainerItemProxy */;
-		};
-		E9C3958813A58631FD8FA4E4B8BFC5DC /* PBXTargetDependency */ = {
+		0662BE785BD054D141738C59DB76C9E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LifetimeTracker;
-			target = 8CE5E1A589C1687EDE2C77A9841A1C82 /* LifetimeTracker */;
-			targetProxy = 3439D6E29FAA4C2B4709BA5B28485351 /* PBXContainerItemProxy */;
+			target = 78E7B1A961CC1062B27A64289AC00F1E /* LifetimeTracker */;
+			targetProxy = A44370A0FA53080FC9CBC8699ECEDDE8 /* PBXContainerItemProxy */;
+		};
+		6C4726A0E097FBDB5E29CB884E117C90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LifetimeTracker-LifetimeTracker";
+			target = A10CDC6C409CEBB3F18F37EC9C9FCBBA /* LifetimeTracker-LifetimeTracker */;
+			targetProxy = E45A37E584C418E56C1470AB1CA0504F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		031CEB1B0E1639531060F124F8A2A54F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FECBE637EBEAB178AF67881C0A016E51 /* Pods-ExampleObjC.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ExampleObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ExampleObjC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
+		2F55A3566E4E4FC936EAEAB624C33C12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -553,10 +542,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -564,6 +555,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -572,7 +564,219 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		391AFE94BCBA9F63FC10C0A4E622DE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LifetimeTracker/LifetimeTracker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker.modulemap";
+				PRODUCT_MODULE_NAME = LifetimeTracker;
+				PRODUCT_NAME = LifetimeTracker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		463D207CE56A83F17D308C45AAD0ABA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03615831AF869656E494A83DD4D0CC5C /* Pods-ExampleObjC.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A84AED87AC76AE9D3FC278040EFC8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8765AA619367ADEB23E2BA3F391E3A52 /* Pods-ExampleObjC.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A250FF6A08918B2346E9F47971BEB78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LifetimeTracker/LifetimeTracker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker.modulemap";
+				PRODUCT_MODULE_NAME = LifetimeTracker;
+				PRODUCT_NAME = LifetimeTracker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		88C096AF149EE97D54B10E1E6D7A7AD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LifetimeTracker";
+				IBSC_MODULE = LifetimeTracker;
+				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/ResourceBundle-LifetimeTracker-LifetimeTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = LifetimeTracker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		959DAB4EC1BE4ADE4B22644C3E349521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -593,240 +797,75 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		3AA25BEF033C8973EC5176AD5653F45D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LifetimeTracker/LifetimeTracker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker.modulemap";
-				PRODUCT_NAME = LifetimeTracker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3C643C621FABB50CFDF77EBDC9ABCA75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LifetimeTracker";
-				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/ResourceBundle-LifetimeTracker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = LifetimeTracker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		4C60DEDE3154A11B614DD63BCCC48960 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LifetimeTracker/LifetimeTracker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LifetimeTracker/LifetimeTracker.modulemap";
-				PRODUCT_NAME = LifetimeTracker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		524BCE92A60539CD561279A005935B98 /* Release */ = {
+		EAEEFD4F95AA4C65C7ECC194D677B528 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5018C28CD79A9CA808B85E5757EEFE10 /* Pods-ExampleObjC.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ExampleObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ExampleObjC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		525D080C3D2495A6DB2C0F69D4BA3CCF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3455E6393817CFA8038C87C3527C1D4 /* LifetimeTracker.xcconfig */;
+			baseConfigurationReference = D13988F4F7C2E418BEC6373DCE2B6E94 /* LifetimeTracker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LifetimeTracker";
-				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/ResourceBundle-LifetimeTracker-Info.plist";
+				IBSC_MODULE = LifetimeTracker;
+				INFOPLIST_FILE = "Target Support Files/LifetimeTracker/ResourceBundle-LifetimeTracker-LifetimeTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = LifetimeTracker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20B0248871F9C2E098455AE52CDA3D13 /* Build configuration list for PBXNativeTarget "LifetimeTracker" */ = {
+		1C97464D237B6297B783B2BA44C881A3 /* Build configuration list for PBXNativeTarget "LifetimeTracker-LifetimeTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C60DEDE3154A11B614DD63BCCC48960 /* Debug */,
-				3AA25BEF033C8973EC5176AD5653F45D /* Release */,
+				88C096AF149EE97D54B10E1E6D7A7AD5 /* Debug */,
+				EAEEFD4F95AA4C65C7ECC194D677B528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2810ABD81F9EE2AF496C4D1B03027DB7 /* Build configuration list for PBXNativeTarget "LifetimeTracker-LifetimeTracker" */ = {
+		21358F52A69CF929F57A37AC7D7CACC5 /* Build configuration list for PBXNativeTarget "Pods-ExampleObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C643C621FABB50CFDF77EBDC9ABCA75 /* Debug */,
-				525D080C3D2495A6DB2C0F69D4BA3CCF /* Release */,
+				463D207CE56A83F17D308C45AAD0ABA9 /* Debug */,
+				5A84AED87AC76AE9D3FC278040EFC8A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				39C5BC78A31CDE101068C530CAC7FA0F /* Debug */,
-				89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */,
+				959DAB4EC1BE4ADE4B22644C3E349521 /* Debug */,
+				2F55A3566E4E4FC936EAEAB624C33C12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97EDFCE3E348944B3075BF0065D469EE /* Build configuration list for PBXNativeTarget "Pods-ExampleObjC" */ = {
+		A97BCBD287B2DCD46F9102DDE650EBFA /* Build configuration list for PBXNativeTarget "LifetimeTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				031CEB1B0E1639531060F124F8A2A54F /* Debug */,
-				524BCE92A60539CD561279A005935B98 /* Release */,
+				6A250FF6A08918B2346E9F47971BEB78 /* Debug */,
+				391AFE94BCBA9F63FC10C0A4E622DE2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

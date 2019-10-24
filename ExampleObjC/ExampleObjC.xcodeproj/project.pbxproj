@@ -107,7 +107,6 @@
 				CD05263D200F758C0034FF0D /* Frameworks */,
 				CD05263E200F758C0034FF0D /* Resources */,
 				F741A31D7D8961DCE46EA44D /* [CP] Embed Pods Frameworks */,
-				055C1130957679EEF2B17D61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,21 +164,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		055C1130957679EEF2B17D61 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A335415F6B4C881E947FF3CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,7 +188,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LifetimeTracker/LifetimeTracker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -213,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
