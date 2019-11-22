@@ -7,15 +7,8 @@ let package = Package(
     products: [
         .library(name: "LifetimeTracker", 
                 targets: ["LifetimeTracker"]),
+    ],
+    targets: [
+        .target(name: "LifetimeTracker", path: "Sources")
     ]
 )
-
-#if os(iOS)
-package.targets.append(
-    .target(name: "LifetimeTracker", path: "Sources")
-)
-#else
-package.targets.append(
-    .target(name: "LifetimeTracker", path: "Sources", exclude: ["UI", "iOS"])
-)
-#endif
