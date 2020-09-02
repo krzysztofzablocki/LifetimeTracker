@@ -25,7 +25,7 @@ Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
 ## Integration
 
-To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)`.
+To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)` or if you are using iOS 13+ SceneDelegates in `scene(willConnectTo:options:)`.
 
 Swift:
 
