@@ -65,9 +65,16 @@ typealias GroupModel = (color: UIColor, title: String, groupName: String, groupC
     }()
 
     private lazy var window: UIWindow = {
+        var frame: CGRect = UIScreen.main.bounds
         let window = UIWindow(frame: .zero)
+
+        if #available(iOS 13.0, *), let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            frame = windowScene.coordinateSpace.bounds
+            window.windowScene = windowScene
+        }
+
         window.windowLevel = UIWindow.Level.statusBar
-        window.frame =  UIScreen.main.bounds
+        window.frame =  frame
         window.rootViewController = self.lifetimeTrackerView
         return window
     }()

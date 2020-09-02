@@ -178,9 +178,16 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     }
 
     private lazy var popoverWindow: UIWindow = {
+        var frame: CGRect = UIScreen.main.bounds
         let popoverWindow = UIWindow(frame: .zero)
+
+        if #available(iOS 13.0, *), let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            frame = windowScene.coordinateSpace.bounds
+            popoverWindow.windowScene = windowScene
+        }
+
         popoverWindow.windowLevel = UIWindow.Level.normal
-        popoverWindow.frame =  UIScreen.main.bounds
+        popoverWindow.frame =  frame
 
         let navigationController = UIStoryboard(name: Constants.Storyboard.circularDashboard.name, bundle: Bundle(for: CircularDashboardViewController.self)).instantiateInitialViewController()
         popoverWindow.rootViewController = navigationController
