@@ -221,7 +221,7 @@ public extension LifetimeTrackable {
         }
         
         let instanceType = type(of: instance)
-        var configuration = configuration
+        let configuration = configuration
         configuration.instanceName = String(reflecting: instanceType)
         configuration.pointerString = "\(Unmanaged<AnyObject>.passUnretained(instance as AnyObject).toOpaque())"
         
