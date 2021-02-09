@@ -13,7 +13,7 @@ class DashboardTableViewHeaderView: UITableViewHeaderFooterView {
     @IBOutlet private weak var groupNameLabel: UILabel!
     
     class var nib: UINib {
-        return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+        lt_nibInOwnBundle
     }
     
     override func prepareForReuse() {

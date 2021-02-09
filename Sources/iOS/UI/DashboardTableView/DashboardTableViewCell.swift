@@ -14,7 +14,7 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     class var nib: UINib {
-        return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
+        lt_nibInOwnBundle
     }
     
     override func prepareForReuse() {
