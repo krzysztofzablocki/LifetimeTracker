@@ -117,7 +117,8 @@ public extension LifetimeTrackable {
 @objc public final class LifetimeTracker: NSObject {
     public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
     public internal(set) static var instance: LifetimeTracker?
-    public typealias LeakClosure = (_ instanceName: String, _ count: Int, _ maxCount: Int) -> Void
+    public typealias LeakClosure = (_ entry: LifetimeTracker.Entry,
+                                    _ group: LifetimeTracker.EntriesGroup) -> Void
     private let lock = NSRecursiveLock()
     
     internal var trackedGroups = [String: EntriesGroup]()
@@ -127,11 +128,11 @@ public extension LifetimeTrackable {
         case leaky
     }
     
-    public final class Entry {
-        public fileprivate(set) var maxCount: Int
-        public let name: String
-        public fileprivate(set) var count: Int
-        public fileprivate(set) var pointers: Set<String>
+    @objc public final class Entry: NSObject {
+        @objc public fileprivate(set) var maxCount: Int
+        @objc public let name: String
+        @objc public fileprivate(set) var count: Int
+        @objc public fileprivate(set) var pointers: Set<String>
         
         init(name: String, maxCount: Int) {
             self.maxCount = maxCount
@@ -155,10 +156,10 @@ public extension LifetimeTrackable {
     }
     
     @objc public final class EntriesGroup: NSObject {
-        public fileprivate(set) var maxCount: Int = 0
-        public fileprivate(set) var name: String? = nil
-        public fileprivate(set) var count: Int = 0
-        public fileprivate(set) var entries = [String: Entry]()
+        @objc public fileprivate(set) var maxCount: Int = 0
+        @objc public fileprivate(set) var name: String? = nil
+        @objc public fileprivate(set) var count: Int = 0
+        @objc public fileprivate(set) var entries = [String: Entry]()
         private var usedMaxCountOverride = false
         
         init(name: String) {
@@ -236,7 +237,7 @@ public extension LifetimeTrackable {
             group.updateEntry(configuration, with: countDelta)
 
             if let entry = group.entries[configuration.instanceName], entry.count > entry.maxCount {
-                self.onLeakDetected?(configuration.instanceName, entry.count, configuration.maxCount)
+                self.onLeakDetected?(entry, group)
             }
 
             self.trackedGroups[groupName] = group
