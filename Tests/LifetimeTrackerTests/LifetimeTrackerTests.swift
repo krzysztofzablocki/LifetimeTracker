@@ -144,12 +144,27 @@ class LifetimeTrackerTests: XCTestCase {
         XCTAssertEqual(currentGroupMaxCount, 2, "Overriden group maxCount != 2 after the modifcation of maxCount")
     }
 
+    func testLeakClosure() {
+        var hasLeaked = false
+        LifetimeTracker.instance?.onLeakDetected = { entry, group in
+            hasLeaked = true
+        }
+
+        TrackableObject.lifetimeConfiguration = LifetimeConfiguration(maxCount: 1)
+        var trackables = [TrackableObject]()
+        trackables.append(TrackableObject())
+        XCTAssert(!hasLeaked)
+        trackables.append(TrackableObject())
+        XCTAssert(hasLeaked)
+    }
+
     static var allTests = [
         ("testDeallocTrackerFiresOnDealloc", testDeallocTrackerFiresOnDealloc),
         ("testDeallocTrackerDoesntFire", testDeallocTrackerDoesntFire),
         ("testEntryMaxCountDoesNotChangeAfterMultipleAllocations", testEntryMaxCountDoesNotChangeAfterMultipleAllocations),
         ("testConfigurationMaxCountIncrementationUpdatesEntryAndGroupMaxCount", testConfigurationMaxCountIncrementationUpdatesEntryAndGroupMaxCount),
         ("testConfigurationMaxCountDecrementationUpdatesEntryAndGroupMaxCount", testConfigurationMaxCountDecrementationUpdatesEntryAndGroupMaxCount),
-        ("testConfigurationMaxCountIncrementationDoeNotChangeOverriddenGroupsMaxCount", testConfigurationMaxCountIncrementationDoeNotChangeOverriddenGroupsMaxCount)
+        ("testConfigurationMaxCountIncrementationDoeNotChangeOverriddenGroupsMaxCount", testConfigurationMaxCountIncrementationDoeNotChangeOverriddenGroupsMaxCount),
+        ("testLeakClosure", testLeakClosure)
     ]
 }

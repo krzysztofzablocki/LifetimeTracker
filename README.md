@@ -7,11 +7,11 @@
 
 LifetimeTracker can surface retain cycle / memory issues right as you develop your application, and it will surface them to you immediately, so you can find them with more ease.
 
-Instruments and Memory Graph Debugger are great, but too many times developers forget to check for issues as they close the feature implementation.
+Instruments and Memory Graph Debugger are great, but too many times, developers forget to check for issues as they close the feature implementation.
 
-If you use those tools sporadicaly many of the issues they surface will require you to investigate the cause, and cost you a lot of time in the process.
+If you use those tools sporadically many of the issues they surface will require you to investigate the cause and cost you a lot of time in the process.
 
-Other tools like [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) rely on objc runtime magic to find the problems, but that means they can't really be used for pure Swift classes. This small tool simply focuses on tracking lifetime of objects which means that it can be used in both Objective-C and Swift codebases and it doesn't rely on any complex or automatic magic behaviour.
+Other tools like [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) rely on objc runtime magic to find the problems, but that means they can't really be used for pure Swift classes. This small tool simply focuses on tracking lifetime of objects which means that it can be used in both Objective-C and Swift codebases, and it doesn't rely on any complex or automatic magic behaviour.
 
 ## Installation
 
@@ -52,7 +52,7 @@ There are two styles available. A overlay bar view which shows the detailed list
 
 ## Tracking key actors
 
-Usually you want to use LifetimeTracker to track only key actors in your app, like ViewModels / Controllers etc. When you have more than `maxCount` items alive, the tracker will let you know.
+Usually, you want to use LifetimeTracker to track only key actors in your app, like ViewModels / Controllers etc. When you have more than `maxCount` items alive, the tracker will let you know.
 
 ### Swift
 
@@ -101,24 +101,24 @@ You conform to `LifetimeTrackable` and call `[self trackLifetime]` at the end of
 
 ## Integrating with [Danger](https://danger.systems)
 
-If you are using Danger, you can use it to add both checkbox to each PR to ensure people have verified no retain cycles were created but also to inform you when someone forgets to call `trackLifetime()` function.
+If you are using Danger, you can use it to add both checkboxes to each PR to ensure people have verified no retain cycles were created but also to inform you when someone forgets to call `trackLifetime()` function.
 
 ```ruby
-# 
+#
 # ** FILE CHECKS **
 # Checks for certain rules and warns if needed.
 # Some rules can be disabled by using // danger:disable rule_name
-# 
+#
 # Rules:
 # - Check if the modified file is a View and doesn't implement LifetimeTrackable (lifetime_tracking)
 
-# Sometimes an added file is also counted as modified. We want the files to be checked only once. 
+# Sometimes an added file is also counted as modified. We want the files to be checked only once.
 files_to_check = (git.modified_files + git.added_files).uniq
 (files_to_check - %w(Dangerfile)).each do |file|
 	next unless File.file?(file)
 	# Only check inside swift files
   next unless File.extname(file).include?(".swift")
-    	
+
   # Will be used to check if we're inside a comment block.
 	is_comment_block = false
 
@@ -140,17 +140,17 @@ files_to_check = (git.modified_files + git.added_files).uniq
 			# Start our custom line checks
 			# e.g. you could do something like check for methods that only call the super class' method
 			#if line.include?("override") and line.include?("func") and filelines[index+1].include?("super") and filelines[index+2].include?("}")
-			#	warn("Override methods which only call super can be removed", file: file, line: index+3) 
+			#	warn("Override methods which only call super can be removed", file: file, line: index+3)
 			#end
     end
 	end
-	
+
 	# Only continue checks for Lifetime Trackable types
 	next unless (File.basename(file).include?("ViewModel") or File.basename(file).include?("ViewController") or File.basename(file).include?("View.swift")) and !File.basename(file).include?("Node") and !File.basename(file).include?("Tests") and !File.basename(file).include?("FlowCoordinator")
 
-	if disabled_rules.include?("lifetime_tracking") == false 
-		if File.readlines(file).grep(/LifetimeTrackable/).any? 
-			fail("You forgot to call trackLifetime() from your initializers in " + File.basename(file, ".*") + " (lifetime_tracking)") unless File.readlines(file).grep(/trackLifetime()/).any? 
+	if disabled_rules.include?("lifetime_tracking") == false
+		if File.readlines(file).grep(/LifetimeTrackable/).any?
+			fail("You forgot to call trackLifetime() from your initializers in " + File.basename(file, ".*") + " (lifetime_tracking)") unless File.readlines(file).grep(/trackLifetime()/).any?
 		else
 			warn("Please add support for LifetimeTrackable to " + File.basename(file, ".*") + " . (lifetime_tracking)")
 		end
@@ -160,12 +160,29 @@ files_to_check = (git.modified_files + git.added_files).uniq
 end
 ```
 
+## Surface last notification from the stack
+
+Sometimes it is useful to get information about last retain cycle in order to log it to external sources such as analytics/trackers. In order to do that we can update initial configuration with `onLeakDetected`:
+
+```objc
+[LifetimeTracker setupOnLeakDetected:^(Entry * entry, EntriesGroup * group) {
+    NSLog(@"POSSIBLE LEAK ALERT: %@ - current count %li, max count %li", entry.name, (long)entry.count, (long)entry.maxCount);
+} onUpdate:^(NSDictionary<NSString *,EntriesGroup *> * groups) {
+    [dashboardIntegration refreshUIWithTrackedGroups: groups];
+}];
+```
+
+```swift
+LifetimeTracker.setup(onLeakDetected: { entity, _ in
+	log.warning("POSSIBLE LEAK ALERT: \(entity.name) - current count: \(entity.count), max count: \(entity.maxCount)")
+}, onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .bar).refreshUI)
+```
 
 ## Group tracked objects
 
 You can group tracked objects together. `maxCount` of a group will be calculated by `maxCount` of all members per default. However, you can override it and provide a separate value to the group with `groupMaxCount`.
 
-You may want to do this when you have a set of sublasses which can appear x times each, but in total only less than the sum of all sublcasses:
+You may want to do this when you have a set of subclasses which can appear x times each, but in total only less than the sum of all subclasses:
 
 ```swift
 // DetailPage: UIViewController
@@ -192,7 +209,8 @@ LifetimeConfiguration(maxCount: 3, groupName: "Detail Page", groupMaxCount: 3)
 
 You can access the summary label using accessibility identifier `LifetimeTracker.summaryLabel`, which allows you to write integration tests that end up with looking up whether any issues were found.
 
-## License 
+## License
+
 LifetimeTracker is available under the MIT license. See [LICENSE](LICENSE) for more information.
 
 ## Attributions

@@ -117,6 +117,8 @@ public extension LifetimeTrackable {
 @objc public final class LifetimeTracker: NSObject {
     public typealias UpdateClosure = (_ trackedGroups: [String: LifetimeTracker.EntriesGroup]) -> Void
     public internal(set) static var instance: LifetimeTracker?
+    public typealias LeakClosure = (_ entry: LifetimeTracker.Entry,
+                                    _ group: LifetimeTracker.EntriesGroup) -> Void
     private let lock = NSRecursiveLock()
     
     internal var trackedGroups = [String: EntriesGroup]()
@@ -126,11 +128,11 @@ public extension LifetimeTrackable {
         case leaky
     }
     
-    public final class Entry {
-        public fileprivate(set) var maxCount: Int
-        public let name: String
-        public fileprivate(set) var count: Int
-        public fileprivate(set) var pointers: Set<String>
+    @objc public final class Entry: NSObject {
+        @objc public fileprivate(set) var maxCount: Int
+        @objc public let name: String
+        @objc public fileprivate(set) var count: Int
+        @objc public fileprivate(set) var pointers: Set<String>
         
         init(name: String, maxCount: Int) {
             self.maxCount = maxCount
@@ -154,10 +156,10 @@ public extension LifetimeTrackable {
     }
     
     @objc public final class EntriesGroup: NSObject {
-        public fileprivate(set) var maxCount: Int = 0
-        public fileprivate(set) var name: String? = nil
-        public fileprivate(set) var count: Int = 0
-        public fileprivate(set) var entries = [String: Entry]()
+        @objc public fileprivate(set) var maxCount: Int = 0
+        @objc public fileprivate(set) var name: String? = nil
+        @objc public fileprivate(set) var count: Int = 0
+        @objc public fileprivate(set) var entries = [String: Entry]()
         private var usedMaxCountOverride = false
         
         init(name: String) {
@@ -203,14 +205,16 @@ public extension LifetimeTrackable {
         }
     }
     
-    @objc public static func setup(onUpdate: @escaping UpdateClosure) {
+    @objc public static func setup(onLeakDetected: LeakClosure? = nil, onUpdate: @escaping UpdateClosure) {
         assert(instance == nil)
-        instance = LifetimeTracker(onUpdate: onUpdate)
+        instance = LifetimeTracker(onLeakDetected: onLeakDetected, onUpdate: onUpdate)
     }
     
     private let onUpdate: UpdateClosure
-    private init(onUpdate: @escaping UpdateClosure) {
+    var onLeakDetected: LeakClosure?
+    private init(onLeakDetected: LeakClosure? = nil, onUpdate: @escaping UpdateClosure) {
         self.onUpdate = onUpdate
+        self.onLeakDetected = onLeakDetected
     }
     
     internal func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
@@ -231,7 +235,11 @@ public extension LifetimeTrackable {
             
             let group = self.trackedGroups[groupName] ?? EntriesGroup(name: groupName)
             group.updateEntry(configuration, with: countDelta)
-            
+
+            if let entry = group.entries[configuration.instanceName], entry.count > entry.maxCount {
+                self.onLeakDetected?(entry, group)
+            }
+
             self.trackedGroups[groupName] = group
         }
         
