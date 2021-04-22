@@ -12,6 +12,8 @@ internal extension String {
 
     var lt_localized: String {
         let bundle = Bundle(for: LifetimeTracker.self)
-        return NSLocalizedString(self, bundle: bundle, comment: self)
+        let resourcePath = bundle.path(forResource: "LifetimeTracker", ofType: "bundle")!
+        let resourceBundle = Bundle(path: resourcePath)!
+        return NSLocalizedString(self, bundle: resourceBundle, comment: self)
     }
 }
