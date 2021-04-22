@@ -23,6 +23,16 @@ Add `pod 'LifetimeTracker'` to your Podfile.
 
 Add `github "krzysztofzablocki/LifetimeTracker"` to your Cartfile.
 
+### Swift Package Manager
+
+Add `LifetimeTracker"` to the dependencies value of your Package.swift.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/krzysztofzablocki/LifetimeTracker.git", .upToNextMajor(from: "1.8.0"))
+]
+```
+
 ## Integration
 
 To Integrate visual notifications simply add following line at the start of `AppDelegate(didFinishLaunchingWithOptions:)` or if you are using iOS 13+ SceneDelegates in `scene(willConnectTo:options:)`.
