@@ -17,7 +17,7 @@ Other tools like [FBRetainCycleDetector](https://github.com/facebook/FBRetainCyc
 
 ### CocoaPods
 
-Add `pod 'LifetimeTracker'` to your Podfile.
+Add `pod 'LifetimeTracker', :configurations => ['Debug']` to your Podfile.
 
 ### Carthage
 
