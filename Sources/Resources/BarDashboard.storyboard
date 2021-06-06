@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeQ-Il-Fvf">
-                                <rect key="frame" x="0.5" y="0.0" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTP-HG-KtQ" userLabel="Header View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -38,17 +35,17 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="No issues detected." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kui-Kg-jAG" userLabel="Summary">
-                                                <rect key="frame" x="44" y="14.5" width="301" height="16"/>
+                                                <rect key="frame" x="44" y="14" width="301" height="16"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="LifetimeTracker.summaryLabel"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-Ze-M0v" userLabel="Move Icon View">
-                                                <rect key="frame" x="350" y="14" width="15" height="15"/>
+                                                <rect key="frame" x="350" y="14.5" width="15" height="15"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-4l-KRY">
                                                         <rect key="frame" x="0.0" y="0.0" width="15" height="3"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="O64-4P-dZA"/>
                                                         </constraints>
@@ -60,7 +57,7 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-qD-gYn">
                                                         <rect key="frame" x="0.0" y="6" width="15" height="3"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="Km8-AI-7RG"/>
                                                         </constraints>
@@ -72,7 +69,7 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAj-Vi-Uyt">
                                                         <rect key="frame" x="0.0" y="12" width="15" height="3"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="PEN-TQ-2T5"/>
                                                         </constraints>
@@ -121,7 +118,7 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8Zo-fx-aQl" firstAttribute="leading" secondItem="WeQ-Il-Fvf" secondAttribute="leading" id="DBV-qq-eKM"/>
                                     <constraint firstItem="LTP-HG-KtQ" firstAttribute="top" secondItem="WeQ-Il-Fvf" secondAttribute="top" id="J7O-5P-vWp"/>
@@ -166,4 +163,12 @@
             <point key="canvasLocation" x="690" y="251"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705878" green="0.44313725490196082" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

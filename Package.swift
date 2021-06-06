@@ -9,6 +9,10 @@ let package = Package(
                 targets: ["LifetimeTracker"]),
     ],
     targets: [
-        .target(name: "LifetimeTracker", path: "Sources")
+        .target(name: "LifetimeTracker",
+                path: "Sources",
+                resources: [
+            .process("Resources")
+        ])
     ]
 )
