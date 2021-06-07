@@ -10,7 +10,7 @@
         <!--Bar Dashboard View Controller-->
         <scene sceneID="UWy-HW-yBl">
             <objects>
-                <viewController storyboardIdentifier="BarDashboardViewController" id="XZY-CN-q02" customClass="BarDashboardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarDashboardViewController" id="XZY-CN-q02" customClass="BarDashboardViewController" customModule="LifetimeTracker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hTQ-M2-7uc"/>
                         <viewControllerLayoutGuide type="bottom" id="e87-QZ-g03"/>
