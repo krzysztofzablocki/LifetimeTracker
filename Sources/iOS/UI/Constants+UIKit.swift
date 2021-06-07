@@ -33,12 +33,12 @@ extension Constants {
     
     enum Storyboard {
         case circularDashboard
-        case barDashbaord
+        case barDashboard
         
         var name: String {
             switch self {
             case .circularDashboard: return "CircularDashboard"
-            case .barDashbaord: return "BarDashboard"
+            case .barDashboard: return "BarDashboard"
             }
         }
     }
