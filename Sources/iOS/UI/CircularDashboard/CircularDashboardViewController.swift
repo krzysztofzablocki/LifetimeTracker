@@ -189,7 +189,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
         popoverWindow.windowLevel = UIWindow.Level.normal
         popoverWindow.frame =  frame
 
-        let navigationController = UIStoryboard(name: Constants.Storyboard.circularDashboard.name, bundle: Bundle(for: CircularDashboardViewController.self)).instantiateInitialViewController()
+        let navigationController = UIStoryboard(name: Constants.Storyboard.circularDashboard.name, bundle: .resolvedBundle).instantiateInitialViewController()
         popoverWindow.rootViewController = navigationController
         popoverWindow.rootViewController?.view.backgroundColor = UIColor.yellow
 
