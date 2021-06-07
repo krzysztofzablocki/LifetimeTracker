@@ -14,3 +14,15 @@ internal extension UIView {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
 }
+
+internal extension Bundle {
+
+    /// Returns a package manager appropriate `Bundle`.
+    static var resolvedBundle: Bundle {
+        #if SWIFT_PACKAGE
+        return Bundle.module
+        #else
+        return Bundle(for: self)
+        #endif
+    }
+}
