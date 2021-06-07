@@ -10,7 +10,7 @@
         <!--Lifetime Tracker List View Controller-->
         <scene sceneID="1D4-WH-aQX">
             <objects>
-                <viewController storyboardIdentifier="LifetimeTrackerListViewController" automaticallyAdjustsScrollViewInsets="NO" id="hGY-sM-6JX" customClass="LifetimeTrackerListViewController" customModule="LifetimeTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LifetimeTrackerListViewController" automaticallyAdjustsScrollViewInsets="NO" id="hGY-sM-6JX" customClass="LifetimeTrackerListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L1p-ji-3cZ"/>
                         <viewControllerLayoutGuide type="bottom" id="EKh-Hq-gM8"/>
@@ -80,7 +80,7 @@
         <!--Circular Dashboard View Controller-->
         <scene sceneID="4Zo-uU-6cZ">
             <objects>
-                <viewController storyboardIdentifier="CircularDashboardViewController" id="KEm-XY-hTd" customClass="CircularDashboardViewController" customModule="LifetimeTracker" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CircularDashboardViewController" id="KEm-XY-hTd" customClass="CircularDashboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V2L-Wr-Hzg"/>
                         <viewControllerLayoutGuide type="bottom" id="T4O-lB-Vvj"/>

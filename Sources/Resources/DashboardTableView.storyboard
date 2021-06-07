@@ -10,7 +10,7 @@
         <!--Dashboard Table View Controller-->
         <scene sceneID="0Ci-1b-V1X">
             <objects>
-                <viewController id="hzA-q0-fGF" customClass="DashboardTableViewController" customModule="LifetimeTracker" sceneMemberID="viewController">
+                <viewController id="hzA-q0-fGF" customClass="DashboardTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yCy-bM-UEU"/>
                         <viewControllerLayoutGuide type="bottom" id="5Km-Fw-40u"/>
