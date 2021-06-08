@@ -39,7 +39,7 @@ final class BarDashboardViewController: UIViewController, LifetimeTrackerViewabl
     }
 
     class func makeFromNib() -> UIViewController & LifetimeTrackerViewable {
-        let storyboard = UIStoryboard(name: Constants.Storyboard.barDashbaord.name, bundle: Bundle(for: self))
+        let storyboard = UIStoryboard(name: Constants.Storyboard.barDashboard.name, bundle: .resolvedBundle)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! BarDashboardViewController
     }
 

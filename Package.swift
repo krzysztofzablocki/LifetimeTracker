@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -9,6 +9,10 @@ let package = Package(
                 targets: ["LifetimeTracker"]),
     ],
     targets: [
-        .target(name: "LifetimeTracker", path: "Sources")
+        .target(name: "LifetimeTracker",
+                path: "Sources",
+                resources: [
+            .process("Resources")
+        ])
     ]
 )
