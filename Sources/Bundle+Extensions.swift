@@ -14,7 +14,7 @@ extension Bundle {
         #if SWIFT_PACKAGE
         return Bundle.module
         #else
-        return Bundle(for: self)
+        return Bundle(for: LifetimeTracker.self)
         #endif
     }
 }

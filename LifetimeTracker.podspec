@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/krzysztofzablocki/LifetimeTracker.git", :tag => s.version.to_s }
   s.ios.source_files  = "Sources/*.swift", "Sources/iOS/**/*.swift"
   s.macos.source_files  = "Sources/*.swift"
-  s.ios.resources     = "Sources/iOS/**/*.{xib,storyboard}"
+  s.ios.resources     = "Sources/Resources/**/*.{xib,storyboard}"
   s.resource_bundle = { "LifetimeTracker" => ["Sources/**/*.{strings}"] }
   s.ios.frameworks  = ["Foundation", "UIKit"]
   s.macos.frameworks  = ["Foundation"]
