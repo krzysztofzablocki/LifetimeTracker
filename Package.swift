@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "LifetimeTracker",
+    defaultLocalization: "en",
     products: [
         .library(
             name: "LifetimeTracker",
@@ -15,7 +16,8 @@ let package = Package(
             name: "LifetimeTracker",
             path: "Sources",
             resources: [
-                .process("Resources")
+                .process("Resources"),
+                .process("Localizable.strings", localization: .default),
             ]
         )
     ]
