@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PopoverViewControllerDelegate: class {
+protocol PopoverViewControllerDelegate: AnyObject {
     func dismissPopoverViewController()
     func changeHideOption(for hideOption: HideOption)
 }

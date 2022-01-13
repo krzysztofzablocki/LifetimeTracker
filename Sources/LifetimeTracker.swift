@@ -92,7 +92,7 @@ import Foundation
 
 
 /// Defines a type that can have its lifetime tracked
-@objc public protocol LifetimeTrackable: class {
+@objc public protocol LifetimeTrackable: AnyObject {
     
     /// Configuration for lifetime tracking, contains identifier and leak classifier
     static var lifetimeConfiguration: LifetimeConfiguration { get }

@@ -12,6 +12,15 @@
 		383869151F9FEE7F00B1A6AB /* VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383869121F9FEE7800B1A6AB /* VisibilityTests.swift */; };
 		4A563B28228C9655009C389D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A563B27228C9655009C389D /* Localizable.strings */; };
 		52D6D9871BEFF229002C0205 /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* LifetimeTracker.framework */; };
+		7A31DF62278FE5E70008250C /* DashboardTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A31DF5D278FE5E70008250C /* DashboardTableView.storyboard */; };
+		7A31DF63278FE5E70008250C /* BarDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A31DF5E278FE5E70008250C /* BarDashboard.storyboard */; };
+		7A31DF64278FE5E70008250C /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A31DF5F278FE5E70008250C /* DashboardTableViewHeaderView.xib */; };
+		7A31DF65278FE5E70008250C /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A31DF60278FE5E70008250C /* DashboardTableViewCell.xib */; };
+		7A31DF66278FE5E70008250C /* CircularDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A31DF61278FE5E70008250C /* CircularDashboard.storyboard */; };
+		7A31DF68278FE63B0008250C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */; };
+		7A31DF69278FE63B0008250C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */; };
+		7A31DF6A278FE63B0008250C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */; };
+		7A31DF6B278FE63B0008250C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */; };
 		87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
 		87EDDF901FB5275B00F1D107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDDF8D1FB5274400F1D107 /* Constants.swift */; };
@@ -34,17 +43,12 @@
 		DD7502881C68FEDE006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */; };
 		DD7502921C690C7A006590AF /* LifetimeTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */; };
 		EFC520F722F1C64200748998 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520E322F1C64200748998 /* SettingsManager.swift */; };
-		EFC520F822F1C64200748998 /* BarDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC520E622F1C64200748998 /* BarDashboard.storyboard */; };
 		EFC520F922F1C64200748998 /* BarDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520E722F1C64200748998 /* BarDashboardViewController.swift */; };
-		EFC520FA22F1C64200748998 /* CircularDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC520E922F1C64200748998 /* CircularDashboard.storyboard */; };
 		EFC520FB22F1C64200748998 /* CircularDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520EA22F1C64200748998 /* CircularDashboardViewController.swift */; };
 		EFC520FC22F1C64200748998 /* Constants+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520EB22F1C64200748998 /* Constants+UIKit.swift */; };
-		EFC520FD22F1C64200748998 /* DashboardTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC520ED22F1C64200748998 /* DashboardTableView.storyboard */; };
 		EFC520FE22F1C64200748998 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520EE22F1C64200748998 /* DashboardTableViewCell.swift */; };
-		EFC520FF22F1C64200748998 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC520EF22F1C64200748998 /* DashboardTableViewCell.xib */; };
 		EFC5210022F1C64200748998 /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520F022F1C64200748998 /* DashboardTableViewController.swift */; };
 		EFC5210122F1C64200748998 /* DashboardTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520F122F1C64200748998 /* DashboardTableViewHeaderView.swift */; };
-		EFC5210222F1C64200748998 /* DashboardTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC520F222F1C64200748998 /* DashboardTableViewHeaderView.xib */; };
 		EFC5210322F1C64200748998 /* Extensions+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520F322F1C64200748998 /* Extensions+UIKit.swift */; };
 		EFC5210422F1C64200748998 /* HideOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520F422F1C64200748998 /* HideOption.swift */; };
 		EFC5210522F1C64200748998 /* LifetimeTracker+DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC520F522F1C64200748998 /* LifetimeTracker+DashboardView.swift */; };
@@ -83,6 +87,12 @@
 		52D6D9E21BEFFF6E002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* LifetimeTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LifetimeTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A31DF5D278FE5E70008250C /* DashboardTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardTableView.storyboard; sourceTree = "<group>"; };
+		7A31DF5E278FE5E70008250C /* BarDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarDashboard.storyboard; sourceTree = "<group>"; };
+		7A31DF5F278FE5E70008250C /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
+		7A31DF60278FE5E70008250C /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		7A31DF61278FE5E70008250C /* CircularDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircularDashboard.storyboard; sourceTree = "<group>"; };
+		7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		87EDDF8D1FB5274400F1D107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87EDDF9B1FB5278B00F1D107 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifetimeTracker.swift; sourceTree = "<group>"; };
@@ -93,17 +103,12 @@
 		DD75027A1C68FCFC006590AF /* LifetimeTracker-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* LifetimeTracker-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LifetimeTracker-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC520E322F1C64200748998 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		EFC520E622F1C64200748998 /* BarDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarDashboard.storyboard; sourceTree = "<group>"; };
 		EFC520E722F1C64200748998 /* BarDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDashboardViewController.swift; sourceTree = "<group>"; };
-		EFC520E922F1C64200748998 /* CircularDashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CircularDashboard.storyboard; sourceTree = "<group>"; };
 		EFC520EA22F1C64200748998 /* CircularDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularDashboardViewController.swift; sourceTree = "<group>"; };
 		EFC520EB22F1C64200748998 /* Constants+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants+UIKit.swift"; sourceTree = "<group>"; };
-		EFC520ED22F1C64200748998 /* DashboardTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DashboardTableView.storyboard; sourceTree = "<group>"; };
 		EFC520EE22F1C64200748998 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
-		EFC520EF22F1C64200748998 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		EFC520F022F1C64200748998 /* DashboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
 		EFC520F122F1C64200748998 /* DashboardTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewHeaderView.swift; sourceTree = "<group>"; };
-		EFC520F222F1C64200748998 /* DashboardTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewHeaderView.xib; sourceTree = "<group>"; };
 		EFC520F322F1C64200748998 /* Extensions+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIKit.swift"; sourceTree = "<group>"; };
 		EFC520F422F1C64200748998 /* HideOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideOption.swift; sourceTree = "<group>"; };
 		EFC520F522F1C64200748998 /* LifetimeTracker+DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LifetimeTracker+DashboardView.swift"; sourceTree = "<group>"; };
@@ -199,6 +204,18 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		7A31DF5C278FE5E70008250C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A31DF5D278FE5E70008250C /* DashboardTableView.storyboard */,
+				7A31DF5E278FE5E70008250C /* BarDashboard.storyboard */,
+				7A31DF5F278FE5E70008250C /* DashboardTableViewHeaderView.xib */,
+				7A31DF60278FE5E70008250C /* DashboardTableViewCell.xib */,
+				7A31DF61278FE5E70008250C /* CircularDashboard.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,8 @@
 				87EDDF9B1FB5278B00F1D107 /* Extensions.swift */,
 				8933C7841EB5B820000D00A4 /* LifetimeTracker.swift */,
 				4A563B27228C9655009C389D /* Localizable.strings */,
+				7A31DF67278FE63B0008250C /* Bundle+Extensions.swift */,
+				7A31DF5C278FE5E70008250C /* Resources */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -265,7 +284,6 @@
 		EFC520E522F1C64200748998 /* BarDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				EFC520E622F1C64200748998 /* BarDashboard.storyboard */,
 				EFC520E722F1C64200748998 /* BarDashboardViewController.swift */,
 			);
 			path = BarDashboard;
@@ -274,7 +292,6 @@
 		EFC520E822F1C64200748998 /* CircularDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				EFC520E922F1C64200748998 /* CircularDashboard.storyboard */,
 				EFC520EA22F1C64200748998 /* CircularDashboardViewController.swift */,
 			);
 			path = CircularDashboard;
@@ -283,12 +300,9 @@
 		EFC520EC22F1C64200748998 /* DashboardTableView */ = {
 			isa = PBXGroup;
 			children = (
-				EFC520ED22F1C64200748998 /* DashboardTableView.storyboard */,
 				EFC520EE22F1C64200748998 /* DashboardTableViewCell.swift */,
-				EFC520EF22F1C64200748998 /* DashboardTableViewCell.xib */,
 				EFC520F022F1C64200748998 /* DashboardTableViewController.swift */,
 				EFC520F122F1C64200748998 /* DashboardTableViewHeaderView.swift */,
-				EFC520F222F1C64200748998 /* DashboardTableViewHeaderView.xib */,
 			);
 			path = DashboardTableView;
 			sourceTree = "<group>";
@@ -522,12 +536,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC520FF22F1C64200748998 /* DashboardTableViewCell.xib in Resources */,
-				EFC520FA22F1C64200748998 /* CircularDashboard.storyboard in Resources */,
+				7A31DF66278FE5E70008250C /* CircularDashboard.storyboard in Resources */,
+				7A31DF65278FE5E70008250C /* DashboardTableViewCell.xib in Resources */,
+				7A31DF64278FE5E70008250C /* DashboardTableViewHeaderView.xib in Resources */,
+				7A31DF63278FE5E70008250C /* BarDashboard.storyboard in Resources */,
 				4A563B28228C9655009C389D /* Localizable.strings in Resources */,
-				EFC520F822F1C64200748998 /* BarDashboard.storyboard in Resources */,
-				EFC5210222F1C64200748998 /* DashboardTableViewHeaderView.xib in Resources */,
-				EFC520FD22F1C64200748998 /* DashboardTableView.storyboard in Resources */,
+				7A31DF62278FE5E70008250C /* DashboardTableView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +601,7 @@
 				87EDDF8E1FB5275A00F1D107 /* Constants.swift in Sources */,
 				EFC520F722F1C64200748998 /* SettingsManager.swift in Sources */,
 				87EDDFA21FB527E700F1D107 /* Extensions.swift in Sources */,
+				7A31DF68278FE63B0008250C /* Bundle+Extensions.swift in Sources */,
 				EFC5210122F1C64200748998 /* DashboardTableViewHeaderView.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				EFC520FB22F1C64200748998 /* CircularDashboardViewController.swift in Sources */,
@@ -612,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2064D01F7EB45A00E8CBBD /* DeallocTracker.swift in Sources */,
+				7A31DF6A278FE63B0008250C /* Bundle+Extensions.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF901FB5275B00F1D107 /* Constants.swift in Sources */,
 				87EDDFAC1FB5291500F1D107 /* Extensions.swift in Sources */,
@@ -623,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2064D11F7EB45F00E8CBBD /* DeallocTracker.swift in Sources */,
+				7A31DF6B278FE63B0008250C /* Bundle+Extensions.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF911FB5275C00F1D107 /* Constants.swift in Sources */,
 				87EDDFAD1FB5291500F1D107 /* Extensions.swift in Sources */,
@@ -634,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2064CF1F7EB44E00E8CBBD /* DeallocTracker.swift in Sources */,
+				7A31DF69278FE63B0008250C /* Bundle+Extensions.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* LifetimeTracker.swift in Sources */,
 				87EDDF8F1FB5275A00F1D107 /* Constants.swift in Sources */,
 				87EDDFAB1FB5291400F1D107 /* Extensions.swift in Sources */,
@@ -731,7 +749,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -782,7 +800,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -809,7 +827,6 @@
 				PRODUCT_NAME = LifetimeTracker;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -831,7 +848,6 @@
 				PRODUCT_NAME = LifetimeTracker;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -844,7 +860,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LifetimeTracker.LifetimeTracker-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -857,7 +872,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LifetimeTracker.LifetimeTracker-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
