@@ -89,11 +89,11 @@ class LifetimeTrackerTests: XCTestCase {
         XCTAssertEqual(currentEntryMaxCount, 1, "Entry maxCount != 1 after the first initialization")
         XCTAssertEqual(currentGroupMaxCount, 1, "Group maxCount != 1 after the first initialization")
 
-        // Test that a modifcation of the objects maxCount with a allocation or deallocation does change the entries and groups maxCount
+        // Test that a modification of the objects maxCount with a allocation or deallocation does change the entries and groups maxCount
         TrackableObject.lifetimeConfiguration.maxCount = 2
         let _ = TrackableObject()
-        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modifcation of maxCount")
-        XCTAssertEqual(currentGroupMaxCount, 2, "Group maxCount != 2 after the modifcation of maxCount")
+        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modification of maxCount")
+        XCTAssertEqual(currentGroupMaxCount, 2, "Group maxCount != 2 after the modification of maxCount")
     }
 
     func testConfigurationMaxCountDecrementationUpdatesEntryAndGroupMaxCount() {
@@ -113,11 +113,11 @@ class LifetimeTrackerTests: XCTestCase {
         XCTAssertEqual(currentEntryMaxCount, 3, "Entry maxCount != 3 after the first initialization")
         XCTAssertEqual(currentGroupMaxCount, 3, "Group maxCount != 3 after the first initialization")
 
-        // Test that a modifcation of the objects maxCount after a new allocation does change the entries and groups maxCount
+        // Test that a modification of the objects maxCount after a new allocation does change the entries and groups maxCount
         TrackableObject.lifetimeConfiguration.maxCount = 2
         let _ = TrackableObject()
-        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modifcation of maxCount")
-        XCTAssertEqual(currentGroupMaxCount, 2, "Group maxCount != 2 after the modifcation of maxCount")
+        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modification of maxCount")
+        XCTAssertEqual(currentGroupMaxCount, 2, "Group maxCount != 2 after the modification of maxCount")
     }
 
     func testConfigurationMaxCountIncrementationDoeNotChangeOverriddenGroupsMaxCount() {
@@ -137,11 +137,11 @@ class LifetimeTrackerTests: XCTestCase {
         XCTAssertEqual(currentEntryMaxCount, 1, "Entry maxCount != 1 after the first initialization")
         XCTAssertEqual(currentGroupMaxCount, 2, "Overriden group maxCount != 2 after the first initialization")
 
-        // Test that a modifcation of the objects maxCount after a new allocation doesn't change the overriden group maxCount
+        // Test that a modification of the objects maxCount after a new allocation doesn't change the overriden group maxCount
         TrackableObject.lifetimeConfiguration.maxCount = 2
         let _ = TrackableObject()
-        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modifcation of maxCount")
-        XCTAssertEqual(currentGroupMaxCount, 2, "Overriden group maxCount != 2 after the modifcation of maxCount")
+        XCTAssertEqual(currentEntryMaxCount, 2, "Entry maxCount != 2 after the modification of maxCount")
+        XCTAssertEqual(currentGroupMaxCount, 2, "Overriden group maxCount != 2 after the modification of maxCount")
     }
 
     func testLeakClosure() {

@@ -210,7 +210,19 @@ public extension LifetimeTrackable {
         instance = LifetimeTracker(onLeakDetected: onLeakDetected, onUpdate: onUpdate)
     }
     
-    private let onUpdate: UpdateClosure
+    /// Set a new update closure, use to set the visibility/style of the dashboard.
+    /// - Parameter update: UI refresh method, typically uses the 'refreshUI' method on 'LifetimeTrackerDashboardIntegration'
+    public static func configure(updateClosure update: @escaping UpdateClosure) {
+        instance?.onUpdate = update
+    }
+    
+    private var onUpdate: UpdateClosure {
+        didSet {
+            /// Refresh the dashboard with the current taskedGroups
+            onUpdate(trackedGroups)
+        }
+    }
+    
     var onLeakDetected: LeakClosure?
     private init(onLeakDetected: LeakClosure? = nil, onUpdate: @escaping UpdateClosure) {
         self.onUpdate = onUpdate
@@ -220,7 +232,7 @@ public extension LifetimeTrackable {
     internal func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
         lock.lock()
         defer {
-            self.onUpdate(self.trackedGroups)
+            onUpdate(trackedGroups)
             lock.unlock()
         }
         
