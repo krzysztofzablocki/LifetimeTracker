@@ -229,7 +229,7 @@ public extension LifetimeTrackable {
         self.onLeakDetected = onLeakDetected
     }
     
-    internal func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
+    public func track(_ instance: Any, configuration: LifetimeConfiguration, file: String = #file) {
         lock.lock()
         defer {
             onUpdate(trackedGroups)
