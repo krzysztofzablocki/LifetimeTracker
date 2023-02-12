@@ -19,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
-            LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .bar).refreshUI)
+            LifetimeTracker.setup(
+              onUpdate: LifetimeTrackerDashboardIntegration(
+                visibility: .alwaysVisible,
+                style: .bar,
+                textColorForNoIssues: .systemGreen,
+                textColorForLeakDetected: .systemRed
+              ).refreshUI
+            )
         #else
         #endif
         

@@ -135,7 +135,9 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     func update(with vm: BarDashboardViewModel) {
         leaksCountLabel?.text = "\(vm.leaksCount)"
-        leaksCountLabel?.textColor = vm.leaksCount == 0 ? .green : .red
+        leaksCountLabel?.textColor = vm.leaksCount == 0
+            ? vm.textColorForNoIssues
+            : vm.textColorForLeakDetected
         leaksTitleLabel?.text = vm.leaksCount == 1 ? "word.leak".lt_localized : "word.leaks".lt_localized
 
         if hideOption.shouldUIBeShown(oldModel: dashboardViewModel, newModel: vm) {
