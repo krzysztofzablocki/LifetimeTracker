@@ -11,11 +11,21 @@ struct BarDashboardViewModel {
     let leaksCount: Int
     let summary: NSAttributedString
     let sections: [GroupModel]
+    let textColorForNoIssues: UIColor
+    let textColorForLeakDetected: UIColor
 
-    init(leaksCount: Int = 0, summary: NSAttributedString = NSAttributedString(), sections: [GroupModel] = []) {
+    init(
+      leaksCount: Int = 0,
+      summary: NSAttributedString = NSAttributedString(),
+      sections: [GroupModel] = [],
+      textColorForNoIssues: UIColor = .systemGreen,
+      textColorForLeakDetected: UIColor = .systemRed
+    ) {
         self.leaksCount = leaksCount
         self.summary = summary
         self.sections = sections
+        self.textColorForNoIssues = textColorForNoIssues
+        self.textColorForLeakDetected = textColorForLeakDetected
     }
 }
 

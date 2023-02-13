@@ -41,7 +41,14 @@ Swift:
 
 ```swift
 #if DEBUG
-	LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .bar).refreshUI)
+	LifetimeTracker.setup(
+        onUpdate: LifetimeTrackerDashboardIntegration(
+            visibility: .alwaysVisible,
+            style: .bar,
+            textColorForNoIssues: .systemGreen,
+            textColorForLeakDetected: .systemRed
+        ).refreshUI
+    )
 #endif
 ```
 
