@@ -208,6 +208,7 @@ public extension LifetimeTrackable {
     @objc public static func setup(onLeakDetected: LeakClosure? = nil, onUpdate: @escaping UpdateClosure) {
         assert(instance == nil)
         instance = LifetimeTracker(onLeakDetected: onLeakDetected, onUpdate: onUpdate)
+        onUpdate([:])
     }
     
     /// Set a new update closure, use to set the visibility/style of the dashboard.
