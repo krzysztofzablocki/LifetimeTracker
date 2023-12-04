@@ -13,6 +13,8 @@ If you use those tools sporadically many of the issues they surface will require
 
 Other tools like [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) rely on objc runtime magic to find the problems, but that means they can't really be used for pure Swift classes. This small tool simply focuses on tracking lifetime of objects which means that it can be used in both Objective-C and Swift codebases, and it doesn't rely on any complex or automatic magic behaviour.
 
+[**If you'd like to support my work and improve your engineering workflows, check out my SwiftyStack course**](https://www.swiftystack.com/)
+
 ## Installation
 
 ### CocoaPods
