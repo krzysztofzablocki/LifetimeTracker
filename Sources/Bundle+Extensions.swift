@@ -17,4 +17,15 @@ extension Bundle {
         return Bundle(for: LifetimeTracker.self)
         #endif
     }
+    static var stringBundle: Bundle {
+        #if SWIFT_PACKAGE
+        return Bundle.module
+        #else
+        let mainBundle = Bundle(for: LifetimeTracker.self)
+        if let podBundlePath = mainBundle.path(forResource: "LifetimeTracker", ofType: "bundle") {
+            return Bundle(path: podBundlePath) ?? mainBundle
+        }
+        return mainBundle
+        #endif
+    }
 }

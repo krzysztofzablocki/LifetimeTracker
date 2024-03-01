@@ -11,6 +11,6 @@ import Foundation
 internal extension String {
 
     var lt_localized: String {
-        Bundle.resolvedBundle.localizedString(forKey: self, value: self, table: nil)
+        Bundle.stringBundle.localizedString(forKey: self, value: self, table: nil)
     }
 }
