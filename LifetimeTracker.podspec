@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Krzysztof Zablocki" => "krzysztof.zablocki@pixle.pl" }
   s.social_media_url   = "http://twitter.com/merowing_"
-  s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = '10.10'
+  s.ios.deployment_target = "12.0"
+  s.osx.deployment_target = '10.13'
   s.source       = { :git => "https://github.com/krzysztofzablocki/LifetimeTracker.git", :tag => s.version.to_s }
   s.ios.source_files  = "Sources/*.swift", "Sources/iOS/**/*.swift"
   s.macos.source_files  = "Sources/*.swift"

@@ -27,5 +27,8 @@ fileprivate final class DeallocTracker {
 ///   - closure: Closure to execute.
 internal func onDealloc(of owner: Any, closure: @escaping () -> Void) {
     var tracker = DeallocTracker(onDealloc: closure)
-    objc_setAssociatedObject(owner, &tracker, tracker, .OBJC_ASSOCIATION_RETAIN)
+    withUnsafePointer(to: tracker) { pointer in
+        var tracker = pointer
+        objc_setAssociatedObject(owner, &tracker, tracker, .OBJC_ASSOCIATION_RETAIN)
+    }
 }
