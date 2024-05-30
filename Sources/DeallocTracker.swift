@@ -26,9 +26,11 @@ fileprivate final class DeallocTracker {
 ///   - owner: Owner to track.
 ///   - closure: Closure to execute.
 internal func onDealloc(of owner: Any, closure: @escaping () -> Void) {
-    var tracker = DeallocTracker(onDealloc: closure)
-    withUnsafePointer(to: tracker) { pointer in
-        var tracker = pointer
-        objc_setAssociatedObject(owner, &tracker, tracker, .OBJC_ASSOCIATION_RETAIN)
-    }
+    let tracker = DeallocTracker(onDealloc: closure)
+    objc_setAssociatedObject(owner, getID(tracker), tracker, .OBJC_ASSOCIATION_RETAIN)
+}
+
+// https://github.com/atrick/swift-evolution/blob/diagnose-implicit-raw-bitwise/proposals/nnnn-implicit-raw-bitwise-conversion.md#associated-object-string-keys
+private func getID(_ object: AnyObject) -> UnsafeRawPointer {
+    return UnsafeRawPointer(Unmanaged.passUnretained(object).toOpaque())
 }
