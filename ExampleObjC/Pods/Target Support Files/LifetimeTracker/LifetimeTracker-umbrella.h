@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "LifetimeTracker-umbrella.h"
 
 FOUNDATION_EXPORT double LifetimeTrackerVersionNumber;
 FOUNDATION_EXPORT const unsigned char LifetimeTrackerVersionString[];

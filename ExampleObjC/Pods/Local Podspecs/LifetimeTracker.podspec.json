@@ -21,10 +21,9 @@
   },
   "ios": {
     "source_files": [
-      "Sources/LifetimeTracker/*.{swift,h}",
+      "Sources/LifetimeTracker/*.swift",
       "Sources/LifetimeTracker/iOS/**/*.swift"
     ],
-    "module_map": "Sources/LifetimeTracker/LifetimeTracker.modulemap",
     "resources": "Sources/LifetimeTracker/Resources/**/*.{xib,storyboard}",
     "resource_bundles": {
       "LifetimeTracker": [
