@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import LifetimeTracker;
+@import LifetimeTrackerCore;
 
 @interface ViewController : UIViewController <LifetimeTrackable>
 

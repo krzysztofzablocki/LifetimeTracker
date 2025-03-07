@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @import LifetimeTracker;
+@import LifetimeTrackerCore;
 
 @interface AppDelegate ()
 
