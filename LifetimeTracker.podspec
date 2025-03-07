@@ -9,14 +9,14 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Krzysztof Zablocki" => "krzysztof.zablocki@pixle.pl" }
   s.social_media_url   = "http://twitter.com/merowing_"
+
   s.ios.deployment_target = "12.0"
-  s.osx.deployment_target = '10.13'
   s.source       = { :git => "https://github.com/krzysztofzablocki/LifetimeTracker.git", :tag => s.version.to_s }
-  s.ios.source_files  = "Sources/*.swift", "Sources/iOS/**/*.swift"
-  s.macos.source_files  = "Sources/*.swift"
-  s.ios.resources     = "Sources/Resources/**/*.{xib,storyboard}"
-  s.resource_bundle = { "LifetimeTracker" => ["Sources/**/*.{strings}"] }
+  s.ios.source_files  = "Sources/LifetimeTracker/*.swift", "Sources/LifetimeTracker/iOS/**/*.swift"
+  s.ios.resources     = "Sources/LifetimeTracker/Resources/**/*.{xib,storyboard}"
+  s.ios.resource_bundle = { "LifetimeTracker" => ["Sources/LifetimeTracker/*.{strings}"] }
   s.ios.frameworks  = ["Foundation", "UIKit"]
-  s.macos.frameworks  = ["Foundation"]
   s.swift_version = "5.0"
+
+  s.ios.dependency 'LifetimeTrackerCore'
 end

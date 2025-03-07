@@ -190,10 +190,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ExampleObjC/Pods-ExampleObjC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LifetimeTracker/LifetimeTracker.framework",
+				"${BUILT_PRODUCTS_DIR}/LifetimeTrackerCore/LifetimeTrackerCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LifetimeTracker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LifetimeTrackerCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

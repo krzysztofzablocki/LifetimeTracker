@@ -14,14 +14,14 @@ extension Bundle {
         #if SWIFT_PACKAGE
         return Bundle.module
         #else
-        return Bundle(for: LifetimeTracker.self)
+        return Bundle(for: BundleAssociatedType.self)
         #endif
     }
     static var stringBundle: Bundle {
         #if SWIFT_PACKAGE
         return Bundle.module
         #else
-        let mainBundle = Bundle(for: LifetimeTracker.self)
+        let mainBundle = Bundle(for: BundleAssociatedType.self)
         if let podBundlePath = mainBundle.path(forResource: "LifetimeTracker", ofType: "bundle") {
             return Bundle(path: podBundlePath) ?? mainBundle
         }
@@ -29,3 +29,9 @@ extension Bundle {
         #endif
     }
 }
+
+#if !SWIFT_PACKAGE
+private final class BundleAssociatedType {
+
+}
+#endif

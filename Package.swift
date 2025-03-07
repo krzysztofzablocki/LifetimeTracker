@@ -10,11 +10,20 @@ let package = Package(
             name: "LifetimeTracker",
             targets: ["LifetimeTracker"]
         ),
+        .library(
+            name: "LifetimeTrackerCore",
+            targets: ["LifetimeTrackerCore"]
+        ),
     ],
     targets: [
         .target(
+            name: "LifetimeTrackerCore"
+        ),
+        .target(
             name: "LifetimeTracker",
-            path: "Sources",
+            dependencies: [
+                .target(name: "LifetimeTrackerCore"),
+            ],
             resources: [
                 .process("Resources"),
                 .process("Localizable.strings", localization: .default),

@@ -1,7 +1,8 @@
-platform :ios, '8.0'
+platform :ios, '12.0'
 
 use_frameworks!
 
 target 'ExampleObjC' do
   pod 'LifetimeTracker', :path => '../'
+  pod 'LifetimeTrackerCore', :path => '../'
 end

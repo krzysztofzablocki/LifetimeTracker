@@ -1,6 +1,6 @@
 {
   "name": "LifetimeTracker",
-  "version": "1.8.1",
+  "version": "1.8.3",
   "summary": "Framework to visually warn you when retain cycle / leak happens.",
   "description": "Mini framework that can surface retain cycle issues sooner.",
   "homepage": "https://github.com/krzysztofzablocki/LifetimeTracker",
@@ -13,34 +13,32 @@
   },
   "social_media_url": "http://twitter.com/merowing_",
   "platforms": {
-    "ios": "8.0",
-    "osx": "10.10"
+    "ios": "12.0"
   },
   "source": {
     "git": "https://github.com/krzysztofzablocki/LifetimeTracker.git",
-    "tag": "1.8.1"
+    "tag": "1.8.3"
   },
   "ios": {
     "source_files": [
-      "Sources/*.swift",
-      "Sources/iOS/**/*.swift"
+      "Sources/LifetimeTracker/*.swift",
+      "Sources/LifetimeTracker/iOS/**/*.swift"
     ],
-    "resources": "Sources/Resources/**/*.{xib,storyboard}",
+    "resources": "Sources/LifetimeTracker/Resources/**/*.{xib,storyboard}",
+    "resource_bundles": {
+      "LifetimeTracker": [
+        "Sources/LifetimeTracker/*.{strings}"
+      ]
+    },
     "frameworks": [
       "Foundation",
       "UIKit"
-    ]
-  },
-  "osx": {
-    "source_files": "Sources/*.swift",
-    "frameworks": [
-      "Foundation"
-    ]
-  },
-  "resource_bundles": {
-    "LifetimeTracker": [
-      "Sources/**/*.{strings}"
-    ]
+    ],
+    "dependencies": {
+      "LifetimeTrackerCore": [
+
+      ]
+    }
   },
   "swift_versions": "5.0",
   "swift_version": "5.0"

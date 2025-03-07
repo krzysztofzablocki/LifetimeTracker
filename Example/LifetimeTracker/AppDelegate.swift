@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 textColorForLeakDetected: .systemRed
               ).refreshUI
             )
-        #else
         #endif
         
         window = UIWindow()
