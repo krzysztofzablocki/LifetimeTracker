@@ -60,7 +60,7 @@ final class BarDashboardViewController: UIViewController, LifetimeTrackerViewabl
     private var hideOption: HideOption = .none {
         didSet {
             if hideOption != .none {
-                view.isHidden = true
+                view.window?.isHidden = true
             }
         }
     }
