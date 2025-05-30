@@ -36,7 +36,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     private var hideOption: HideOption = .none {
         didSet {
             if hideOption != .none {
-                view.isHidden = true
+                view.window?.isHidden = true
             }
         }
     }
