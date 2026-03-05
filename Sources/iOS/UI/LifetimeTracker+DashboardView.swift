@@ -102,7 +102,9 @@ typealias GroupModel = (color: UIColor, title: String, groupName: String, groupC
 
     @objc public func refreshUI(trackedGroups: [String: LifetimeTracker.EntriesGroup]) {
         DispatchQueue.main.async {
-            self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
+            if !self.lifetimeTrackerView.isHiddenByUser {
+                self.window.isHidden = self.visibility.windowIsHidden(hasIssuesToDisplay: self.hasIssuesToDisplay(from: trackedGroups))
+            }
 
             let entries = self.entries(from: trackedGroups)
             let vm = BarDashboardViewModel(

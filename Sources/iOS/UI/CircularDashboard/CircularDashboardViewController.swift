@@ -17,6 +17,8 @@ protocol LifetimeTrackerViewable {
 
     static func makeFromNib() -> UIViewController & LifetimeTrackerViewable
 
+    var isHiddenByUser: Bool { get }
+
     func update(with vm: BarDashboardViewModel)
 }
 
@@ -32,6 +34,8 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     fileprivate var formerStatusBarStyle = UIApplication.shared.statusBarStyle
 
     private var didInitializeRoundView = false
+
+    var isHiddenByUser: Bool { return hideOption != .none }
 
     private var hideOption: HideOption = .none {
         didSet {
@@ -141,8 +145,8 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
         leaksTitleLabel?.text = vm.leaksCount == 1 ? "word.leak".lt_localized : "word.leaks".lt_localized
 
         if hideOption.shouldUIBeShown(oldModel: dashboardViewModel, newModel: vm) {
-            view.isHidden = false
             hideOption = .none
+            view.window?.isHidden = false
         }
 
         dashboardViewModel = vm

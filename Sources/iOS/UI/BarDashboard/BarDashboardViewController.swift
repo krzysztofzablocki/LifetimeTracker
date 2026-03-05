@@ -57,6 +57,8 @@ final class BarDashboardViewController: UIViewController, LifetimeTrackerViewabl
         didSet { clampDragOffset() }
     }
 
+    var isHiddenByUser: Bool { return hideOption != .none }
+
     private var hideOption: HideOption = .none {
         didSet {
             if hideOption != .none {
@@ -100,8 +102,8 @@ final class BarDashboardViewController: UIViewController, LifetimeTrackerViewabl
         summaryLabel?.attributedText = vm.summary
 
         if hideOption.shouldUIBeShown(oldModel: dashboardViewModel, newModel: vm) {
-            view.isHidden = false
             hideOption = .none
+            view.window?.isHidden = false
         }
 
         dashboardViewModel = vm
